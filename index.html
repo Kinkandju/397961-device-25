@@ -6,7 +6,139 @@
   </head>
   <body>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
+    <header class="main-header">
+      <nav class="main-navigation">
+        <a class="main-header-logo" href=""><img src="img/index-logo-black.svg" weight="250" height="80" alt="Логотип интернет-магазина гаджетов «Девайс»"></a>
+        <ul class="site-navigation-header">
+          <li>
+            <!-- Здесь будет выпадающий список -->
+            <!-- <select class="select-item" name="catalog">
+              <option>Каталог товаров</option>
+              <option>Виртуальная реальность</option>
+              <option>Моноподы для селфи</option>
+              <option>Экшн-камеры</option>
+              <option>Фитнес-браслеты</option>
+              <option>Умные часы</option>
+              <option>Квадрокоптеры</option>
+            </select> -->
+            <a href="catalog.html">Каталог товаров</a>
+        </li>
+          <li><a href="delivery.html">Доставка</a></li>
+          <li><a href="guarantee.html">Гарантия</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+
+        <ul class="user-navigation-header">
+          <li class="login-link">
+            <p class="login-link-header">
+            <img src="img/login-icon.svg" weight="50" height="50" alt="Иконка пользователя">
+            <button class="login">Вход</button>
+            </p>
+          </li>
+          <li class="difference">
+            <p class="difference-header">
+              <img src="img/difference-icon.svg" weight="50" height="50" alt="Иконка сравнения товаров">
+              <a href="difference.html">Сравнить</a>
+            </p>
+          </li>
+          <li class="purchases">
+            <p class="purchases-header">
+              <img src="img/purchases-icon.svg" weight="50" height="50" alt="Иконка корзины с товарами">
+              <a href="purchases.html">Корзина</a>
+            </p>
+          </li>
+        </ul>
+        <!-- Здесь будет поле ввода поиска по сайту -->
+        <!-- <form action="" method="get">
+          <input type="text" placeholder="Поиск по сайту">
+          <button type="submit"></button>
+        </form> -->
+        <span>Поиск по сайту</span>
+        <button><img src="img/search.svg" weight="50" height="50" alt="Поиск"></button>
+      </nav>
+    </header>
+
+    <!-- Первый смысловой блок "О нас" -->
+    <main class="container">
+      <h1 class="visually-hidden">Интернет-магазина гаджетов «Девайс»</h1>
+      <hr>
+
+      <section class="about-us">
+        <h2>О нас</h2>
+        <p>
+          Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.
+        </p>
+        <p>
+          Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:
+        </p>
+        <ul class="carrier-companies">
+          <li><a href="https://www.dellin.ru/">Деловые Линии</a></li>
+          <li><a href="http://autotrading.ru/">Автотрейдинг</a></li>
+          <li><a href="https://www.jde.ru/">ЖелДорЭкспедиция</a></li>
+        </ul>
+        <a class="button" href="info.html">Подробнее о нас</a>
+      </section>
+
+      <hr />
+
+      <!-- Второй смысловой блок "Контакты" -->
+      <section class="contacts">
+        <h2>Контакты</h2>
+        <p>
+          Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
+        </p>
+        <p class="map">
+          <a href="map.html"><img src="img/map.jpg" weight="500" height="250" alt="Адрес местоположения интернет-магазина гаджетов «Девайс»: ул. Строителей, д.15"></a>
+        </p>
+          <a class="button" href="info.html">Напишите нам</a>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+        <a class="main-header-logo" href=""><img src="img/index-logo-orange.svg" weight="250" height="80" alt="Логотип интернет-магазина гаджетов «Девайс»"></a>
+        <address>
+          г. Москва, ул. Строителей, д.15
+        </address>
+        <hr>
+
+        <ul class="site-navigation-footer">
+          <li><a href="delivery.html">Доставка</a></li>
+          <li><a href="guarantee.html">Гарантия</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+
+        <div class="footer-social">
+          <ul>
+            <li><a class="social-button" href="#">Facebook</a></li>
+            <li><a class="social-button" href="#">Instagram</a></li>
+            <li><a class="social-button" href="#">Twitter</a></li>
+          </ul>
+        </div>
+
+        <ul class="user-navigation-footer">
+          <li class="login-link">
+            <p class="login-link-footer">
+            <img src="img/login-icon.svg" weight="50" height="50" alt="Иконка пользователя">
+            <button class="login">Вход</button>
+            </p>
+          </li>
+          <li class="difference">
+            <p class="difference-footer">
+              <img src="img/difference-icon.svg" weight="50" height="50" alt="Иконка сравнения товаров">
+              <a href="difference.html">Сравнить</a>
+            </p>
+          </li>
+          <li class="purchases">
+            <p class="purchases-footer">
+              <img src="img/purchases-icon.svg" weight="50" height="50" alt="Иконка корзины с товарами">
+              <a href="purchases.html">Корзина</a>
+            </p>
+          </li>
+        </ul>
+
+        <p class="call">Тел.: +7 (495) 495-95-95</p>
+        <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/HTMLAcademy.svg" width="50" height="50" alt="Профессиональный онлайн‑курс HTML Academy"></a>
+    </footer>
 
   </body>
 </html>
