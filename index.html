@@ -8,61 +8,63 @@
 
     <header class="main-header">
       <nav class="main-navigation">
-        <a class="main-header-logo" href=""><img src="img/index-logo-black.svg" weight="250" height="80" alt="Логотип интернет-магазина гаджетов «Девайс»"></a>
+        <!-- Логотип -->
+        <a class="main-header-logo" href=""><img src="img/index-logo-black.svg" width="250" height="80" alt="Логотип интернет-магазина гаджетов «Девайс»"></a>
+        <!-- Форма поиска -->
+        <form action="" method="get">
+          <input type="text" placeholder="Поиск по сайту">
+          <button type="submit"></button>
+        </form>
+        <!-- Пользовательская навигация -->
+        <ul class="user-navigation-header">
+          <li class="login-link">
+            <p class="login-link-header">
+              <a class="icon" href="#">
+                <img src="img/login-icon.svg" width="50" height="50" alt="Иконка пользователя"></a>
+              <a class="log-in" href="#">Вход</a>
+            </p>
+          </li>
+          <li class="difference">
+            <p class="difference-header">
+              <a class="icon" href="#">
+                <img src="img/difference-icon.svg" width="50" height="50" alt="Иконка сравнения товаров">
+                Сравнить
+              </a>
+            </p>
+          </li>
+          <li class="purchases">
+            <p class="purchases-header">
+              <a class="icon" href="#">
+                <img src="img/purchases-icon.svg" width="50" height="50" alt="Иконка корзины с товарами">
+                Корзина
+              </a>
+            </p>
+          </li>
+        </ul>
+        <!-- Навигация по каталогу -->
         <ul class="site-navigation-header">
           <li>
-            <!-- Здесь будет выпадающий список -->
-            <!-- <select class="select-item" name="catalog">
-              <option>Каталог товаров</option>
-              <option>Виртуальная реальность</option>
-              <option>Моноподы для селфи</option>
-              <option>Экшн-камеры</option>
-              <option>Фитнес-браслеты</option>
-              <option>Умные часы</option>
-              <option>Квадрокоптеры</option>
-            </select> -->
             <a href="catalog.html">Каталог товаров</a>
+            <ul>
+              <li>Виртуальная реальность</li>
+              <li>Моноподы для селфи</li>
+              <li>Экшн-камеры</li>
+              <li>Фитнес-браслеты</li>
+              <li>Умные часы</li>
+              <li>Квадрокоптеры</li>
+            </ul>
         </li>
           <li><a href="delivery.html">Доставка</a></li>
           <li><a href="guarantee.html">Гарантия</a></li>
           <li><a href="contacts.html">Контакты</a></li>
         </ul>
-
-        <ul class="user-navigation-header">
-          <li class="login-link">
-            <p class="login-link-header">
-            <img src="img/login-icon.svg" weight="50" height="50" alt="Иконка пользователя">
-            <button class="login">Вход</button>
-            </p>
-          </li>
-          <li class="difference">
-            <p class="difference-header">
-              <img src="img/difference-icon.svg" weight="50" height="50" alt="Иконка сравнения товаров">
-              <a href="difference.html">Сравнить</a>
-            </p>
-          </li>
-          <li class="purchases">
-            <p class="purchases-header">
-              <img src="img/purchases-icon.svg" weight="50" height="50" alt="Иконка корзины с товарами">
-              <a href="purchases.html">Корзина</a>
-            </p>
-          </li>
-        </ul>
-        <!-- Здесь будет поле ввода поиска по сайту -->
-        <!-- <form action="" method="get">
-          <input type="text" placeholder="Поиск по сайту">
-          <button type="submit"></button>
-        </form> -->
-        <span>Поиск по сайту</span>
-        <button><img src="img/search.svg" weight="50" height="50" alt="Поиск"></button>
       </nav>
     </header>
 
-    <!-- Первый смысловой блок "О нас" -->
     <main class="container">
       <h1 class="visually-hidden">Интернет-магазина гаджетов «Девайс»</h1>
       <hr>
-
+      <!-- Первый смысловой блок "О нас" -->
       <section class="about-us">
         <h2>О нас</h2>
         <p>
@@ -79,8 +81,6 @@
         <a class="button" href="info.html">Подробнее о нас</a>
       </section>
 
-      <hr />
-
       <!-- Второй смысловой блок "Контакты" -->
       <section class="contacts">
         <h2>Контакты</h2>
@@ -88,56 +88,63 @@
           Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
         </p>
         <p class="map">
-          <a href="map.html"><img src="img/map.jpg" weight="500" height="250" alt="Адрес местоположения интернет-магазина гаджетов «Девайс»: ул. Строителей, д.15"></a>
+          <a href="map.html"><img src="img/map.jpg" width="500" height="250" alt="Адрес местоположения интернет-магазина гаджетов «Девайс»: ул. Строителей, д.15"></a>
         </p>
           <a class="button" href="info.html">Напишите нам</a>
       </section>
     </main>
 
     <footer class="main-footer">
-        <a class="main-header-logo" href=""><img src="img/index-logo-orange.svg" weight="250" height="80" alt="Логотип интернет-магазина гаджетов «Девайс»"></a>
-        <address>
-          г. Москва, ул. Строителей, д.15
-        </address>
-        <hr>
-
-        <ul class="site-navigation-footer">
-          <li><a href="delivery.html">Доставка</a></li>
-          <li><a href="guarantee.html">Гарантия</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
+      <!-- Логотип -->
+      <a class="main-header-logo" href=""><img src="img/index-logo-orange.svg" width="250" height="80" alt="Логотип интернет-магазина гаджетов «Девайс»"></a>
+      <!-- Пользовательская навигация -->
+      <ul class="user-navigation-footer">
+        <li class="login-link">
+          <p class="login-link-footer">
+            <a class="icon" href="#">
+              <img src="img/login-icon-2.svg" width="50" height="50" alt="Иконка пользователя"></a>
+            <a class="log-in" href="#">Вход</a>
+          </p>
+        </li>
+        <li class="difference">
+          <p class="difference-footer">
+            <a class="icon" href="#">
+              <img src="img/difference-icon-2.svg" width="50" height="50" alt="Иконка сравнения товаров">
+              Сравнить
+            </a>
+          </p>
+        </li>
+        <li class="purchases">
+          <p class="purchases-footer">
+            <a class="icon" href="#">
+              <img src="img/purchases-icon-2.svg" width="50" height="50" alt="Иконка корзины с товарами">
+              Корзина
+            </a>
+          </p>
+        </li>
+      </ul>
+      <!-- Навигация по каталогу -->
+      <ul class="site-navigation-footer">
+        <li><a href="delivery.html">Доставка</a></li>
+        <li><a href="guarantee.html">Гарантия</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+      <!-- Адрес организации -->
+      <address>
+        г. Москва, ул. Строителей, д.15
+      </address>
+      <!-- Социальные сети -->
+      <div class="footer-social">
+        <ul>
+          <li><a class="social-button" href="#">Facebook</a></li>
+          <li><a class="social-button" href="#">Instagram</a></li>
+          <li><a class="social-button" href="#">Twitter</a></li>
         </ul>
-
-        <div class="footer-social">
-          <ul>
-            <li><a class="social-button" href="#">Facebook</a></li>
-            <li><a class="social-button" href="#">Instagram</a></li>
-            <li><a class="social-button" href="#">Twitter</a></li>
-          </ul>
-        </div>
-
-        <ul class="user-navigation-footer">
-          <li class="login-link">
-            <p class="login-link-footer">
-            <img src="img/login-icon.svg" weight="50" height="50" alt="Иконка пользователя">
-            <button class="login">Вход</button>
-            </p>
-          </li>
-          <li class="difference">
-            <p class="difference-footer">
-              <img src="img/difference-icon.svg" weight="50" height="50" alt="Иконка сравнения товаров">
-              <a href="difference.html">Сравнить</a>
-            </p>
-          </li>
-          <li class="purchases">
-            <p class="purchases-footer">
-              <img src="img/purchases-icon.svg" weight="50" height="50" alt="Иконка корзины с товарами">
-              <a href="purchases.html">Корзина</a>
-            </p>
-          </li>
-        </ul>
-
-        <p class="call">Тел.: +7 (495) 495-95-95</p>
-        <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/HTMLAcademy.svg" width="50" height="50" alt="Профессиональный онлайн‑курс HTML Academy"></a>
+      </div>
+      <!-- Телефон организации -->
+      <p class="call">Тел.: +7 (495) 495-95-95</p>
+      <!-- Ссылка на HTML Academy -->
+      <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/HTMLAcademy.svg" width="50" height="50" alt="Профессиональный онлайн‑курс HTML Academy"></a>
     </footer>
 
   </body>
