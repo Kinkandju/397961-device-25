@@ -5,6 +5,199 @@
     <title>HTML Academy: Девайс</title>
   </head>
   <body>
+    
+    <header class="main-header">
+      <nav class="main-navigation">
+        <a class="main-header-logo" href=""><img src="img/index-logo-black.svg" weight="250" height="80" alt="Логотип интернет-магазина гаджетов «Девайс»"></a>
+        <ul class="site-navigation-header">
+          <li>
+            <!-- Здесь будет выпадающий список -->
+            <!-- <select class="select-item" name="catalog">
+              <option>Каталог товаров</option>
+              <option>Виртуальная реальность</option>
+              <option>Моноподы для селфи</option>
+              <option>Экшн-камеры</option>
+              <option>Фитнес-браслеты</option>
+              <option>Умные часы</option>
+              <option>Квадрокоптеры</option>
+            </select> -->
+            <a href="catalog.html">Каталог товаров</a>
+        </li>
+          <li><a href="delivery.html">Доставка</a></li>
+          <li><a href="guarantee.html">Гарантия</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+        <ul class="user-navigation-header">
+          <li class="login-link">
+            <p class="login-link-header">
+              <img src="img/login-icon.svg" weight="50" height="50" alt="Иконка пользователя">
+              <span class="login">Валентин Петухов</span>
+              <button class="out-login">Выход</button>
+            </p>
+          </li>
+          <li class="difference">
+            <p class="difference-header">
+              <img src="img/difference-icon.svg" weight="50" height="50" alt="Иконка сравнения товаров">
+              <a href="difference.html">Сравнить</a>
+            </p>
+          </li>
+          <li class="purchases">
+            <p class="purchases-header">
+              <img src="img/purchases-icon.svg" weight="50" height="50" alt="Иконка корзины с товарами">
+              <a href="purchases.html">Корзина</a>
+            </p>
+          </li>
+        </ul>
+        <!-- Здесь будет поле ввода поиска по сайту -->
+        <!-- <form action="" method="get">
+          <input type="text" placeholder="Поиск по сайту">
+          <button type="submit"></button>
+        </form> -->
+        <span>Поиск по сайту</span>
+        <button><img src="img/search.svg" weight="50" height="50" alt="Поиск"></button>
+      </nav>
+    </header>
+
+    <main class="container">
+      <h1 class="vpage-title">Моноподы для селфи</h1>
+      <ul class="breadcrumbs">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html">Каталог товаров</a></li>
+        <li class="breadcrumbs-current.html">Моноподы для селфи</li>
+      </ul>
+
+        <!-- Раздел с фильтром по критериям товара -->
+      <section class="filters">
+        <h2 class="visually-hidden">Фильтр товаров</h2>
+        <!-- Здесь будет форма -->
+        <h3 clas="color">Цвет</h3>
+        <ul class="color-list">
+          <li class="color-current">Черный</li>
+          <li>Белый</li>
+          <li class="color-current">Синий</li>
+          <li class="color-current">Красный</li>
+          <li>Розовый</li>
+        </ul>
+        <h3 class="bluetooth">Bluetooth</h3>
+        <ul class="bluetooth-list">
+          <li class="bluetooth-current">Есть</li>
+          <li>Нет</li>
+        </ul>
+        <a class="button" href="catalog-item.html">Показать</a>
+      </section>
+
+      <!-- Раздел каталога товаров -->
+      <section class="catalog">
+        <h2 class="visually-hidden">Каталог моноподов для селфи</h2>
+      <ul class="catalog-list">
+        <li class="catalog-item">
+          <h3>
+            <a href="catalog.item-1.html">
+              <span class="catalog-item-title">Любительская селфи-палка</span>
+            </a>
+          </h3>
+          <p class="catalog-item-image">
+            <a href="catalog.item-1.html">
+            <img src="img/item-1.jpg" weight="500" height="500" alt="Любительская селфи-палка">
+            </a>
+          </p>
+          <p class="catalog-item-price">
+            <a class="button-price" href="#">500 руб.</a>
+          </p>
+        </li>
+        <li class="catalog-item">
+          <h3>
+            <a href="catalog.item-2.html">
+              <span class="catalog-item-title">Профессиональная селфи-палка</span>
+            </a>
+          </h3>
+          <p class="catalog-item-image">
+            <a href="catalog.item-2.html">
+            <img src="img/item-2.jpg" weight="500" height="500" alt="Профессиональная селфи-палка">
+            </a>
+          </p>
+          <p class="catalog-item-price">
+            <a class="button-price" href="#">1500 руб.</a>
+          </p>
+        </li>
+        <li class="catalog-item">
+          <h3>
+            <a href="catalog.item-3.html">
+              <span class="catalog-item-title">Непотопляемая селфи-палка</span>
+            </a>
+          </h3>
+          <p class="catalog-item-image">
+            <a href="catalog.item-3.html">
+            <img src="img/item-3.jpg" weight="500" height="500" alt="Непотопляемая селфи-палка">
+            </a>
+          </p>
+          <p class="catalog-item-price">
+            <a class="button-price" href="#">2500 руб.</a>
+          </p>
+        </li>
+        <li class="catalog-item">
+          <h3>
+            <a href="catalog.item-4.html">
+              <span class="catalog-item-title">Селфи-палка «Следуй за мной»</span>
+            </a>
+          </h3>
+          <p class="catalog-item-image">
+            <a href="catalog.item-4.html">
+            <img src="img/item-4.jpg" weight="500" height="500" alt="Селфи-палка «Следуй за мной»">
+            </a>
+          </p>
+          <p class="catalog-item-price">
+            <a class="button-price" href="#">4900 руб.</a>
+          </p>
+        </li>
+      </ul>
+    </main>
+
+    <footer class="main-footer">
+        <a class="main-header-logo" href=""><img src="img/index-logo-orange.svg" weight="250" height="80" alt="Логотип интернет-магазина гаджетов «Девайс»"></a>
+        <address>
+          г. Москва, ул. Строителей, д.15
+        </address>
+        <hr>
+
+        <ul class="site-navigation-footer">
+          <li><a href="delivery.html">Доставка</a></li>
+          <li><a href="guarantee.html">Гарантия</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+
+        <div class="footer-social">
+          <ul>
+            <li><a class="social-button" href="#">Facebook</a></li>
+            <li><a class="social-button" href="#">Instagram</a></li>
+            <li><a class="social-button" href="#">Twitter</a></li>
+          </ul>
+        </div>
+
+        <ul class="user-navigation-footer">
+          <li class="login-link">
+            <p class="login-link-footer">
+              <img src="img/login-icon.svg" weight="50" height="50" alt="Иконка пользователя">
+              <span class="login">Валентин Петухов</span>
+              <button class="out-login">Выход</button>
+            </p>
+          </li>
+          <li class="difference">
+            <p class="difference-footer">
+              <img src="img/difference-icon.svg" weight="50" height="50" alt="Иконка сравнения товаров">
+              <a href="difference.html">Сравнить</a>
+            </p>
+          </li>
+          <li class="purchases">
+            <p class="purchases-footer">
+              <img src="img/purchases-icon.svg" weight="50" height="50" alt="Иконка корзины с товарами">
+              <a href="purchases.html">Корзина</a>
+            </p>
+          </li>
+        </ul>
+        <p class="call">Тел.: +7 (495) 495-95-95</p>
+        <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/HTMLAcademy.svg" width="50" height="50" alt="Профессиональный онлайн‑курс HTML Academy"></a>
+    </footer>
 
   </body>
 </html>
