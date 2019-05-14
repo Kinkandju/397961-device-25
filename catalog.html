@@ -9,25 +9,25 @@
     <header class="main-header">
       <nav class="main-navigation">
         <!-- Логотип -->
-        <a class="main-header-logo" href=""><img src="img/index-logo-black.svg" width="250" height="80" alt="Логотип интернет-магазина гаджетов «Девайс»"></a>
+        <a class="main-header-logo" href="index.html"><img src="img/device.svg" width="163" height="35" alt="Логотип интернет-магазина гаджетов «Девайс»"></a>
         <!-- Форма поиска -->
         <form action="" method="get">
           <input type="text" placeholder="Поиск по сайту">
-          <button type="submit"></button>
+          <button type="submit"><img src="img/search.svg" width="16" height="16" alt="Кнопка поиска"></button>
         </form>
         <!-- Пользовательская навигация -->
         <ul class="user-navigation-header">
           <li class="login-link">
             <p class="login-link-header">
               <a class="icon" href="#">
-                <img src="img/login-icon.svg" width="50" height="50" alt="Иконка пользователя">Валентин Петухов</a>
+                <img src="img/user.svg" width="12" height="12" alt="Иконка пользователя">Валентин Петухов</a>
               <a class="log-out" href="#">Выход</a>
             </p>
           </li>
           <li class="difference">
             <p class="difference-header">
               <a class="icon" href="#">
-                <img src="img/difference-icon.svg" width="50" height="50" alt="Иконка сравнения товаров">
+                <img src="img/compare.svg" width="12" height="12" alt="Иконка сравнения товаров">
                 Сравнить
               </a>
             </p>
@@ -35,7 +35,7 @@
           <li class="purchases">
             <p class="purchases-header">
               <a class="icon" href="#">
-                <img src="img/purchases-icon.svg" width="50" height="50" alt="Иконка корзины с товарами">
+                <img src="img/cart.svg" width="12" height="12" alt="Иконка корзины с товарами">
                 Корзина
               </a>
             </p>
@@ -72,6 +72,12 @@
         <!-- Раздел с фильтром по критериям товара -->
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
+        <span class="filters-name">Фильтр:</span>
+        <div class="cost">
+          <span class="range-cost">Стоимость</span>
+          <input type="range" min="0" max="500">
+        </div>
+
 
         <!-- Здесь будет форма -->
         <form class="filters-form">
@@ -95,6 +101,20 @@
         </form>
       </section>
 
+      <!-- Сортировка товаров -->
+      <section class="sort">
+        <h2 class="visually-hidden">Сортировка товара</h2>
+        <span class="sort-name">Сортировка:</span>
+        <ul class="sort-list">
+          <li class="sort-item sort-current">По цене</li>
+          <li class="sort-item">По типу</li>
+          <li class="sort-item">По популярности</li>
+        </ul>
+          <!-- Здесь будут кнопки "вверх" и "вниз" -->
+          <button class="button-up"><img src="img/icon-up-dir.svg" width="11" height="10" alt="Кнопка вверх"></button>
+          <button class="button-down"><img src="img/icon-down-dir.svg" width="11" height="10" alt="Кнопка вниз"></button>
+
+      </section>
       <!-- Раздел каталога товаров -->
       <section class="catalog">
         <h2 class="visually-hidden">Каталог моноподов для селфи</h2>
@@ -172,20 +192,20 @@
 
     <footer class="main-footer">
         <!-- Логотип -->
-        <a class="main-header-logo" href="#"><img src="img/index-logo-orange.svg" width="250" height="80" alt="Логотип интернет-магазина гаджетов «Девайс»"></a>
+        <a class="main-header-logo" href="index.html"><img src="img/device.svg" width="163" height="35" alt="Логотип интернет-магазина гаджетов «Девайс»"></a>
         <!-- Пользовательская навигация -->
         <ul class="user-navigation-footer">
           <li class="login-link">
             <p class="login-link-footer">
               <a class="icon" href="#">
-                <img src="img/login-icon-2.svg" width="50" height="50" alt="Иконка пользователя">Валентин Петухов</a>
+                <img src="img/user.svg" width="12" height="12" alt="Иконка пользователя">Валентин Петухов</a>
               <a class="log-out" href="#">Выход</a>
             </p>
           </li>
           <li class="difference">
             <p class="difference-footer">
               <a class="icon" href="#">
-                <img src="img/difference-icon-2.svg" width="50" height="50" alt="Иконка сравнения товаров">
+                <img src="img/compare.svg" width="12" height="12" alt="Иконка сравнения товаров">
                 Сравнить
               </a>
             </p>
@@ -193,7 +213,7 @@
           <li class="purchases">
             <p class="purchases-footer">
               <a class="icon" href="#">
-                <img src="img/purchases-icon-2.svg" width="50" height="50" alt="Иконка корзины с товарами">
+                <img src="img/cart.svg" width="12" height="12" alt="Иконка корзины с товарами">
                 Корзина
               </a>
             </p>
@@ -212,9 +232,9 @@
         <!-- Социальные сети -->
         <div class="footer-social">
           <ul>
-            <li><a class="social-button" href="#">Facebook</a></li>
-            <li><a class="social-button" href="#">Instagram</a></li>
-            <li><a class="social-button" href="#">Twitter</a></li>
+            <li><a class="social-button" href="#"><img src="img/fb.svg" width="32" height="32" alt="Facebook"></a></li>
+            <li><a class="social-button" href="#"><img src="img/inst.svg" width="32" height="32" alt="Instagram"></a></li>
+            <li><a class="social-button" href="#"><img src="img/tw.svg" width="32" height="32" alt="Twitter"></a></li>
           </ul>
         </div>
         <!-- Телефон организации -->
@@ -222,7 +242,7 @@
           <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
         </p>
         <!-- Ссылка на HTML Academy -->
-        <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/HTMLAcademy.svg" width="50" height="50" alt="Профессиональный онлайн‑курс HTML Academy"></a>
+        <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="27" height="35" alt="Профессиональный онлайн‑курс HTML Academy"></a>
     </footer>
 
   </body>
