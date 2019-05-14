@@ -101,23 +101,22 @@
         </form>
       </section>
 
-      <!-- Сортировка товаров -->
-      <section class="sort">
-        <h2 class="visually-hidden">Сортировка товара</h2>
-        <span class="sort-name">Сортировка:</span>
-        <ul class="sort-list">
-          <li class="sort-item sort-current">По цене</li>
-          <li class="sort-item">По типу</li>
-          <li class="sort-item">По популярности</li>
-        </ul>
-          <!-- Здесь будут кнопки "вверх" и "вниз" -->
-          <button class="button-up"><img src="img/icon-up-dir.svg" width="11" height="10" alt="Кнопка вверх"></button>
-          <button class="button-down"><img src="img/icon-down-dir.svg" width="11" height="10" alt="Кнопка вниз"></button>
-
-      </section>
-      <!-- Раздел каталога товаров -->
       <section class="catalog">
-        <h2 class="visually-hidden">Каталог моноподов для селфи</h2>
+        <!-- Сортировка товаров -->
+        <div class="filter">
+          <h2 class="visually-hidden">Сортировка товара</h2>
+          <span class="sort-name">Сортировка:</span>
+          <ul class="sort-list">
+            <li class="sort-item sort-current">По цене</li>
+            <li class="sort-item">По типу</li>
+            <li class="sort-item">По популярности</li>
+          </ul>
+            <!-- Здесь будут кнопки "вверх" и "вниз" -->
+            <button class="button-up"><img src="img/icon-up-dir.svg" width="11" height="10" alt="Кнопка вверх"></button>
+            <button class="button-down"><img src="img/icon-down-dir.svg" width="11" height="10" alt="Кнопка вниз"></button>
+        </div>
+        <!-- Раздел каталога товаров -->
+      <h2 class="visually-hidden">Каталог моноподов для селфи</h2>
       <ul class="catalog-list">
         <li class="catalog-item">
           <h3>
@@ -181,13 +180,16 @@
         </li>
       </ul>
       <!-- Пагинация -->
-      <ul class="pagination-list">
-        <li class="pagination-item"><a href="#">Назад</a></li>
-        <li class="pagination-item pagination-item-current"><a href="">1</a></li>
-        <li class="pagination-item"><a href="#">2</a></li>
-        <li class="pagination-item"><a href="#">3</a></li>
-        <li class="pagination-item"><a href="#">Вперед</a></li>
-      </ul>
+      <div class="pagination">
+        <ul class="pagination-list">
+          <li class="pagination-item"><a href="#">Назад</a></li>
+          <li class="pagination-item pagination-item-current"><a href="">1</a></li>
+          <li class="pagination-item"><a href="#">2</a></li>
+          <li class="pagination-item"><a href="#">3</a></li>
+          <li class="pagination-item"><a href="#">Вперед</a></li>
+        </ul>
+      </div>
+      </section>
     </main>
 
     <footer class="main-footer">
