@@ -117,15 +117,26 @@
               </ul>
           </fieldset>
 
+          <!-- Фильтр выбора Bluetooth -->
+          <fieldset class="">
+            <legend>Bluetooth</legend>
+            <ul class="bluetooth-list">
+              <li class="filter-option">
+                <label>
+                  <input type="radio" name="bluetooth" value="yes" checked>
+                  Есть
+                </label>
+              </li>
+              <li class="filter-option">
+                <label>
+                  <input type="radio" name="bluetooth" value="no">
+                  Нет
+                </label>
+              </li>
+            </ul>
+          </fieldset>
 
-          <h3 class="bluetooth">Bluetooth</h3>
-          <ul class="bluetooth-list">
-            <li class="bluetooth-current">Есть</li>
-            <li>Нет</li>
-          </ul>
-
-          <!-- Здесь будет кнопка -->
-        <button type="submit">Показать</button>
+        <button class="button filter-button" type="submit">Показать</button>
         </form>
       </section>
 
