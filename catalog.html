@@ -66,7 +66,7 @@
       <ul class="breadcrumbs">
         <li><a href="index.html">Главная</a></li>
         <li><a href="catalog.html">Каталог товаров</a></li>
-        <li class="breadcrumbs-current.html">Моноподы для селфи</li>
+        <li class="breadcrumbs-current">Моноподы для селфи</li>
       </ul>
 
         <!-- Раздел с фильтром по критериям товара -->
@@ -79,16 +79,44 @@
         </div>
 
 
-        <!-- Здесь будет форма -->
-        <form class="filters-form">
-          <h3 clas="color">Цвет</h3>
-          <ul class="color-list">
-            <li class="color-current">Черный</li>
-            <li>Белый</li>
-            <li class="color-current">Синий</li>
-            <li class="color-current">Красный</li>
-            <li>Розовый</li>
-          </ul>
+        <!-- Фильтр выбора цвета -->
+        <form action="https://echo.htmlacademy.ru" metod="get">
+          <fieldset class="color">
+            <legend>Цвет</legend>
+              <ul class="color-list">
+                <li class="filter-option">
+                  <label>
+                    <input class="filter-input filter-input-checkbox" type="checkbox" name="black" checked>
+                    Черный
+                  </label>
+                </li>
+                <li class="filter-option">
+                  <label>
+                    <input class="filter-input filter-input-checkbox" type="checkbox" name="white">
+                    Белый
+                  </label>
+                </li>
+                <li class="filter-option">
+                  <label>
+                    <input class="filter-input filter-input-checkbox" type="checkbox" name="blue" checked>
+                    Синий
+                  </label>
+                </li>
+                <li class="filter-option">
+                  <label>
+                    <input class="filter-input filter-input-checkbox" type="checkbox" name="red" checked>
+                    Красный
+                  </label>
+                </li>
+                <li class="filter-option">
+                  <label>
+                    <input class="filter-input filter-input-checkbox" type="checkbox" name="pink">
+                    Розовый
+                  </label>
+                </li>
+              </ul>
+          </fieldset>
+
 
           <h3 class="bluetooth">Bluetooth</h3>
           <ul class="bluetooth-list">
