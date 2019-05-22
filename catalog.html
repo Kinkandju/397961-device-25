@@ -73,18 +73,24 @@
         <li class="breadcrumbs-current">Моноподы для селфи</li>
       </ul>
 
-        <!-- Раздел с фильтром по критериям товара -->
+        <!-- Фильтр по критериям товара -->
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
         <span class="filters-name">Фильтр:</span>
-        <div class="cost">
-          <span class="range-cost">Стоимость</span>
-          <input type="range" min="0" max="500">
-        </div>
 
+        <!-- Фильтр выбора стоимости -->
+        <fieldset class="cost">
+          <legend>Стоимость</legend>
+            <form action="https://echo.htmlacademy.ru" metod="get">
+              <img src="img/filter-button.svg" width="10" height="10" alt="Декоративная кнопка фильтра">
+              <img src="img/filter-button.svg" width="10" height="10" alt="Декоративная кнопка фильтра">
+              <label class="visually-hidden" for="cost-min">Минимальная цена товара</label>
+              <input type="text" name="price-min" id="cost-min" placeholder="от 0">
+              <label class="visually-hidden" for="cost-max">Максимальная цена товара</label>
+              <input type="text" name="price-max" id="cost-max" placeholder="до 5000">
+        </fieldset>
 
         <!-- Фильтр выбора цвета -->
-        <form action="https://echo.htmlacademy.ru" metod="get">
           <fieldset class="color">
             <legend>Цвет</legend>
               <ul class="color-list">
