@@ -17,7 +17,7 @@
       <a class="main-header-logo" href="index.html"><img src="img/device.svg" width="163" height="35" alt="Логотип интернет-магазина гаджетов «Девайс»"></a>
 
       <!-- Форма поиска -->
-      <form action="https://echo.htmlacademy.ru" method="get">
+      <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
         <label class="visually-hidden" for="search-site">Поиск по сайту</label>
         <input type="search" id="search-site" placeholder="Поиск по сайту">
         <button class="button-search" type="submit">Искать</button>
@@ -29,7 +29,7 @@
           <p class="login-link-header">
             <a class="log-in" href="#">
               <img src="img/user.svg" width="12" height="12" alt="Иконка пользователя">
-              Вход
+              Войти
             </a>
           </p>
         </li>
@@ -73,10 +73,11 @@
 
   <main class="container">
     <h1 class="visually-hidden">Интернет-магазина гаджетов «Девайс»</h1>
+
     <!-- Слайдер специальных предложений -->
     <section class="slider-special-offer">
       <h2 class="visually-hidden">Специальные предложения</h2>
-      <div class="slide-1">
+      <div class="slide-1-monopod">
         <h3 class="visually-hidden">Специальное предложение - монопод</h3>
         <p class="name-offer">
           Делай селфи,<br>
@@ -101,7 +102,7 @@
         <img src="img/slider-1.png" width="384" height="486" alt="Монопод">
       </div>
 
-      <div class="slide-2 visually-hidden">
+      <div class="slide-2-fitness-bracelet visually-hidden">
         <h3 class="visually-hidden">Специальное предложение - фитнес-браслет</h3>
         <p class="name-offer">
           Худеем<br>
@@ -122,7 +123,7 @@
         <img src="img/slider-2.png" width="345" height="485" alt="Фитнес-браслет">
       </div>
 
-      <div class="slide-3 visually-hidden">
+      <div class="slide-3-quadcopter visually-hidden">
         <h3 class="visually-hidden">Специальное предложение - квадрокоптер</h3>
         <p class="name-offer">
           Порхает как бабочка,<br>
@@ -243,33 +244,36 @@
     </section>
 
     <!-- Смысловой блок "О нас" -->
-    <section class="about-us">
-      <h2>О нас</h2>
-      <p>
-        Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.
-      </p>
-      <p>
-        Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:
-      </p>
-      <ul class="carrier-companies">
-        <li><a href="https://www.dellin.ru/">Деловые Линии</a></li>
-        <li><a href="http://autotrading.ru/">Автотрейдинг</a></li>
-        <li><a href="https://www.jde.ru/">ЖелДорЭкспедиция</a></li>
-      </ul>
-      <a class="button" href="info.html">Подробнее о нас</a>
-    </section>
+    <div class="about-us_contacts">
+      <section class="about-us">
+        <h2>О нас</h2>
+        <p>
+          Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.
+        </p>
+        <p>
+          Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:
+        </p>
+        <ul class="carrier-companies">
+          <li><a href="https://www.dellin.ru/">Деловые Линии</a></li>
+          <li><a href="http://autotrading.ru/">Автотрейдинг</a></li>
+          <li><a href="https://www.jde.ru/">ЖелДорЭкспедиция</a></li>
+        </ul>
+        <a class="button" href="info.html">Подробнее о нас</a>
+      </section>
 
-    <!-- Смысловой блок "Контакты" -->
-    <section class="contacts">
-      <h2>Контакты</h2>
-      <p>
-        Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
-      </p>
-      <p class="map">
-        <a href="#"><img src="img/map.jpg" width="560" height="222" alt="Адрес местоположения интернет-магазина гаджетов «Девайс»: ул. Строителей, д.15"></a>
-      </p>
-      <a class="button" href="#">Напишите нам</a>
-    </section>
+      <!-- Смысловой блок "Контакты" -->
+      <section class="contacts">
+        <h2>Контакты</h2>
+        <p>
+          Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
+        </p>
+        <p class="map">
+          <a href="#"><img src="img/map.jpg" width="560" height="222" alt="Адрес местоположения интернет-магазина гаджетов «Девайс»: ул. Строителей, д.15"></a>
+        </p>
+        <a class="button" href="#">Напишите нам</a>
+      </section>
+    </div>
+
   </main>
 
   <footer class="main-footer">
@@ -301,16 +305,19 @@
         </p>
       </li>
     </ul>
+
     <!-- Навигация по каталогу -->
     <ul class="site-navigation-footer">
       <li><a href="#">Доставка</a></li>
       <li><a href="#">Гарантия</a></li>
       <li><a href="#">Контакты</a></li>
     </ul>
+
     <!-- Адрес организации -->
     <address>
       г. Москва, ул. Строителей, д.15
     </address>
+
     <!-- Социальные сети -->
     <div class="footer-social">
       <ul>
@@ -319,10 +326,12 @@
         <li><a class="social-button" href="#"><img src="img/tw.svg" width="32" height="32" alt="Twitter"></a></li>
       </ul>
     </div>
+
     <!-- Телефон организации -->
     <p class="call">
       <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
     </p>
+
     <!-- Ссылка на HTML Academy -->
     <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="27" height="35" alt="Профессиональный онлайн‑курс HTML Academy"></a>
   </footer>
@@ -332,21 +341,22 @@
   <h2 class="visually-hidden">Обратная связь</h2>
   <form action="https://echo.htmlacademy.ru" metod="post">
     <p class="user-name">
-      <label>
+      <label for="write-name">
         Ваше имя:
-        <input type="text" name="user-name" placeholder="Имя Фамилия">
       </label>
+      <input type="text" name="user-name" id="write-name" placeholder="Имя Фамилия">
     </p>
     <p class="email">
-      <label>
+      <label for="write-email">
         Ваш e-mail:
-        <input type="email" name="email" placeholder="email@example.com">
       </label>
+      <input type="email" name="email" id="write-email" placeholder="email@example.com">
     </p>
     <p class="message">
-      <label>Текст письма:
-        <textarea type="text" name="message" rows="10" cols="50" placeholder="В свободной форме"></textarea>
+      <label for="write-message">
+        Текст письма:
       </label>
+        <textarea type="text" name="message" id="write-message" rows="10" cols="50" placeholder="В свободной форме"></textarea>
     </p>
 
     <button class="button" type="submit">Отправить</button>

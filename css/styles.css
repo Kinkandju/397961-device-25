@@ -1,1 +1,342 @@
-﻿
+﻿@font-face {
+  font-family: 'Gilroy';
+  font-weight: 800;
+  font-style: normal;
+  src: local('Gilroy'),
+       url('../fonts/gilroyextrabold.woff2') format('woff2'),
+       url('../fonts/gilroyextrabold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  font-weight: 300;
+  font-style: normal;
+  src: local('Gilroy'),
+       url('../fonts/gilroylight.woff2') format('woff2'),
+       url('../fonts/gilroylight.woff') format('woff');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Gilroy', 'Open Sans', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: normal;
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+/* Стили кнопок */
+.button {
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 3.6px;
+  font-weight: 800;
+  color: #000000;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* Стили формы поиска */
+.search-form input {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.3);
+
+  background-color: #f0c52e;
+}
+
+/* Стили пользовательской навигации */
+.user-navigation-header {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 300;
+  letter-spacing: 0.2px;
+  color: #000000;
+
+  list-style: none;
+
+  background-color: #f0c52e;
+}
+
+/* Стили блока навигации по каталогу */
+.site-navigation-header {
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 3.6px;
+  font-weight: 800;
+  color: #000000;
+  text-transform: uppercase;
+
+  list-style: none;
+
+  background-color: #f0c52e;
+}
+
+.nested-list {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 15px;
+  letter-spacing: normal;
+  font-weight: 300;
+  line-height: 36px;
+  color: #000000;
+  text-transform: none;
+
+  list-style: none;
+
+  background-color: #f0c52e;
+}
+
+/* Стили слайдера специальных предложений */
+.slider-special-offer .name-offer{
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 47px;
+  line-height: 56px;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+  color: #000000;
+  text-transform: none;
+  text-align: left;
+
+  background-color: #ffffff;
+}
+
+.name-offer + p {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 300;
+  letter-spacing: 0.2px;
+  color: #464646;
+  text-align: left;
+
+  background-color: #ffffff;
+}
+
+.identification {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 300;
+  letter-spacing: 0.1px;
+  color: #464646;
+  text-align: left;
+
+  background-color: #ffffff;
+}
+
+.value {
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 36px;
+  line-height: 48px;
+  font-weight: 300;
+  letter-spacing: 0.4px;
+  color: #464646;
+  text-align: left;
+
+  background-color: #ffffff;
+}
+
+.catalog-list {
+  list-style: none;
+}
+
+/* Стили каталога товаров */
+.catalog h3 {
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  color: #000000;
+  text-align: left;
+
+  background-color: #ffffff;
+}
+
+/* Стили слайдера предоставляемых услуг */
+.slider-list {
+  list-style: none;
+  background-color: #e5e5e5;
+}
+
+.slider-list h3 {
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 47px;
+  line-height: 48px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #000000;
+  text-align: left;
+}
+
+.slider-list p {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 300;
+  letter-spacing: 0.2px;
+  color: #464646;
+  text-align: left;
+
+  background-color: #e5e5e5;
+}
+
+/* Логотипы */
+.logotypes-list {
+  list-style: none;
+}
+
+/* Стили блоков "О нас" и "Контакты" */
+.about-us_contacts h2 {
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 47px;
+  line-height: 48px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #000000;
+  text-align: left;
+
+  background-color: #ffffff;
+}
+
+.about-us_contacts p {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 300;
+  color: #464646;
+  text-align: left;
+
+  background-color: #ffffff;
+}
+
+.carrier-companies {
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 40px;
+  font-weight: 800;
+  color: #000000;
+  text-align: left;
+
+  background-color: #ffffff;
+  list-style-type: circle;
+}
+
+/* Стили пользовательской навигации снизу */
+.user-navigation-footer {
+  list-style: none;
+
+  background-color: #464646;
+}
+
+.user-navigation-footer a {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 15px;
+  line-height: 36px;
+  font-weight: 300;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+  opacity: 0.7;
+}
+
+/* Стили навигации по каталогу */
+.site-navigation-footer {
+  list-style: none;
+  background-color: #464646;
+}
+
+.site-navigation-footer li {
+  text-align: center;
+}
+
+.site-navigation-footer a {
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 3.6px;
+  font-weight: 800;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background-color: #464646;
+}
+
+/* Стили адреса */
+address {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 300;
+  color: #ffffff;
+  text-align: left;
+
+  background-color: #464646;
+}
+
+/* Стили социальных сетей */
+.footer-social ul {
+  list-style: none;
+
+  background-color: #464646;
+}
+
+.footer-social a {
+  opacity: 0.5;
+}
+
+/* Стили телефона организации */
+.call {
+  background-color: #464646;
+}
+
+.call a {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 300;
+  color: #ffffff;
+  text-align: right;
+}
+
+/* Стили формы модального окна (Обратная связь) */
+.modal-write-us {
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+  color: #000000;
+  text-align: left;
+
+  background-color: #ffffff;
+}
+
+.modal-write-us input[type="text"],
+.modal-write-us input[type="email"],
+textarea {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 300;
+  color: #464646;
+  opacity: 0.4;
+  text-align: left;
+
+  background-color: transparent;
+}
