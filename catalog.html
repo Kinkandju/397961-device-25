@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
   </head>
   <body>
 
@@ -79,15 +82,25 @@
         <span class="filters-name">Фильтр:</span>
 
         <!-- Фильтр выбора стоимости -->
+        <form action="https://echo.htmlacademy.ru" metod="get">
         <fieldset class="cost">
           <legend>Стоимость</legend>
-            <form action="https://echo.htmlacademy.ru" metod="get">
-              <img src="img/filter-button.svg" width="10" height="10" alt="Декоративная кнопка фильтра">
-              <img src="img/filter-button.svg" width="10" height="10" alt="Декоративная кнопка фильтра">
-              <label class="visually-hidden" for="cost-min">Минимальная цена товара</label>
-              <input type="text" name="price-min" id="cost-min" placeholder="от 0">
-              <label class="visually-hidden" for="cost-max">Максимальная цена товара</label>
-              <input type="text" name="price-max" id="cost-max" placeholder="до 5000">
+              <button class="round-button">Левая</button>
+              <button class="round-button">Правая</button>
+              <label for="cost-min">
+                <span class="visually-hidden">
+                  Минимальная цена товара
+                </span>
+                от
+              </label>
+              <input type="number" name="price-min" id="cost-min" value="0" placeholder="0">
+              <label for="cost-max">
+                <span class="visually-hidden">
+                  Максимальная цена товара
+                </span>
+                до
+              </label>
+              <input type="number" name="price-max" id="cost-max" value="5000" placeholder="5000">
         </fieldset>
 
         <!-- Фильтр выбора цвета -->
@@ -131,7 +144,6 @@
               </li>
             </ul>
           </fieldset>
-
         <button class="button filter-button" type="submit">Показать</button>
         </form>
       </section>
@@ -146,6 +158,7 @@
             <li class="sort-item"><a href="#">По типу</a></li>
             <li class="sort-item"><a href="#">По популярности</a></li>
           </ul>
+
             <!-- Здесь будут кнопки "вверх" и "вниз" -->
             <a class="button button-up" href="#">
               <img src="img/icon-up-dir.svg" width="11" height="10" alt="Сортировка по возрастанию">
@@ -154,6 +167,7 @@
               <img src="img/icon-down-dir.svg" width="11" height="10" alt="Сортировка по убыванию">
             </a>
         </div>
+        </section>
 
         <!-- Раздел каталога товаров -->
       <h2 class="visually-hidden">Каталог моноподов для селфи</h2>
