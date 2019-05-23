@@ -55,6 +55,11 @@ a {
   color: #000000;
   text-transform: uppercase;
   text-align: center;
+
+  width: 220px;
+  height: 8px;
+  background-color: #f0c52e;
+  border: none;
 }
 
 .button:hover {
@@ -129,6 +134,10 @@ a {
   background-color: #f0c52e;
 }
 
+.log-out {
+  opacity: 0.3;
+}
+
 /* Стили блока навигации по каталогу */
 .site-navigation-header {
   font-family: 'Gilroy', Arial, sans-serif;
@@ -147,15 +156,111 @@ a {
 .nested-list {
   font-family: 'Open Sans', Arial, sans-serif;
   font-size: 15px;
+  line-height: 36px;
   letter-spacing: normal;
   font-weight: 300;
-  line-height: 36px;
   color: #000000;
   text-transform: none;
 
   list-style: none;
 
   background-color: #f0c52e;
+}
+/* Стили "хлебных крошек" */
+.breadcrumbs {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  font-weight: 300;
+  color: #000000;
+  opacity: 0.3;
+
+  background-color: #ffffff;
+  list-style: none;
+}
+
+/* Стили фильтра по критериям товара */
+.filters-name {
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 3.2px;
+  font-weight: 800;
+  color: #000000;
+  text-transform: uppercase;
+  text-align: left;
+
+  background-color: #d9d9d9;
+}
+
+legend {
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  font-weight: 800;
+  color: #000000;
+  text-align: left;
+
+  background-color: #ebebeb;
+}
+
+.cost input {
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  font-weight: 300;
+  color: #000000;
+  opacity: 0.2;
+  text-align: center;
+
+  background-color: transparent;
+}
+.button-up,
+.button-down {
+  background-color: transparent;
+}
+
+.button-up:hover,
+.button-up:active,
+.button-down:hover,
+.button-down:active {
+  opacity: 0.2;
+
+  background-color: transparent;
+}
+
+.color-list,
+.bluetooth-list {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 40px;
+  letter-spacing: 0.1px;
+  font-weight: 300;
+  color: #000000;
+  text-align: left;
+
+  background-color: #ebebeb;
+  list-style: none;
+}
+
+/* Стили каталога товаров */
+.catalog-item-image:hover {
+  opacity: 0.7;
+}
+
+.button-price {
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  font-weight: 300;
+  color: #000000;
+  text-align: right;
+
+  background-color: transparent;
 }
 
 /* Стили слайдера специальных предложений */
@@ -213,7 +318,8 @@ a {
 }
 
 /* Стили каталога товаров */
-.catalog h3 {
+.catalog h3,
+.catalog-item-title {
   font-family: 'Gilroy', Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -231,7 +337,8 @@ a {
   background-color: #e5e5e5;
 }
 
-.slider-list h3 {
+.slider-list h3,
+.vpage-title {
   font-family: 'Gilroy', Arial, sans-serif;
   font-size: 47px;
   line-height: 48px;
@@ -342,14 +449,6 @@ a {
 
   background-color: #464646;
 }
-
-/* .site-navigation-footer a:hover {
-  opacity: 0.6;
-}
-
-.site-navigation-footer a:active {
-  opacity: 0.3;
-} */
 
 /* Стили адреса */
 address {
