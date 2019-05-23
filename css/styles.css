@@ -34,6 +34,17 @@ a {
   color: #000000;
 }
 
+/* Изменение состояний при наведении на ссылки */
+.main-navigation a:hover,
+.main-footer a:hover {
+  opacity: 0.6;
+}
+
+.main-navigation a:active,
+.main-footer a:active {
+  opacity: 0.3;
+}
+
 /* Стили кнопок */
 .button {
   font-family: 'Gilroy', Arial, sans-serif;
@@ -46,15 +57,62 @@ a {
   text-align: center;
 }
 
+.button:hover {
+  width: 220px;
+  height: 40px;
+  background-color: #f0c52e;
+}
+
+.button:active {
+  opacity: 0.3;
+
+  width: 220px;
+  height: 40px;
+  background-color: #f0c52e;
+
+}
+
 /* Стили формы поиска */
 .search-form input {
   font-family: 'Open Sans', Arial, sans-serif;
   font-size: 15px;
   line-height: 30px;
   font-weight: 300;
-  color: rgba(0, 0, 0, 0.3);
+  color: rgba(255, 255, 255, 0.3);
 
-  background-color: #f0c52e;
+  background-color: transparent;
+}
+
+.search-form input:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.search-form input:hover {
+  color: #000000;
+}
+
+.button-search {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 300;
+  letter-spacing: 0.2px;
+  color: #000000;
+
+  background-color: transparent;
+  width: 85px;
+  height: 49px;
+  border: solid 2px #000000;
+}
+
+.button-search:hover {
+  color: #ffffff;
+
+  background-color: #000000;
+}
+
+.button-search:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 /* Стили пользовательской навигации */
@@ -253,6 +311,16 @@ a {
   opacity: 0.7;
 }
 
+.user-navigation-footer a:hover {
+  color: #ffffff;
+  opacity: 1;
+}
+
+.user-navigation-footer a:active {
+  color: #ffffff;
+  opacity: 0.3;
+}
+
 /* Стили навигации по каталогу */
 .site-navigation-footer {
   list-style: none;
@@ -275,6 +343,14 @@ a {
   background-color: #464646;
 }
 
+/* .site-navigation-footer a:hover {
+  opacity: 0.6;
+}
+
+.site-navigation-footer a:active {
+  opacity: 0.3;
+} */
+
 /* Стили адреса */
 address {
   font-family: 'Open Sans', Arial, sans-serif;
@@ -296,7 +372,15 @@ address {
 }
 
 .footer-social a {
-  opacity: 0.5;
+  opacity: 0.3;
+}
+
+.footer-social a:hover {
+  opacity: 0.6;
+}
+
+.footer-social a:active {
+  opacity: 0.1;
 }
 
 /* Стили телефона организации */
