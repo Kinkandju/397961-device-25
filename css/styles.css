@@ -29,8 +29,16 @@ body {
   background-color: #ffffff;
 }
 
+/* Стилизация ссылок */
 a {
   text-decoration: none;
+}
+
+.main-navigation a,
+.main-footer a,
+.about-us a,
+.breadcrumbs a,
+.catalog a {
   color: #000000;
 }
 
@@ -511,7 +519,7 @@ address {
 
 .modal-write-us input[type="text"],
 .modal-write-us input[type="email"],
-textarea {
+.modal-write-us textarea {
   font-family: 'Open Sans', Arial, sans-serif;
   font-style: normal;
   font-size: 14px;
