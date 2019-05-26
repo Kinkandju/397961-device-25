@@ -85,7 +85,6 @@ a {
   height: 40px;
   background-color: #f0c52e;
   border: none;
-
 }
 
 /* Стили формы поиска */
@@ -217,6 +216,12 @@ legend {
   background-color: #ebebeb;
 }
 
+.cost,
+.color,
+.bluetooth {
+  border: none;
+}
+
 .cost input {
   font-family: 'Gilroy', Arial, sans-serif;
   font-size: 14px;
@@ -229,6 +234,39 @@ legend {
 
   background-color: transparent;
 }
+
+/* Стили сортировки товаров */
+.sort-name {
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 3.2px;
+  font-weight: 800;
+  color: #000000;
+  text-align: left;
+  text-transform: uppercase;
+
+  background-color: #ebebeb;
+}
+
+.sort-list {
+  list-style: none;
+  background-color: #ebebeb;
+}
+
+.sort-item a {
+  font-family: 'OpenSans', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.3);
+  text-align: left;
+}
+
+.sort-current a {
+  color: #000000;
+}
+
 .button-up,
 .button-down {
   background-color: transparent;
@@ -273,6 +311,31 @@ legend {
 
   background-color: transparent;
 }
+
+/* Стили пагинации */
+.pagination-list {
+  list-style: none;
+}
+
+.pagination-item a {
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 3.2px;
+  font-weight: 800;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.pagination-item:nth-child(3) a,
+.pagination-item:nth-child(4) a{
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.pagination-item:nth-child(1) a:active {
+  color: #000000;
+}
+
 
 /* Стили слайдера специальных предложений */
 .slider-special-offer .name-offer{
