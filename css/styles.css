@@ -9,7 +9,8 @@
 
 @font-face {
   font-family: 'Gilroy';
-  font-weight: 300;
+  font-weigh
+  t: 300;
   font-style: normal;
   src: local('Gilroy'),
        url('../fonts/gilroylight.woff2') format('woff2'),
@@ -74,14 +75,16 @@ a {
   width: 220px;
   height: 40px;
   background-color: #f0c52e;
+  border: none;
 }
 
 .button:active {
-  opacity: 0.3;
+  color: rgba(0, 0, 0, 0.3);
 
   width: 220px;
   height: 40px;
   background-color: #f0c52e;
+  border: none;
 
 }
 
@@ -368,6 +371,23 @@ legend {
   background-color: #e5e5e5;
 }
 
+.button-delivery:active,
+.button-warranty:active,
+.button-credit:active {
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+  letter-spacing: 3.6px;
+  color: #f7e184;
+  text-align: center;
+
+  width: 278px;
+  height: 40px;
+  background-color: #000000;
+  border: none;
+}
+
 /* Логотипы */
 .logotypes-list {
   list-style: none;
@@ -530,4 +550,9 @@ address {
   text-align: left;
 
   background-color: transparent;
+}
+
+/* Стилизация скрытых блоков, заголовков, надписей */
+.visually-hidden {
+  display: none;
 }
