@@ -124,6 +124,53 @@ body > * > * > * {
   margin-left: 20px;
 }
 
+/* Сеточная стилизация блока каталога товаров */
+.catalog-list {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-list li {
+  position: relative;
+
+  margin-bottom: 164px;
+
+  width: 160px;
+  height: 160px;
+
+  background-color: rgba(94%, 77%, 18%, 0.5);
+}
+
+.catalog-list a {
+/* position: relative; */
+}
+
+.catalog-list h3 {
+  position: absolute;
+
+  top: 176px;
+}
+
+/* Сеточная стилизация cлайдера предоставляемых услуг */
+.slider-service {
+  display: flex;
+
+  background-color: #e5e5e5;
+}
+
+/* Сеточная стилизация блока "Логотипы" */
+.logotypes-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Сеточная стилизация блоков "О нас" и "Контакты" */
+.about-us_contacts {
+  display: flex;
+}
 
 /* ---------------------------------------------------------------------- */
 body {
