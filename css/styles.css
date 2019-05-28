@@ -38,37 +38,42 @@ body > * > * > * {
   margin-right: 20px;
 }
 
-.main-header-logo {
-  width: 163px;
-  height: 35px;
-
-  position: absolute;
-  top: -17px;
-}
-
 .main-navigation {
+  position: relative;
+
   padding-top: 50px;
-  padding-left: 60px;
-  padding-right: 60px;
+  padding-left: 59px;
+  padding-right: 59px;
   padding-bottom: 40px;
   margin-left: auto;
   margin-right: auto;
 
   width: 1160px;
-
   background-color: rgba(94%, 77%, 18%, 0.5);
+}
 
-  min-height: 299px;
+.main-header-logo {
+  position: absolute;
+  top: -17px;
 
-  position: relative;
+  width: 163px;
+  height: 35px;
 }
 
 .navigation-container {
   display: flex;
+
+  margin-bottom: ;
 }
 
 .search-form {
   display: flex;
+
+  margin-bottom: 50px;
+}
+
+.button-search {
+  margin-right: 100px;
 }
 
 .user-navigation-header {
@@ -80,13 +85,48 @@ body > * > * > * {
   list-style: none;
 }
 
+.login-link {
+  margin-right: 215px;
+}
+
+.difference {
+  margin-right: 40px;
+}
+
 .site-navigation-header {
   display: flex;
 
   margin: 0;
+  margin-bottom: 34px;
   padding: 0;
 
   list-style: none;
+}
+
+.site-navigation-header li:nth-child(1) {
+  padding-right: 32px;
+  margin-right: 280px;
+}
+
+.site-navigation-header li:nth-child(2) {
+  margin-right: 35px;
+}
+
+.site-navigation-header li:nth-child(4) {
+  margin-left: auto;
+}
+
+/* Сеточная основного содержания сайта */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 1160px;
+}
+
+.container-center {
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 /* ---------------------------------------------------------------------- */
@@ -161,25 +201,25 @@ a {
 }
 
 /* Стили формы поиска */
-.search-form input {
+.search-form input[type="search"] {
   font-family: 'Open Sans', Arial, sans-serif;
   font-size: 15px;
   line-height: 30px;
   font-weight: 300;
-  color: rgba(255, 255, 255, 0.3);
+  /* color: rgba(255, 255, 255, 0.3); */
   border: none;
-  border-bottom: 2px solid #000000;
 
-  background-color: transparent;
   width: 356px;
-  }
-
-.search-form input:hover {
-  color: rgba(255, 255, 255, 0.6);
+  background-color: transparent;
 }
 
-.search-form input:hover {
+.search-form input[type="search"]:focus {
   color: #000000;
+  border-bottom: 2px solid #000000;
+  }
+
+.search-form input[type="search"]:hover {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .button-search {
