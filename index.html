@@ -16,46 +16,49 @@
       <!-- Логотип -->
       <a class="main-header-logo" href="index.html"><img src="img/device.svg" width="163" height="35" alt="Логотип интернет-магазина гаджетов «Девайс»"></a>
 
-      <!-- Форма поиска -->
-      <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-        <label class="visually-hidden" for="search-site">Поиск по сайту</label>
-        <input type="search" id="search-site" placeholder="Поиск по сайту">
-        <button class="button-search" type="submit">Найти</button>
-      </form>
+      <!-- div-оболочка для удобства стилизации -->
+      <div class="navigation-container">
+        <!-- Форма поиска -->
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+          <label class="visually-hidden" for="search-site">Поиск по сайту</label>
+          <input type="search" id="search-site" placeholder="Поиск по сайту">
+          <button class="button-search" type="submit">Найти</button>
+        </form>
 
-      <!-- Пользовательская навигация -->
-      <ul class="user-navigation-header">
-        <li class="login-link">
-          <p class="login-link-header">
-            <a class="log-in" href="#">
-              <img src="img/user.svg" width="12" height="12" alt="Иконка пользователя">
-              Войти
-            </a>
-          </p>
-        </li>
-        <li class="difference">
-          <p class="difference-header">
-            <a class="icon" href="#">
-              <img src="img/compare.svg" width="12" height="12" alt="Иконка сравнения товаров">
-              Сравнить
-            </a>
-          </p>
-        </li>
-        <li class="purchases">
-          <p class="purchases-header">
-            <a class="icon" href="#">
-              <img src="img/cart.svg" width="12" height="12" alt="Иконка корзины с товарами">
-              Корзина
-            </a>
-          </p>
-        </li>
-      </ul>
+        <!-- Пользовательская навигация -->
+        <ul class="user-navigation-header">
+          <li class="login-link">
+            <p class="login-link-header">
+              <a class="log-in" href="#">
+                <img src="img/user.svg" width="12" height="12" alt="Иконка пользователя">
+                Войти
+              </a>
+            </p>
+          </li>
+          <li class="difference">
+            <p class="difference-header">
+              <a class="icon" href="#">
+                <img src="img/compare.svg" width="12" height="12" alt="Иконка сравнения товаров">
+                Сравнить
+              </a>
+            </p>
+          </li>
+          <li class="purchases">
+            <p class="purchases-header">
+              <a class="icon" href="#">
+                <img src="img/cart.svg" width="12" height="12" alt="Иконка корзины с товарами">
+                Корзина
+              </a>
+            </p>
+          </li>
+        </ul>
+      </div>
 
       <!-- Навигация по каталогу -->
       <ul class="site-navigation-header">
         <li>
-          <a href="catalog.html">Каталог товаров<img src="img/plus.svg" width="16" height="16" alt="Раскрывающийся плюс"></a>
-          <ul class="nested-list">
+          <a href="catalog.html">Каталог товаров<img src="img/plus.svg" width="16" height="16" alt="Раскрывающийся список"></a>
+          <ul class="visually-hidden nested-list">
             <li><a href="#">Виртуальная реальность</a></li>
             <li><a href="#">Моноподы для селфи</a></li>
             <li><a href="#">Экшн-камеры</a></li>
