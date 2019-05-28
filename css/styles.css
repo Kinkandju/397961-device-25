@@ -34,21 +34,18 @@ body > * > * > * {
 /* Сеточная стилизация шапки сайта */
 .main-header {
   margin-top: 40px;
-  margin-left: 20px;
   margin-right: 20px;
+  margin-left: 20px;
 }
 
 .main-navigation {
   position: relative;
 
-  padding-top: 50px;
+  padding-top: 46px;
   padding-left: 59px;
   padding-right: 59px;
   padding-bottom: 40px;
-  margin-left: auto;
-  margin-right: auto;
 
-  width: 1160px;
   background-color: rgba(94%, 77%, 18%, 0.5);
 }
 
@@ -62,42 +59,46 @@ body > * > * > * {
 
 .navigation-container {
   display: flex;
-
-  margin-bottom: ;
 }
 
 .search-form {
   display: flex;
 
-  margin-bottom: 50px;
-}
-
-.button-search {
   margin-right: 100px;
+  margin-bottom: 40px;
+
+  width: 441px;
 }
 
 .user-navigation-header {
   display: flex;
+  justify-content: flex-start;
 
   margin: 0;
+  /* margin-bottom: 40px; */
   padding: 0;
 
+  width: 488px;
   list-style: none;
 }
 
-.login-link {
-  margin-right: 215px;
+.user-navigation-header li:nth-child(1){
+  margin-right: 200px;
 }
 
-.difference {
-  margin-right: 40px;
+.user-navigation-header li:nth-child(2) {
+  margin-right: 20px;
+}
+
+.user-navigation-header li:nth-child(3) {
+  margin-left: auto;
 }
 
 .site-navigation-header {
   display: flex;
 
   margin: 0;
-  margin-bottom: 34px;
+  margin-bottom: 30px;
   padding: 0;
 
   list-style: none;
@@ -105,7 +106,7 @@ body > * > * > * {
 
 .site-navigation-header li:nth-child(1) {
   padding-right: 32px;
-  margin-right: 280px;
+  margin-right: 275px;
 }
 
 .site-navigation-header li:nth-child(2) {
@@ -116,23 +117,20 @@ body > * > * > * {
   margin-left: auto;
 }
 
-/* Сеточная основного содержания сайта */
+/* Сеточная стилизация основного содержания сайта */
 .container {
-  margin-left: auto;
-  margin-right: auto;
-
-  width: 1160px;
-}
-
-.container-center {
-  margin-left: 20px;
+  /* margin-top: 40px; */
   margin-right: 20px;
+  margin-left: 20px;
 }
+
 
 /* ---------------------------------------------------------------------- */
 body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+
+  width: 1160px;
 
   font-family: 'Gilroy', 'Open Sans', Arial, sans-serif;
   font-size: 18px;
