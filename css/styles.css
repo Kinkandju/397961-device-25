@@ -159,8 +159,32 @@ body > * > * > * {
   background-color: rgba(94%, 77%, 18%, 0.5);
 }
 
+/* Я запуталась. Как выровнять отдельно каждый товар? Пробовала позиционировать, начинают вырвниваться все. Флексами тоже ерундистика получается. */
 .catalog-list a {
-/* position: relative; */
+}
+
+.catalog-list h3 {
+}
+
+.catalog-list img {
+}
+
+/* .catalog-list img:nth-child(1) {
+  position: absolute;
+  top: 52px;
+  left: 31px;
+} */
+
+/* .catalog-list img:nth-child(2) {
+  position: absolute;
+  top: 41px;
+  left: 38px;
+}
+
+.catalog-list img:nth-child(3) {
+  position: absolute;
+  top: 38px;
+  left: 49px; */
 }
 
 .catalog-list h3 {
