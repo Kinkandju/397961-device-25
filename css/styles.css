@@ -185,7 +185,32 @@ body > * > * > * {
   display: flex;
   flex-direction: column;
 
-  width: 278px;
+  width: 285px;
+}
+
+.slide-service-1 {
+  display: flex;
+
+  padding-left: 117px;
+}
+
+.slide-service-1 h3 {
+  position: relative;
+  top: -90px;
+}
+
+.slide-service-1 p {
+  position: relative;
+  top: -90px;
+
+  padding-right: 130px;
+}
+
+.slide-service-1 img {
+  padding-right: 206px;
+
+  position: relative;
+  top: -33px;
 }
 
 /* Сеточная стилизация блока "Логотипы" */
