@@ -10,74 +10,78 @@
 </head>
 
 <body>
+  <!-- div-центровщик для удобства стилизации -->
+  <div class="layout-container ">
+    <header class="main-header">
+      <nav class="main-navigation">
+        <!-- Логотип -->
+        <a class="main-header-logo" href="index.html"><img src="img/device.svg" width="163" height="35" alt="Логотип интернет-магазина гаджетов «Девайс»"></a>
 
-  <header class="main-header">
-    <nav class="main-navigation">
-      <!-- Логотип -->
-      <a class="main-header-logo" href="index.html"><img src="img/device.svg" width="163" height="35" alt="Логотип интернет-магазина гаджетов «Девайс»"></a>
+        <!-- div-оболочка для удобства стилизации -->
+        <div class="navigation-container">
+          <!-- Форма поиска -->
+          <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+            <label class="visually-hidden" for="search-site">Поиск по сайту</label>
+            <input type="search" id="search-site" placeholder="Поиск по сайту">
+            <button class="button-search" type="submit">Найти</button>
+          </form>
 
-      <!-- div-оболочка для удобства стилизации -->
-      <div class="navigation-container">
-        <!-- Форма поиска -->
-        <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-          <label class="visually-hidden" for="search-site">Поиск по сайту</label>
-          <input type="search" id="search-site" placeholder="Поиск по сайту">
-          <button class="button-search" type="submit">Найти</button>
-        </form>
-
-        <!-- Пользовательская навигация -->
-        <ul class="user-navigation-header">
-          <li class="login-link">
-            <p class="login-link-header">
-              <a class="icon" href="#">
-                <img src="img/user.svg" width="12" height="12" alt="Иконка пользователя">
-                Войти
-              </a>
-            </p>
-          </li>
-          <li class="difference">
-            <p class="difference-header">
-              <a class="icon" href="#">
-                <img src="img/compare.svg" width="12" height="12" alt="Иконка сравнения товаров">
-                Сравнить
-              </a>
-            </p>
-          </li>
-          <li class="purchases">
-            <p class="purchases-header">
-              <a class="icon" href="#">
-                <img src="img/cart.svg" width="12" height="12" alt="Иконка корзины с товарами">
-                Корзина
-              </a>
-            </p>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Навигация по каталогу -->
-      <ul class="site-navigation-header">
-        <li>
-          <a href="catalog.html">Каталог товаров<img src="img/plus.svg" width="16" height="16" alt="Раскрывающийся список"></a>
-          <ul class="visually-hidden nested-list">
-            <li><a href="#">Виртуальная реальность</a></li>
-            <li><a href="#">Моноподы для селфи</a></li>
-            <li><a href="#">Экшн-камеры</a></li>
-            <li><a href="#">Фитнес-браслеты</a></li>
-            <li><a href="#">Умные часы</a></li>
-            <li><a href="#">Квадрокоптеры</a></li>
+          <!-- Пользовательская навигация -->
+          <ul class="user-navigation-header">
+            <li class="login-link">
+              <p class="login-link-header">
+                <a class="icon" href="#">
+                  <img src="img/user.svg" width="12" height="12" alt="Иконка пользователя">
+                  Войти
+                </a>
+              </p>
+            </li>
+            <li class="difference">
+              <p class="difference-header">
+                <a class="icon" href="#">
+                  <img src="img/compare.svg" width="12" height="12" alt="Иконка сравнения товаров">
+                  Сравнить
+                </a>
+              </p>
+            </li>
+            <li class="purchases">
+              <p class="purchases-header">
+                <a class="icon" href="#">
+                  <img src="img/cart.svg" width="12" height="12" alt="Иконка корзины с товарами">
+                  Корзина
+                </a>
+              </p>
+            </li>
           </ul>
-        </li>
-        <li><a href="#">Доставка</a></li>
-        <li><a href="#">Гарантия</a></li>
-        <li><a href="#">Контакты</a></li>
-      </ul>
-    </nav>
-  </header>
+        </div>
+
+        <!-- Навигация по каталогу -->
+        <ul class="site-navigation-header">
+          <li>
+            <a href="catalog.html">Каталог товаров<img src="img/plus.svg" width="16" height="16" alt="Раскрывающийся список"></a>
+            <ul class="visually-hidden nested-list">
+              <li><a href="#">Виртуальная реальность</a></li>
+              <li><a href="#">Моноподы для селфи</a></li>
+              <li><a href="#">Экшн-камеры</a></li>
+              <li><a href="#">Фитнес-браслеты</a></li>
+              <li><a href="#">Умные часы</a></li>
+              <li><a href="#">Квадрокоптеры</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Гарантия</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+
 
   <main class="container">
 
       <h1 class="visually-hidden">Интернет-магазина гаджетов «Девайс»</h1>
-
+    <!-- div-центровщик для удобства стилизации -->
+    <div class="layout-container ">
       <!-- Слайдер специальных предложений -->
       <section class="slider-special-offer">
         <h2 class="visually-hidden">Специальные предложения</h2>
@@ -193,9 +197,12 @@
           </li>
         </ul>
       </section>
+    </div>
 
       <!-- Слайдер предоставляемых услуг -->
-      <section class="slider-service">
+    <section class="slider-service">
+      <!-- div-центровщик для удобства стилизации -->
+      <div class="layout-container ">
         <h2 class="visually-hidden">Предоставляемые услуги</h2>
         <div class="slider-bottons">
           <button class="button button-delivery">Доставка</button>
@@ -226,8 +233,11 @@
             <img src="img/credit.svg" width="156" height="186" alt="Кредит">
           </li>
         </ul>
-      </section>
+      </div>
+    </section>
 
+      <!-- div-центровщик для удобства стилизации -->
+      <div class="layout-container ">
       <!-- Смысловой блок "Логотипы" -->
       <section class="logotypes">
         <h2 class="visually-hidden">Логотипы компаний</h2>
@@ -278,10 +288,12 @@
             <a class="button" href="#">Напишите нам</a>
           </section>
       </div>
-
+  </div>
   </main>
 
   <footer class="main-footer">
+    <!-- div-центровщик для удобства стилизации -->
+    <div class="layout-container ">
     <!-- div-оболочка для удобства стилизации -->
     <div class="logo-user-navigation">
       <!-- Логотип -->
@@ -350,7 +362,7 @@
       <!-- Ссылка на HTML Academy -->
       <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="27" height="35" alt="Профессиональный онлайн‑курс HTML Academy"></a>
     </div>
-
+  </div>
   </footer>
 
 <!-- Форма модального окна (Обратная связь) -->

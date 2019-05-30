@@ -32,10 +32,15 @@ body > * > * > * {
 } */
 
 /* Сеточная стилизация шапки сайта */
+.layout-container {
+  margin: 0 auto;
+  padding: 0 20px;
+
+  width: 1200px;
+}
+
 .main-header {
   margin-top: 40px;
-  margin-right: 20px;
-  margin-left: 20px;
 }
 
 .main-navigation {
@@ -59,6 +64,7 @@ body > * > * > * {
 
 .navigation-container {
   display: flex;
+  justify-content: space-between;
 }
 
 .search-form {
@@ -67,32 +73,27 @@ body > * > * > * {
   margin-right: 100px;
   margin-bottom: 40px;
 
-  width: 441px;
+  width: 440px;
 }
 
 .user-navigation-header {
   display: flex;
-  justify-content: flex-start;
 
   margin: 0;
-  /* margin-bottom: 40px; */
   padding: 0;
 
-  width: 488px;
+  width: 620px;
   list-style: none;
 }
 
-.user-navigation-header li:nth-child(1){
-  margin-right: 200px;
+.login-link {
+  margin-right: auto;
 }
 
-.user-navigation-header li:nth-child(2) {
-  margin-right: 20px;
+.difference {
+  margin-right: 40px;
 }
 
-.user-navigation-header li:nth-child(3) {
-  margin-left: auto;
-}
 
 .site-navigation-header {
   display: flex;
@@ -251,12 +252,8 @@ body > * > * > * {
 
 /* ---------------------------------------------------------------------- */
 body {
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
-  padding-left: 20px;
-  padding-right: 20px;
-
-  width: 1200px;
 
   font-family: 'Gilroy', 'Open Sans', Arial, sans-serif;
   font-size: 18px;
