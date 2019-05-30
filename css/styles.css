@@ -170,6 +170,81 @@ body > * > * > * {
 /* Сеточная стилизация блоков "О нас" и "Контакты" */
 .about-us_contacts {
   display: flex;
+
+  margin-bottom: 70px;
+}
+
+.about-us {
+  padding-right: 85px;
+}
+
+/* Сеточная стилизация подвала сайта */
+.main-footer {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 80px;
+
+  background-color: #464646;
+}
+
+.main-footer-logo {
+  position: absolute;
+  top: 65px;
+  left: 20px;
+
+  width: 163px;
+  height: 35px;
+}
+
+.logo-user-navigation {
+  display: flex;
+  justify-content: flex-end;
+
+  position: relative;
+}
+
+.user-navigation-footer {
+  display: flex;
+  justify-content: flex-end;
+
+  margin: 0;
+  margin-right: 20px;
+  margin-left: 20px;
+  padding: 0;
+  padding-top: 35px;
+}
+
+.user-navigation-footer li {
+  margin-left: 40px;
+}
+
+.address-site-navigation-call {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.site-navigation-footer {
+  display: flex;
+  justify-content: space-between;
+
+  width: 440px;
+}
+
+.social-copyright {
+  display: flex;
+}
+
+.footer-social-list {
+  display: flex;
+  flex-direction: row;
+
+  margin:0;
+  padding: 0;
 }
 
 /* ---------------------------------------------------------------------- */
