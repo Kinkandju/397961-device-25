@@ -20,15 +20,15 @@
 
 /* Подсветка отдельных блоков сайта */
 /* body > * {
-  background-color: rgba(225, 0, 0, 0.3);
+  outline: red solid 2px;
 }
 
 body > * > * {
-  background-color: rgba(225, 225, 0, 0.3);
+  outline: green solid 2px;
 }
 
 body > * > * > * {
-  background-color: rgba(0, 0, 225, 0.3);
+  outline: blue solid 2px;
 } */
 
 /* Сеточная стилизация шапки сайта */
@@ -139,12 +139,6 @@ body > * > * > * {
   padding-right: 80px;
 }
 
-.container {
-  /* margin-top: 40px; */
-  /* margin-right: 20px;
-  margin-left: 20px; */
-}
-
 /* Сеточная стилизация блока каталога товаров */
 .catalog-list {
   display: flex;
@@ -178,8 +172,21 @@ body > * > * > * {
 /* Сеточная стилизация cлайдера предоставляемых услуг */
 .slider-service-container {
   background-color: #e5e5e5;
+
+  min-height: 288px;
 }
 
+.slider-service {
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider-bottons {
+  display: flex;
+  flex-direction: column;
+
+  width: 278px;
+}
 
 /* Сеточная стилизация блока "Логотипы" */
 .logotypes-list {
@@ -257,16 +264,32 @@ body > * > * > * {
 
 .social-copyright {
   display: flex;
-  justify-content: center;
 
   padding-top: 60px;
+  padding-bottom: 65px;
+}
+
+.social-copyright a {
+  /* margin-left: auto; */
+}
+
+.footer-social {
+  margin: 0 auto;
 }
 
 .footer-social-list {
   display: flex;
 
-  margin:0;
+  margin: 0;
   padding: 0;
+}
+
+.footer-social-list li:nth-child(1) {
+  padding-right: 23px;
+}
+
+.footer-social-list li:nth-child(2) {
+  padding-right: 23px;
 }
 
 /* ---------------------------------------------------------------------- */
@@ -318,25 +341,21 @@ a {
   text-transform: uppercase;
   text-align: center;
 
-  width: 220px;
-  height: 8px;
-  background-color: rgba(94%, 77%, 18%, 0.5);
+  padding: 10px 40px;
+
+  background-color: #f0c52e;
   border: none;
 }
 
 .button:hover {
-  width: 220px;
-  height: 40px;
-  background-color: rgba(94%, 77%, 18%, 0.5);
+  background-color: #f0c52e;
   border: none;
 }
 
 .button:active {
   color: rgba(0, 0, 0, 0.3);
 
-  width: 220px;
-  height: 40px;
-  background-color: rgba(94%, 77%, 18%, 0.5);
+  background-color: #f0c52e;
   border: none;
 }
 
