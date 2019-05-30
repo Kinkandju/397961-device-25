@@ -237,11 +237,13 @@ body > * > * > * {
 
 .social-copyright {
   display: flex;
+  justify-content: center;
+
+  padding-top: 60px;
 }
 
 .footer-social-list {
   display: flex;
-  flex-direction: row;
 
   margin:0;
   padding: 0;
