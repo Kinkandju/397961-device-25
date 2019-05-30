@@ -253,8 +253,10 @@ body > * > * > * {
 body {
   margin: 0 auto;
   padding: 0;
+  padding-left: 20px;
+  padding-right: 20px;
 
-  width: 1160px;
+  width: 1200px;
 
   font-family: 'Gilroy', 'Open Sans', Arial, sans-serif;
   font-size: 18px;
