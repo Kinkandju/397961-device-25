@@ -254,6 +254,101 @@ body > * > * > * {
   padding-right: 85px;
 }
 
+/* Сеточная стилизация заголовка страницы каталога */
+.vpage-title {
+  padding-left: 60px;
+}
+
+/* Сеточная стилизация сортировки товаров страницы каталога */
+.filter {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+
+  background-color: #ebebeb;
+}
+
+.sort-name {
+  /* padding-right: 50px; */
+}
+
+.sort-list {
+  display: flex;
+  /* padding-right: 25px; */
+}
+
+/* Сеточная стилизация "хлебных крошек" страницы каталога */
+.breadcrumbs {
+  display: flex;
+
+  padding-left: 60px;
+}
+
+.breadcrumbs li {
+  padding-right: 35px;
+}
+
+/* Сеточная стилизация фильтра и каталога товаров страницы каталога */
+.filters-catalog-container {
+  display: flex;
+}
+
+.filters-container {
+  padding-left: 60px;
+  padding-right: 67px;
+
+  width: 200px;
+
+  background-color: #ebebeb;
+}
+
+.catalog-list-item {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  margin: 0;
+  padding: 0;
+  padding-left: 73px;
+  padding-top: 69px;
+
+  list-style: none;
+}
+
+.catalog-item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.catalog-item .catalog-item-image {
+  order: -1;
+}
+
+/* Сеточная стилизация пагинации страницы каталога */
+.pagination-list {
+  display: flex;
+  justify-content: space-between;
+  /* Подправить потом цифры по центру */
+
+  margin: 0;
+  margin-left: 73px;
+  padding: 0;
+
+  background-color: #ebebeb;
+}
+
+.pagination-list li {
+  padding: 25px 30px;
+}
+
+
+/* .filter {
+  display: flex;
+
+  background-color: #ebebeb;
+} */
+
 /* Сеточная стилизация подвала сайта */
 .main-footer {
   display: flex;
