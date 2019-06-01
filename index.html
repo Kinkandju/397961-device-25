@@ -12,7 +12,7 @@
 <body>
   <!-- div-центровщик для удобства стилизации -->
   <div class="layout-container">
-    
+
     <header class="main-header">
       <nav class="main-navigation">
         <!-- Логотип -->
@@ -20,6 +20,7 @@
 
         <!-- div-оболочка для удобства стилизации -->
         <div class="navigation-container">
+
           <!-- Форма поиска -->
           <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
             <label class="visually-hidden" for="search-site">Поиск по сайту</label>
@@ -60,7 +61,7 @@
         <ul class="site-navigation-header">
           <li>
             <a href="catalog.html">Каталог товаров<img src="img/plus.svg" width="16" height="16" alt="Раскрывающийся список"></a>
-            <ul class="visually-hidden nested-list">
+            <ul class="nested-list">
               <li><a href="#">Виртуальная реальность</a></li>
               <li><a href="#">Моноподы для селфи</a></li>
               <li><a href="#">Экшн-камеры</a></li>
@@ -81,8 +82,10 @@
   <main class="container">
 
       <h1 class="visually-hidden">Интернет-магазина гаджетов «Девайс»</h1>
+
     <!-- div-центровщик для удобства стилизации -->
     <div class="layout-container ">
+
       <!-- Слайдер специальных предложений -->
       <section class="slider-special-offer">
         <h2 class="visually-hidden">Специальные предложения</h2>
@@ -97,7 +100,7 @@
               Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
             </p>
             <a class="button" href="#">Подробнее</a>
-            <table summary="Характеристики товаров - монопод">
+            <table class="table-container" summary="Характеристики товаров - монопод">
               <tr class="identification">
                 <td>Длина палки</td>
                 <td>Вес палки</td>
@@ -123,7 +126,7 @@
             Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
           </p>
           <a class="button" href="#">Подробнее</a>
-          <table summary="Преимущество товаров - фитнес-браслет">
+          <table class="table-container" summary="Преимущество товаров - фитнес-браслет">
             <tr class="identification">
               <td>Без подзарядки</td>
             </tr>
@@ -144,7 +147,7 @@
             Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
           </p>
           <a class="button" href="#">Подробнее</a>
-          <table summary="Характеристики товаров - квадрокоптер">
+          <table class="table-container" summary="Характеристики товаров - квадрокоптер">
             <tr class="identification">
               <td>Дальность полета</td>
               <td>Радиус поражения</td>
@@ -165,37 +168,49 @@
           <li>
             <a href="#">
               <h3>Виртуальная реальность</h3>
+              <span class="catalog-list-image">
               <img src="img/popular-1.svg" width="97" height="55" alt="Виртуальная реальность">
+              </span>
             </a>
           </li>
           <li>
             <a href="#">
             <h3>Моноподы для селфи</h3>
+            <span class="catalog-list-image">
             <img src="img/popular-2.svg" width="86" height="117" alt="Моноподы для селфи">
+            </span>
           </a>
           </li>
           <li>
             <a href="#">
             <h3>Экшн-камеры</h3>
+            <span class="catalog-list-image">
             <img src="img/popular-3.svg" width="71" height="87" alt="Экшн-камеры">
+            </span>
           </a>
           </li>
           <li>
             <a href="#">
             <h3>Фитнес-браслеты</h3>
+            <span class="catalog-list-image">
             <img src="img/popular-4.svg" width="107" height="65" alt="Фитнес-браслеты">
+            </span>
           </a>
           </li>
           <li>
             <a href="#">
             <h3>Умные часы</h3>
+            <span class="catalog-list-image">
             <img src="img/popular-5.svg" width="56" height="98" alt="Умные часы">
+            </span>
           </a>
           </li>
           <li>
             <a href="#">
             <h3>Квадрокоптеры</h3>
+            <span class="catalog-list-image">
             <img src="img/poppular-6.svg" width="132" height="69" alt="Квадрокоптеры">
+          </span>
           </a>
           </li>
         </ul>
