@@ -42,7 +42,7 @@ body > * > * > * {
 .main-header {
   margin-top: 40px;
 
-  min-height: 299px;
+  /* min-height: 299px; */
   background-color: rgba(94%, 77%, 18%, 0.5);
 }
 
@@ -246,7 +246,7 @@ body > * > * > * {
 .slider-service-container {
   background-color: #e5e5e5;
 
-  min-height: 288px;
+  /* min-height: 288px; */
 }
 
 .slider-service {
