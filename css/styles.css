@@ -36,28 +36,28 @@ body > * > * > * {
   margin: 0 auto;
   padding: 0 20px;
 
-  width: 1200px;
+  width: 1160px;
 }
 
 .main-header {
   margin-top: 40px;
 
-  /* min-height: 299px; */
   background-color: rgba(94%, 77%, 18%, 0.5);
 }
 
 .main-navigation {
   position: relative;
 
-  padding-top: 46px;
-  padding-left: 59px;
-  padding-right: 59px;
-  padding-bottom: 40px;
+  padding-top: 29px;
+  padding-left: 60px;
+  padding-right: 55px;
+  /* padding-bottom: 40px; */
 }
 
+/* Сеточная стилизация логотипа */
 .main-header-logo {
   position: absolute;
-  top: -17px;
+  top: -18px;
 
   width: 163px;
   height: 35px;
@@ -68,23 +68,38 @@ body > * > * > * {
   justify-content: space-between;
 }
 
+/* Сеточная стилизация формы поиска */
 .search-form {
   display: flex;
 
   margin-right: 100px;
-  margin-bottom: 40px;
+  margin-bottom: 34px;
 
   width: 440px;
 }
 
 .user-navigation-header {
   display: flex;
+  justify-content: flex-end;
 
   margin: 0;
   padding: 0;
+  padding-right: 5px;
 
   width: 505px;
   list-style: none;
+}
+
+.login-link-header img {
+  padding-right: 10px;
+}
+
+.difference-header img {
+  padding-right: 5px;
+}
+
+.purchases-header img {
+  padding-right: 5px;
 }
 
 .login-link {
@@ -92,17 +107,17 @@ body > * > * > * {
 }
 
 .difference {
-  margin-right: 40px;
+  margin-right: 41px;
 }
 
-
+/* Сеточная стилизация навигации по каталогу */
 .site-navigation-header {
   display: flex;
   justify-content: flex-end;
 
   margin: 0;
-  /* margin-bottom: 30px; */
   padding: 0;
+  padding-bottom: 25px;
 
   list-style: none;
 }
@@ -112,7 +127,7 @@ body > * > * > * {
 }
 
 .site-navigation-header > li:nth-child(3) {
-  margin-left: 35px;
+  margin-left: 33px;
 }
 
 .site-navigation-header > li:nth-child(4) {
@@ -125,14 +140,20 @@ body > * > * > * {
   flex-direction: column;
   flex-wrap: wrap;
 
+  height: 110px;
+  /* width: 260px; */
+
   margin: 0;
+  margin-top: 20px;
   padding: 0;
+}
+
+.nested-list li {
+  margin-right: 58px;
 }
 
 .nested-list a {
   display: block;
-  border: 1px solid #000000;
-  margin-bottom: -1px;
 }
 
 /* Сеточная стилизация первого слайдера главной страницы*/
@@ -526,7 +547,7 @@ a {
 /* Стили кнопок */
 .button {
   position: relative;
-  z-index: 2;
+  z-index: 1;
 
   font-family: 'Gilroy', Arial, sans-serif;
   font-size: 18px;
@@ -545,7 +566,7 @@ a {
 
 .button::before {
   position: absolute;
-  z-index: 1;
+  z-index: -1;
   left: 0;
   top: 17px;
 
@@ -643,7 +664,7 @@ a {
   font-family: 'Open Sans', Arial, sans-serif;
   font-size: 15px;
   line-height: 36px;
-  letter-spacing: normal;
+  letter-spacing: 0.2px;
   font-weight: 300;
   color: #000000;
   text-transform: none;
