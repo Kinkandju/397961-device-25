@@ -78,6 +78,7 @@ body > * > * > * {
   width: 440px;
 }
 
+/* Сеточная стилизация пользовательской навигации */
 .user-navigation-header {
   display: flex;
   justify-content: flex-end;
@@ -117,7 +118,7 @@ body > * > * > * {
 
   margin: 0;
   padding: 0;
-  padding-bottom: 25px;
+  padding-bottom: 31px;
 
   list-style: none;
 }
@@ -141,7 +142,6 @@ body > * > * > * {
   flex-wrap: wrap;
 
   height: 110px;
-  /* width: 260px; */
 
   margin: 0;
   margin-top: 20px;
@@ -150,6 +150,19 @@ body > * > * > * {
 
 .nested-list li {
   margin-right: 58px;
+}
+
+.nested-list li:nth-child(4),
+.nested-list li:nth-child(5) {
+  height: 38px;
+}
+
+.nested-list li:nth-child(4) {
+  margin-right: 75px;
+}
+
+.nested-list li:nth-child(5) {
+  margin-top: -1px;
 }
 
 .nested-list a {
@@ -166,7 +179,7 @@ body > * > * > * {
 }
 
 .slider-slides {
-  width: 400%;
+  width: 300%;
 }
 
 .slider-slides .slide-1-monopod,
@@ -181,51 +194,54 @@ body > * > * > * {
   display: flex;
 
   height: 486px;
+  width: 1160px;
 
   position: relative;
-  top: -100px;
+  top: -110px;
 }
 
 .slide-1-monopod img {
   order: -1;
 
   padding-left: 90px;
+  padding-right: 125px;
 }
 
 .slide-2-fitness-bracelet img {
   order: -1;
 
   padding-left: 90px;
+  padding-right: 139px;
 }
 
 .slide-3-quadcopter img {
   order: -1;
 
   padding-left: 84px;
+  padding-right: 42px;
 }
 
 .monopod-container {
-  padding-left: 125px;
   padding-right: 80px;
 }
 
 .fitness-bracelet-container {
-  padding-left: 139px;
   padding-right: 90px;
 }
 
 .quadcopter-container {
-  padding-left: 42px;
   padding-right: 30px;
 }
 
 /* .table-container {
-  display: flex;
+  table-layout: fixed;
 }
 
-.value {
-  order: 1;
+.table-container tr {
+
 } */
+
+
 
 /* Сеточная стилизация блока каталога товаров */
 .catalog-list {
