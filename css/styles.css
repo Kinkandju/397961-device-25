@@ -548,15 +548,22 @@ body > * > * > * {
 
 /* Сеточная стилизация модального окна обратной связи */
 .modal {
+  display: none;
+
   position: fixed;
-  top: 100px;
-  left: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
   z-index: 2;
 
   color: #000000;
 
   background-color: #ffffff;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) ;
+}
+
+.modal-visible {
+  display: block;
 }
 
 .modal-write-us {
