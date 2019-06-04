@@ -114,6 +114,7 @@ body > * > * > * {
 /* Сеточная стилизация навигации по каталогу */
 .site-navigation-header {
   display: flex;
+  order: -1;
   justify-content: flex-end;
 
   margin: 0;
@@ -124,7 +125,7 @@ body > * > * > * {
 }
 
 .site-navigation-header > li:nth-child(1) {
-  margin-right: auto;
+  /* padding-left: 60px; */
 }
 
 .site-navigation-header > li:nth-child(3) {
@@ -138,35 +139,20 @@ body > * > * > * {
 /* Сеточная стилизация вложенного списка навигации каталога товаров*/
 .nested-list {
   display: flex;
-  flex-direction: column;
+  order: 1;
   flex-wrap: wrap;
 
-  height: 110px;
-
+  width: 600px;
   margin: 0;
-  margin-top: 20px;
   padding: 0;
 }
 
 .nested-list li {
-  margin-right: 58px;
+  width: 200px;
 }
 
-.nested-list li:nth-child(4),
-.nested-list li:nth-child(5) {
-  height: 38px;
-}
-
-.nested-list li:nth-child(4) {
-  margin-right: 75px;
-}
-
-.nested-list li:nth-child(5) {
-  margin-top: -1px;
-}
-
-.nested-list a {
-  display: block;
+.nested-list li:nth-child(5n) {
+  width: 400px;
 }
 
 /* Сеточная стилизация первого слайдера главной страницы*/
@@ -672,6 +658,12 @@ body {
   color: #000000;
 
   background-color: #ffffff;
+}
+
+/* Стилизация изображений */
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Стилизация ссылок */
@@ -1277,7 +1269,9 @@ address {
 }
 
 /* Стилизация скрытых блоков, заголовков, надписей */
-.visually-hidden:not(:focus):not(:active) {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
 
   width: 1px;
