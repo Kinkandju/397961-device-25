@@ -546,7 +546,111 @@ body > * > * > * {
   padding-right: 23px;
 }
 
-/* Сеточная стилизация модальных окон */
+/* Сеточная стилизация модального окна обратной связи */
+.modal {
+  position: fixed;
+  top: 100px;
+  left: auto;
+  z-index: 2;
+
+  color: #000000;
+
+  background-color: #ffffff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) ;
+}
+
+.modal-write-us {
+  width: 760px;
+
+  padding: 95px 100px;
+  margin: 0 100px;
+}
+
+.container-name-email {
+  display: flex;
+  justify-content: space-between;
+
+  width: 760px;
+}
+
+.container-name-email label,
+.message label {
+  margin-bottom: 10px;
+}
+
+.user-name,
+.email {
+  display: flex;
+  flex-direction: column;
+
+  width: 360px;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-write-us input[type="text"],
+.modal-write-us input[type="email"],
+.modal-write-us textarea[type="text"] {
+  font: inherit;
+
+  padding: 15px 20px;
+}
+/* Сеточная стилизация модального окна карты*/
+.modal-map {
+  width: 960px;
+  height: 559px;
+
+  padding: 0;
+  margin: 0 100px;
+}
+
+.modal-map p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Стилизация кнопки закрытия всплывающего модального окна */
+.modal-close {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+
+  width: 55px;
+  height: 55px;
+
+  font-size: 0;
+
+  background-color: rgba(94%, 77%, 18%, 0.5);
+  border: 0;
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.modal-close::before,
+.modal-close::after {
+  position: absolute;
+  top: 27px;
+  left: 13px;
+
+  content: "";
+
+  width: 30px;
+  height: 2px;
+
+  background-color: #ffffff;
+}
+
+.modal-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-close::after {
+  transform: rotate(-45deg);
+}
 
 
 /* ---------------------------------------------------------------------- */
@@ -1152,17 +1256,17 @@ address {
 
 .modal-write-us input[type="text"],
 .modal-write-us input[type="email"],
-.modal-write-us textarea {
+.modal-write-us textarea[type="text"] {
   font-family: 'Open Sans', Arial, sans-serif;
   font-style: normal;
   font-size: 14px;
   line-height: 18px;
   font-weight: 300;
-  color: #464646;
-  opacity: 0.4;
+  color: rgba(70, 70, 70, 0.4);
   text-align: left;
 
-  background-color: transparent;
+  background-color: rgba(242, 242, 242, 0.5);
+  border: none;
 }
 
 /* Стилизация скрытых блоков, заголовков, надписей */
