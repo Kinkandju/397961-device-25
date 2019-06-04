@@ -233,6 +233,11 @@ body > * > * > * {
   padding-right: 30px;
 }
 
+/* Стилизация первого абзаца слайдера */
+.name-offer::before {
+
+}
+
 /* .table-container {
   table-layout: fixed;
 }
@@ -332,12 +337,32 @@ body > * > * > * {
 /* Сеточная стилизация блоков "О нас" и "Контакты" */
 .about-us_contacts {
   display: flex;
-
-  margin-bottom: 70px;
+  justify-content: space-between;
 }
 
+/* Пока ничего не вышло, надо исправить */
 .about-us {
-  padding-right: 85px;
+  display: relative;
+  /* padding-right: 85px; */
+}
+
+.contacts {
+  display: relative;
+}
+
+.about-us h2 {
+  display: block;
+}
+
+.about-us h2::before,
+.contacts h2::before {
+  position: absolute;
+
+  width: 80px;
+  height: 7px;
+  color: #000000;
+
+  content: "";
 }
 
 /* Сеточная стилизация заголовка страницы каталога */
@@ -427,7 +452,6 @@ body > * > * > * {
 .pagination-list li {
   padding: 25px 30px;
 }
-
 
 /* .filter {
   display: flex;
@@ -521,6 +545,9 @@ body > * > * > * {
 .footer-social-list li:nth-child(2) {
   padding-right: 23px;
 }
+
+/* Сеточная стилизация модальных окон */
+
 
 /* ---------------------------------------------------------------------- */
 body {
