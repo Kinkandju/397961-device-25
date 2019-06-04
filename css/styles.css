@@ -72,8 +72,8 @@ body > * > * > * {
 .search-form {
   display: flex;
 
-  margin-right: 100px;
-  margin-bottom: 34px;
+  margin-right: 76px;
+  /* margin-bottom: 34px; */
 
   width: 440px;
 }
@@ -83,38 +83,79 @@ body > * > * > * {
   display: flex;
   justify-content: flex-end;
 
+  width: 600px;
+
   margin: 0;
+  /* margin-left: 100px; */
   padding: 0;
   padding-right: 5px;
 
-  width: 505px;
   list-style: none;
 }
 
-.login-link-header img {
-  padding-right: 10px;
+.user-navigation-header .login-link,
+.user-navigation-header .difference,
+.user-navigation-header .purchases {
+  position: relative;
+  padding-left: 50px;
 }
 
-.difference-header img {
-  padding-right: 5px;
+.login-link::before {
+  content: "";
+
+  position: absolute;
+  top: 24px;
+  left: 24px;
+
+  width: 12px;
+  height: 12px;
+
+  background-image: url("../img/user.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
-.purchases-header img {
-  padding-right: 5px;
+.difference::before {
+  content: "";
+
+  position: absolute;
+  top: 26px;
+  left: 29px;
+
+  width: 12px;
+  height: 12px;
+
+  background-image: url("../img/compare.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.purchases::before {
+  content: "";
+
+  position: absolute;
+  top: 24px;
+  left: 28px;
+
+  width: 12px;
+  height: 12px;
+
+  background-image: url("../img/cart.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.difference {
+  padding-right: 12px;
 }
 
 .login-link {
   margin-right: auto;
 }
 
-.difference {
-  margin-right: 41px;
-}
-
 /* Сеточная стилизация навигации по каталогу */
 .site-navigation-header {
   display: flex;
-  order: -1;
   justify-content: flex-end;
 
   margin: 0;
@@ -139,7 +180,6 @@ body > * > * > * {
 /* Сеточная стилизация вложенного списка навигации каталога товаров*/
 .nested-list {
   display: flex;
-  order: 1;
   flex-wrap: wrap;
 
   width: 600px;
@@ -681,12 +721,18 @@ a {
 
 /* Изменение состояний при наведении на ссылки */
 .main-navigation a:hover,
-.main-footer a:hover {
+.main-footer a:hover,
+.login-link:hover::before,
+.difference:hover::before,
+.purchases:hover::before {
   opacity: 0.6;
 }
 
 .main-navigation a:active,
-.main-footer a:active {
+.main-footer a:active,
+.login-link:active::before,
+.difference:active::before,
+.purchases:active::before {
   opacity: 0.3;
 }
 
