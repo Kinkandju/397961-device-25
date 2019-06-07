@@ -419,30 +419,19 @@ body > * > * > * {
 }
 
 /* Вспомогательное оформление */
-.filters {
+/* .filters {
   background: rgba(234, 255, 45, 0.2);
   box-shadow: inset 0 0 0 2px rgb(234, 255, 45);
-}
+} */
 
-/* Сеточная стилизация фильтра выбора стоимости страницы каталога */
-.cost,
-.color,
-.bluetooth {
-  margin: 0;
-  padding: 0;
-
-  border: none;
-}
-
-.cost legend,
-.color legend,
-.bluetooth legend {
+/* Общая сеточная стилизация фильтров страницы каталога */
+.filters legend {
   position: relative;
+
+  margin-bottom: 25px;
 }
 
-.cost legend::before,
-.color legend::before,
-.bluetooth legend::before {
+.filters legend::before {
   position: absolute;
   top: -10px;
 
@@ -452,14 +441,108 @@ body > * > * > * {
   background-color: #000000;
 }
 
+.filters ul {
+  margin: 0;
+  padding: 0;
+}
+
+.filters fieldset {
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
+
+  border: none;
+}
+
+.filter-option {
+  margin-bottom: 17px;
+  padding-left: 45px;
+}
+
+.filter-option label {
+  position: relative;
+
+  display: block;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.filter-input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: -42px;
+  top: 8px;
+
+  width: 20px;
+  height: 20px;
+
+  border: 2px solid #000000;
+  border-radius: 10%;
+}
+
+.filter-input-checkbox:checked + label::after {
+  content: "";
+
+  position: absolute;
+  top: 12px;
+  left: -38px;
+
+  width: 16px;
+  height: 16px;
+
+  background-color: #000000;
+  /* background-image: url("../img/checkbox-on.svg"); */
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-input-radio + label::before {
+  content: "";
+
+  position: absolute;
+  left: -42px;
+  top: 8px;
+
+  width: 18px;
+  height: 18px;
+
+  border: 4px solid #000000;
+  border-radius: 50%;
+}
+
+.filter-input-radio:checked + label::after {
+  content: "";
+
+  position: absolute;
+  top: 16px;
+  left: -34px;
+
+  width: 10px;
+  height: 10px;
+
+  background-color: #000000;
+  border-radius: 50%;
+}
+
+/* Сеточная стилизация фильтра по критериям товара страницы каталога */
+.filters-name {
+  display: block;
+
+  margin: 0;
+  margin-bottom: 65px;
+  padding: 20px 0;
+
+  background-color: #d9d9d9
+}
+
+/* Сеточная стилизация фильтра выбора стоимости страницы каталога */
 .range-controls {
   position: relative;
 
-  height: 20px;
+  margin-bottom: 10px;
 
   background-color: #ebebeb;
-
-  padding-top: 30px;
 }
 
 .range-controls .scale {
@@ -477,7 +560,7 @@ body > * > * > * {
 
 .range-controls .toggle {
   position: absolute;
-  top: 21px;
+  top: -10px;
   left: 0;
 
   width: 4px;
@@ -517,17 +600,6 @@ body > * > * > * {
 
   border: none;
   background: #f1f1f1;
-}
-
-/* Сеточная стилизация фильтра по критериям товара страницы каталога */
-.filters-name {
-  display: block;
-
-  margin: 0;
-  margin-bottom: 65px;
-  padding: 20px 0;
-
-  background-color: #d9d9d9
 }
 
 /* Сеточная стилизация сортировки товаров страницы каталога */
@@ -570,7 +642,7 @@ body > * > * > * {
   margin: 0;
   padding: 0;
   padding-left: 73px;
-  padding-top: 69px;
+  padding-top: 49px;
 
   list-style: none;
 }
@@ -588,8 +660,7 @@ body > * > * > * {
 /* Сеточная стилизация пагинации страницы каталога */
 .pagination-list {
   display: flex;
-  justify-content: space-between;
-  /* Подправить потом цифры по центру */
+  flex-wrap: wrap;
 
   margin: 0;
   margin-left: 73px;
@@ -598,8 +669,21 @@ body > * > * > * {
   background-color: #ebebeb;
 }
 
-.pagination-list li {
-  padding: 25px 30px;
+.pagination-item a {
+  display: block;
+  padding: 25px 15px;
+}
+
+.pagination-item:first-child {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: 190px;
+}
+
+.pagination-item:last-child {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
 }
 
 /* .filter {
@@ -1135,19 +1219,46 @@ a {
   line-height: 24px;
   letter-spacing: 3.2px;
   font-weight: 800;
-  color: #000000;
+  color: rgba(0, 0, 0, 0.3);
   text-transform: uppercase;
 }
 
-.pagination-item:nth-child(3) a,
-.pagination-item:nth-child(4) a{
-  color: rgba(0, 0, 0, 0.3);
+.pagination-item a:hover,
+.pagination-item a:focus {
+  color: rgba(0, 0, 0, 0.6);
 }
 
-.pagination-item:nth-child(1) a:active {
+.pagination-item a:active {
   color: #000000;
 }
 
+.pagination-item:first-child a,
+.pagination-item:last-child a {
+  color: #000000;
+}
+
+.pagination-item:first-child a:hover,
+.pagination-item:first-child a:focus,
+.pagination-item:last-child a:hover,
+.pagination-item:last-child a:focus {
+  color: #000000;
+}
+
+.pagination-item:first-child:hover,
+.pagination-item:first-child:focus,
+.pagination-item:last-child:hover,
+.pagination-item:last-child:focus {
+  background-color: #d9d9d9;
+}
+
+.pagination-item:first-child a:active,
+.pagination-item:last-child a:active,
+.pagination-item:first-child:active,
+.pagination-item:last-child:active {
+  color: rgba(0, 0, 0, 0.6);
+
+  background-color: #d9d9d9;
+}
 
 /* Стили слайдера специальных предложений */
 .slider-special-offer .name-offer{
