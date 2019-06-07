@@ -366,6 +366,17 @@ body > * > * > * {
   justify-content: space-between;
 }
 
+.about-us_contacts h2::before {
+  content: "";
+
+  position: absolute;
+
+  width: 80px;
+  height: 7px;
+
+  background-color: #000000;
+}
+
 /* Пока ничего не вышло, надо исправить */
 .about-us {
   display: relative;
@@ -396,6 +407,129 @@ body > * > * > * {
   padding-left: 60px;
 }
 
+/* Сеточная стилизация "хлебных крошек" страницы каталога */
+.breadcrumbs {
+  display: flex;
+
+  padding-left: 60px;
+}
+
+.breadcrumbs li {
+  padding-right: 35px;
+}
+
+/* Вспомогательное оформление */
+.filters {
+  background: rgba(234, 255, 45, 0.2);
+  box-shadow: inset 0 0 0 2px rgb(234, 255, 45);
+}
+
+/* Сеточная стилизация фильтра выбора стоимости страницы каталога */
+.cost,
+.color,
+.bluetooth {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+}
+
+.cost legend,
+.color legend,
+.bluetooth legend {
+  position: relative;
+}
+
+.cost legend::before,
+.color legend::before,
+.bluetooth legend::before {
+  position: absolute;
+  top: -10px;
+
+  content: "";
+  width: 200px;
+  height: 2px;
+  background-color: #000000;
+}
+
+.range-controls {
+  position: relative;
+
+  height: 20px;
+
+  background-color: #ebebeb;
+
+  padding-top: 30px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: #dbdbdb;
+}
+
+.range-controls .bar {
+  width: 55%;
+  height: 2px;
+
+  background: #91c92f;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 21px;
+  left: 0;
+
+  width: 4px;
+  height: 4px;
+  padding: 0;
+
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  background-color: #ababab;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+
+  cursor: pointer;
+}
+
+.range-controls .toggle-max {
+  left: 108px;
+}
+
+.price-controls {
+  font-size: 0;
+}
+
+.price-controls label {
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: normal;
+  color: rgba(0, 0, 0, 0.2);
+
+  display: inline-block;
+  width: 50%;
+}
+
+.price-controls input {
+  width: 50px;
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Сеточная стилизация фильтра по критериям товара страницы каталога */
+.filters-name {
+  display: block;
+
+  margin: 0;
+  margin-bottom: 65px;
+  padding: 20px 0;
+
+  background-color: #d9d9d9
+}
+
 /* Сеточная стилизация сортировки товаров страницы каталога */
 .filter {
   display: flex;
@@ -412,17 +546,6 @@ body > * > * > * {
 .sort-list {
   display: flex;
   /* padding-right: 25px; */
-}
-
-/* Сеточная стилизация "хлебных крошек" страницы каталога */
-.breadcrumbs {
-  display: flex;
-
-  padding-left: 60px;
-}
-
-.breadcrumbs li {
-  padding-right: 35px;
 }
 
 /* Сеточная стилизация фильтра и каталога товаров страницы каталога */
@@ -812,7 +935,7 @@ a {
   letter-spacing: 0.2px;
   color: #000000;
 
-  padding: 8px 21px;
+  padding: 4px 18px;
   background-color: transparent;
   border: solid 2px #000000;
 }
@@ -890,10 +1013,10 @@ a {
   text-transform: uppercase;
   text-align: left;
 
-  background-color: #d9d9d9;
+  /* background-color: #d9d9d9; */
 }
 
-legend {
+.filters legend {
   font-family: 'Gilroy', Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;

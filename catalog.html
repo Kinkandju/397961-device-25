@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Девайс</title>
+    <title>HTML Academy: каталог проекта Девайс</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
@@ -31,14 +31,14 @@
           <li class="login-link">
             <p class="login-link-header">
               <a class="icon" href="#">
-                <img src="img/user.svg" width="12" height="12" alt="Иконка пользователя">Валентин Петухов</a>
+                Валентин Петухов
+              </a>
               <a class="log-out" href="#">Выход</a>
             </p>
           </li>
           <li class="difference">
             <p class="difference-header">
               <a class="icon" href="#">
-                <img src="img/compare.svg" width="12" height="12" alt="Иконка сравнения товаров">
                 Сравнить
               </a>
             </p>
@@ -46,7 +46,6 @@
           <li class="purchases">
             <p class="purchases-header">
               <a class="icon" href="#">
-                <img src="img/cart.svg" width="12" height="12" alt="Иконка корзины с товарами">
                 Корзина
               </a>
             </p>
@@ -102,22 +101,33 @@
           <form action="https://echo.htmlacademy.ru" metod="get">
           <fieldset class="cost">
             <legend>Стоимость</legend>
-                <button class="round-button">Левая</button>
-                <button class="round-button">Правая</button>
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                <div class="bar"></div>
+                <div class="toggle toggle-min"></div>
+                <div class="toggle toggle-max"></div>
+                </div>
+              </div>
+              <div class="price-controls">
                 <label for="cost-min">
                   <span class="visually-hidden">
                     Минимальная цена товара
                   </span>
                   от
+                  <input type="number" name="price-min" id="cost-min" value="0" placeholder="0">
                 </label>
-                <input type="number" name="price-min" id="cost-min" value="0" placeholder="0">
+
                 <label for="cost-max">
                   <span class="visually-hidden">
                     Максимальная цена товара
                   </span>
                   до
+                  <input type="number" name="price-max" id="cost-max" value="5000" placeholder="5000">
                 </label>
-                <input type="number" name="price-max" id="cost-max" value="5000" placeholder="5000">
+
+              </div>
+            </div>
           </fieldset>
 
           <!-- Фильтр выбора цвета -->
