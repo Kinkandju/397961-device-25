@@ -621,6 +621,29 @@ body > * > * > * {
   /* padding-right: 25px; */
 }
 
+.arrow {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.arrow::before {
+  display: inline-block;
+  content: "";
+  border: 10px solid #000000;
+  border-right-width: 5px;
+  border-left-width: 5px;
+  border-right-color: transparent;
+  border-left-color: transparent;
+}
+
+.button-up::before {
+  border-top-width: 0;
+}
+
+.button-down::before {
+  border-bottom-width: 0;
+}
+
 /* Сеточная стилизация фильтра и каталога товаров страницы каталога */
 .filters-catalog-container {
   display: flex;
