@@ -605,14 +605,15 @@ body > * > * > * {
 /* Сеточная стилизация сортировки товаров страницы каталога */
 .filter {
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 
   background-color: #ebebeb;
 }
 
 .sort-name {
-  /* padding-right: 50px; */
+  margin-left: 73px;
 }
 
 .sort-list {
@@ -660,6 +661,7 @@ body > * > * > * {
 /* Сеточная стилизация пагинации страницы каталога */
 .pagination-list {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 
   margin: 0;
@@ -674,15 +676,17 @@ body > * > * > * {
   padding: 25px 15px;
 }
 
+.pagination-item:first-child a,
+.pagination-item:last-child a {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
 .pagination-item:first-child {
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-right: 190px;
+  margin-right: auto;
 }
 
 .pagination-item:last-child {
-  padding-left: 15px;
-  padding-right: 15px;
   margin-left: auto;
 }
 
