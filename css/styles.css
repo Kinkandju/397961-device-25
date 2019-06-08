@@ -333,8 +333,6 @@ body > * > * > * {
 /* Сеточная стилизация cлайдера предоставляемых услуг */
 .slider-service-container {
   background-color: #e5e5e5;
-
-  /* min-height: 288px; */
 }
 
 .slider-service {
@@ -346,7 +344,15 @@ body > * > * > * {
   display: flex;
   flex-direction: column;
 
-  width: 285px;
+  width: 300px;
+}
+
+.slider-list {
+  width: 800px;
+
+  margin: 0;
+  padding: 0;
+  padding-left: 120px;
 }
 
 .slide-service-1 {
@@ -355,7 +361,7 @@ body > * > * > * {
   /* padding-left: 117px; */
 }
 
-.slide-service-1 h3 {
+/* .slide-service-1 h3 {
   position: relative;
   top: -90px;
 }
@@ -372,12 +378,15 @@ body > * > * > * {
 
   position: relative;
   top: -33px;
-}
+} */
 
 /* Сеточная стилизация блока "Логотипы" */
 .logotypes-list {
   display: flex;
   justify-content: space-between;
+
+  margin: 0;
+  padding: 0;
 }
 
 /* Сеточная стилизация блоков "О нас" и "Контакты" */
@@ -630,24 +639,42 @@ body > * > * > * {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  /* justify-content: space-between; */
+
+  padding: 20px 0;
 
   background-color: #ebebeb;
 }
 
 .sort-name {
   margin-left: 73px;
+  margin-right: 55px;
 }
 
 .sort-list {
   display: flex;
-  /* padding-right: 25px; */
+  flex-wrap: wrap;
+
+  margin: 0;
+  padding: 0;
+}
+
+.sort-list li {
+  margin-right: 25px;
+}
+
+.arrow-buttons {
+  margin-left: auto;
 }
 
 .arrow {
   display: inline-block;
-  margin: 0 10px;
+  margin: 0 15px;
 }
+
+.button-down {
+  margin: 0;
+}
+
 
 .arrow::before {
   display: inline-block;
@@ -1378,12 +1405,9 @@ a {
 }
 
 /* Стили слайдера предоставляемых услуг */
-.slider-bottons {
-  width: 285px;
-}
-
 .slider-list {
   list-style: none;
+
   background-color: #e5e5e5;
 }
 
@@ -1413,7 +1437,7 @@ a {
 .button-delivery,
 .button-warranty,
 .button-credit {
-  padding: 10px 25px;
+  padding: 10px 20px;
 }
 
 .button-delivery:active,
@@ -1427,7 +1451,7 @@ a {
   color: #f7e184;
   text-align: center;
 
-  padding-left: 25px;
+  padding-left: 20px;
   padding-right: 110px;
   background-color: #000000;
   border: none;
