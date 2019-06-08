@@ -160,13 +160,13 @@ body > * > * > * {
 
   margin: 0;
   padding: 0;
-  padding-bottom: 31px;
+  padding-bottom: 30px;
 
   list-style: none;
 }
 
 .site-navigation-header > li:nth-child(1) {
-  /* padding-left: 60px; */
+  margin-right: auto;
 }
 
 .site-navigation-header > li:nth-child(3) {
@@ -180,19 +180,28 @@ body > * > * > * {
 /* Сеточная стилизация вложенного списка навигации каталога товаров*/
 .nested-list {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
 
-  width: 600px;
+  height: 110px;
+
   margin: 0;
   padding: 0;
 }
 
-.nested-list li {
-  width: 200px;
+.nested-list li:nth-child(1),
+.nested-list li:nth-child(2),
+.nested-list li:nth-child(3) {
+  margin-right: 58px;
 }
 
-.nested-list li:nth-child(5n) {
-  width: 400px;
+.nested-list li:nth-child(4),
+.nested-list li:nth-child(5) {
+  margin-right: 77px;
+}
+
+.nested-list li:nth-child(6)  {
+  height: 100px;
 }
 
 /* Сеточная стилизация первого слайдера главной страницы*/
@@ -411,7 +420,10 @@ body > * > * > * {
 .breadcrumbs {
   display: flex;
 
+  margin: 0;
+  padding: 0;
   padding-left: 60px;
+  margin-bottom: 50px;
 }
 
 .breadcrumbs li {
@@ -1548,6 +1560,47 @@ address {
   text-align: right;
 }
 
+/* Стили анимации модальных окон */
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
 /* Стили формы модального окна (Обратная связь) */
 .modal-write-us {
   font-family: 'Gilroy', Arial, sans-serif;
@@ -1594,4 +1647,15 @@ input[type="radio"].visually-hidden {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+/* Стиль отвечающий за показ модального окна */
+.modal-show {
+  display: block;
+
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
