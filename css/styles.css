@@ -66,16 +66,26 @@ body > * > * > * {
 .navigation-container {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
 }
 
 /* Сеточная стилизация формы поиска */
 .search-form {
   display: flex;
+  justify-content: space-between;
 
   margin-right: 76px;
-  /* margin-bottom: 34px; */
+  margin-bottom: 32px;
 
   width: 440px;
+}
+
+.search-form input[type="search"] {
+  display: inline-block;
+
+  padding: 6px 0 4px 40px;
+
+  width: 355px;
 }
 
 /* Сеточная стилизация пользовательской навигации */
@@ -160,7 +170,7 @@ body > * > * > * {
 
   margin: 0;
   padding: 0;
-  padding-bottom: 30px;
+  padding-bottom: 33px;
 
   list-style: none;
 }
@@ -186,6 +196,7 @@ body > * > * > * {
   height: 110px;
 
   margin: 0;
+  margin-top: 20px;
   padding: 0;
 }
 
@@ -197,7 +208,7 @@ body > * > * > * {
 
 .nested-list li:nth-child(4),
 .nested-list li:nth-child(5) {
-  margin-right: 77px;
+  margin-right: 75px;
 }
 
 .nested-list li:nth-child(6)  {
@@ -1037,7 +1048,6 @@ a {
   /* color: rgba(255, 255, 255, 0.3); */
   border: none;
 
-  width: 356px;
   background-color: transparent;
 }
 
@@ -1058,7 +1068,7 @@ a {
   letter-spacing: 0.2px;
   color: #000000;
 
-  padding: 4px 18px;
+  padding: 6px 18px;
   background-color: transparent;
   border: solid 2px #000000;
 }
