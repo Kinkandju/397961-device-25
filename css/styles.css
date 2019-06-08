@@ -447,7 +447,39 @@ body > * > * > * {
 }
 
 .breadcrumbs li {
+  position: relative;
   padding-right: 35px;
+}
+
+.breadcrumbs a::before {
+  position: absolute;
+  top: 8px;
+  right: 19px;
+  z-index: 2;
+
+  width: 10px;
+  height: 10px;
+
+  content: "";
+
+  background-color: #ffffff;
+}
+
+.breadcrumbs a::after {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  z-index: 1;
+
+  content: "";
+
+  width: 26px;
+  height: 26px;
+
+  background-color: #ffffff;
+  box-shadow: 1px 1px 0 2px #000000;
+  border-radius: 50px 0 0 0;
+  transform: rotate(-45deg) scale(0.2);
 }
 
 /* Вспомогательное оформление */
@@ -675,25 +707,6 @@ body > * > * > * {
   margin: 0;
 }
 
-
-.arrow::before {
-  display: inline-block;
-  content: "";
-  border: 10px solid #000000;
-  border-right-width: 5px;
-  border-left-width: 5px;
-  border-right-color: transparent;
-  border-left-color: transparent;
-}
-
-.button-up::before {
-  border-top-width: 0;
-}
-
-.button-down::before {
-  border-bottom-width: 0;
-}
-
 /* Сеточная стилизация фильтра и каталога товаров страницы каталога */
 .filters-catalog-container {
   display: flex;
@@ -725,6 +738,17 @@ body > * > * > * {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+}
+
+.item-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.item-container h3 {
+  width: 260px;
 }
 
 .catalog-item .catalog-item-image {
@@ -998,7 +1022,6 @@ a {
 .main-navigation a,
 .main-footer a,
 .about-us a,
-.breadcrumbs a,
 .catalog a {
   color: #000000;
 }
@@ -1155,11 +1178,14 @@ a {
   line-height: 24px;
   letter-spacing: 0.1px;
   font-weight: 300;
-  color: #000000;
-  opacity: 0.3;
+  color: rgba(0, 0, 0, 0.3);
 
   background-color: #ffffff;
   list-style: none;
+}
+
+.breadcrumbs a {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 /* Стили фильтра по критериям товара */
@@ -1265,6 +1291,39 @@ a {
 
   background-color: #ebebeb;
   list-style: none;
+}
+
+/* Стили кнопок "вверх" и "вниз" сортировки товаров */
+.arrow::before {
+  display: inline-block;
+  content: "";
+  border: 10px solid rgba(0, 0, 0, 0.2);
+  border-right-width: 5px;
+  border-left-width: 5px;
+  border-right-color: transparent;
+  border-left-color: transparent;
+}
+
+.button-up::before {
+  border-top-width: 0;
+}
+
+.button-down::before {
+  border-bottom-width: 0;
+}
+
+/* Не работает */
+.arrow::before:hover,
+.arrow::before:focus {
+  border-color: rgba(0, 0, 0, 0.4);
+}
+
+.arrow::before:active {
+  border-color: #000000;
+}
+
+.arrow-current {
+  border-color: #000000;
 }
 
 /* Стили каталога товаров */
