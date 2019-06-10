@@ -82,14 +82,6 @@ body > * > * > * {
   width: 440px;
 }
 
-.search-form input[type="search"] {
-  display: inline-block;
-
-  padding: 6px 0 4px 40px;
-
-  width: 355px;
-}
-
 .search-form::after {
   position: absolute;
   top: 16px;
@@ -102,6 +94,14 @@ body > * > * > * {
   background-image: url('../img/search.svg');
   background-repeat: no-repeat;
   background-position: 0 0;
+}
+
+.search-form input[type="search"] {
+  display: inline-block;
+
+  padding: 6px 0 4px 40px;
+
+  width: 355px;
 }
 
 /* Сеточная стилизация пользовательской навигации */
@@ -191,6 +191,10 @@ body > * > * > * {
   list-style: none;
 }
 
+.drop-down-list {
+  padding-bottom: 163px;
+}
+
 .site-navigation-header > li:first-child:hover .nested-list {
   display: flex;
 }
@@ -260,6 +264,7 @@ body > * > * > * {
   margin-top: 20px;
   margin-left: -60px;
   padding: 0;
+  padding-bottom: 33px;
 }
 
 .nested-list a {
@@ -292,7 +297,7 @@ body > * > * > * {
   position: relative;
 }
 
-.slider-inner {
+/* .slider-inner {
   overflow: hidden;
 }
 
@@ -304,7 +309,7 @@ body > * > * > * {
 .slider-slides .slide-2-fitness-bracelet,
 .slider-slides .slide-3-quadcopter {
   float: left;
-}
+} */
 
 .slide-1-monopod,
 .slide-2-fitness-bracelet,
@@ -340,7 +345,123 @@ body > * > * > * {
 }
 
 .monopod-container {
-  padding-right: 80px;
+  padding-right: 75px;
+}
+
+.name-offer {
+  position: relative;
+  top: 30px;
+
+  margin-bottom: 50px;
+}
+
+.name-offer::before {
+  position: absolute;
+  top: -42px;
+
+  content: "";
+
+  width: 100px;
+  height: 7px;
+
+  background-color: #ffffff;
+}
+
+.name-offer::after {
+  position: absolute;
+  top: -93px;
+  left: 330px;
+
+  content: "01";
+
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 179px;
+  line-height: 179px;
+  letter-spacing: 1.8px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+/* .name-offer:nth-child(1)::after {
+  content: "01";
+}
+
+.name-offer:nth-child(2)::after {
+  content: "02";
+}
+
+.name-offer:nth-child(3)::after {
+  content: "03";
+} */
+
+.name-offer + p {
+  margin-bottom: 41px;
+}
+
+.controls-button {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+
+  margin-bottom: 47px;
+}
+
+.slider-controls {
+  display: none;
+}
+
+.label-controls label {
+  position: relative;
+
+  display: inline-block;
+  margin: 0 10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #000000;
+  cursor: pointer;
+}
+
+/* .label-controls label::after {
+  display: none;
+
+  position: absolute;
+  top: 2px;
+  left: 2px;
+
+  content: "";
+
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+  border: 1px solid #000000;
+  cursor: pointer;
+}
+
+#btn-1:checked ~ .label-controls label[for="btn-1"],
+#btn-2:checked ~ .label-controls label[for="btn-2"],
+#btn-3:checked ~ .label-controls label[for="btn-3"] {
+  display: flex;
+} */
+
+.label-controls label:last-child {
+  margin-right: 0;
+}
+
+.table-container {
+  margin: 0;
+  padding: 0;
+
+  border-collapse: collapse;
+}
+
+.table-container td {
+  padding-right: 76px;
+}
+
+.table-container td:last-child {
+  padding-right: 0;
 }
 
 .fitness-bracelet-container {
@@ -1184,6 +1305,8 @@ a {
 }
 
 .button-search {
+  /* display: none; */
+
   font-family: 'Open Sans', Arial, sans-serif;
   font-size: 15px;
   line-height: 30px;
@@ -1195,6 +1318,10 @@ a {
   background-color: transparent;
   border: solid 2px #000000;
 }
+
+/* .search-form input[type="search"]:focus .button-search {
+  display: inline-block;
+} */
 
 .button-search:hover {
   color: #ffffff;
@@ -1474,6 +1601,8 @@ a {
   font-size: 47px;
   line-height: 56px;
   letter-spacing: 0.5px;
+  font-style: normal;
+  font-stretch: normal;
   font-weight: 800;
   color: #000000;
   text-transform: none;

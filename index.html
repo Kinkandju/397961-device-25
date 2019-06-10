@@ -55,7 +55,7 @@
         </div>
 
         <!-- Навигация по каталогу -->
-        <ul class="site-navigation-header">
+        <ul class="site-navigation-header drop-down-list">
           <li class="drop-down-point">
             <a href="#catalog.html">Каталог товаров<img src="img/plus.svg" width="16" height="16" alt="Раскрывающийся список"></a>
             <ul class="nested-list">
@@ -100,25 +100,40 @@
             <p>
               Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
             </p>
-            <a class="button" href="#">Подробнее</a>
-            <div class="slider-controls"></div>
+
+            <div class="controls-button">
+              <a class="button" href="#">Подробнее</a>
+
+                <div class="label-controls">
+                  <label for="btn-1"></label>
+                  <label for="btn-2"></label>
+                  <label for="btn-3"></label>
+                </div>
+
+              <div class="slider-controls">
+                <input type="radio" id="btn-1" name="toggle" checked>
+                <input type="radio" id="btn-2" name="toggle">
+                <input type="radio" id="btn-3" name="toggle">
+              </div>
+            </div>
+
             <table class="table-container" summary="Характеристики товаров - монопод">
-              <tr class="identification">
-                <td>Длина палки</td>
-                <td>Вес палки</td>
-                <td>Материал</td>
-              </tr>
               <tr class="value">
                 <td>8,5 м</td>
                 <td>5 кг</td>
                 <td>Карбон</td>
+              </tr>
+              <tr class="identification">
+                <td>Длина палки</td>
+                <td>Вес палки</td>
+                <td>Материал</td>
               </tr>
             </table>
           </div>
           <img src="img/slider-1.png" width="384" height="486" alt="Монопод">
         </div>
 
-        <div class="slide-2-fitness-bracelet">
+        <div class="slide-2-fitness-bracelet visually-hidden">
           <div class="fitness-bracelet-container">
           <h3 class="visually-hidden">Специальное предложение - фитнес-браслет</h3>
           <p class="name-offer">
@@ -128,8 +143,23 @@
           <p>
             Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
           </p>
-          <a class="button" href="#">Подробнее</a>
-          <div class="slider-controls"></div>
+
+          <div class="controls-button">
+            <a class="button" href="#">Подробнее</a>
+
+              <div class="label-controls">
+                <label for="btn-1"></label>
+                <label for="btn-2"></label>
+                <label for="btn-3"></label>
+              </div>
+
+            <div class="slider-controls">
+              <input type="radio" id="btn-1" name="toggle" checked>
+              <input type="radio" id="btn-2" name="toggle">
+              <input type="radio" id="btn-3" name="toggle">
+            </div>
+          </div>
+
           <table class="table-container" summary="Преимущество товаров - фитнес-браслет">
             <tr class="identification">
               <td>Без подзарядки</td>
@@ -142,7 +172,7 @@
           <img src="img/slider-2.png" width="345" height="485" alt="Фитнес-браслет">
         </div>
 
-        <div class="slide-3-quadcopter">
+        <div class="slide-3-quadcopter visually-hidden">
           <div class="quadcopter-container">
             <h3 class="visually-hidden">Специальное предложение - квадрокоптер</h3>
             <p class="name-offer">
@@ -152,8 +182,23 @@
             <p>
               Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
             </p>
-            <a class="button" href="#">Подробнее</a>
-            <div class="slider-controls"></div>
+
+            <div class="controls-button">
+              <a class="button" href="#">Подробнее</a>
+
+                <div class="label-controls">
+                  <label for="btn-1"></label>
+                  <label for="btn-2"></label>
+                  <label for="btn-3"></label>
+                </div>
+
+              <div class="slider-controls">
+                <input type="radio" id="btn-1" name="toggle" checked>
+                <input type="radio" id="btn-2" name="toggle">
+                <input type="radio" id="btn-3" name="toggle">
+              </div>
+            </div>
+
             <table class="table-container" summary="Характеристики товаров - квадрокоптер">
               <tr class="identification">
                 <td>Дальность полета</td>
