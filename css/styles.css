@@ -82,18 +82,32 @@ body > * > * > * {
   width: 440px;
 }
 
-.search-form::after {
+.search-form::before {
   position: absolute;
   top: 16px;
   left: 3px;
 
   content: "";
-  width: 16px;
-  height: 16px;
 
-  background-image: url('../img/search.svg');
-  background-repeat: no-repeat;
-  background-position: 0 0;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #000000;
+
+  border-radius: 50%;
+}
+
+.search-form::after {
+  position: absolute;
+  top: 28px;
+  left: 12px;
+
+  content: "";
+
+  width: 8px;
+  height: 2px;
+  background-color: #000000;
+
+  transform: rotate(45deg);
 }
 
 .search-form input[type="search"] {
@@ -1014,11 +1028,10 @@ body > * > * > * {
 
 .arrow {
   display: inline-block;
-  margin: 0 15px;
 }
 
 .button-down {
-  margin: 0;
+  margin-left: 15px;
 }
 
 /* Сеточная стилизация фильтра и каталога товаров страницы каталога */
@@ -1713,25 +1726,8 @@ a {
   border-bottom-width: 0;
 }
 
-/* Не работает */
-.arrow::before:hover,
-.arrow::before:focus {
-  border-color: rgba(0, 0, 0, 0.4);
-}
-
-.arrow::before:active {
-  border-color: #000000;
-}
-
-.arrow-current {
-  border-color: #000000;
-}
 
 /* Стили каталога товаров */
-/* .catalog-item-image:hover {
-  opacity: 0.7;
-} */
-
 .liken {
   font-family: 'Open Sans', Arial, sans-serif;
   font-size: 13px;
@@ -1812,6 +1808,10 @@ a {
   color: rgba(0, 0, 0, 0.6);
 
   background-color: #d9d9d9;
+}
+
+.pagination-item.active a {
+  color: #000000;
 }
 
 /* Стили слайдера специальных предложений */
@@ -2050,8 +2050,16 @@ a {
   background-color: #464646;
 }
 
+.site-navigation-footer a:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.site-navigation-footer a:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 /* Стили адреса */
-address {
+.address {
   font-family: 'Open Sans', Arial, sans-serif;
   font-style: normal;
   font-size: 15px;
@@ -2111,9 +2119,9 @@ address {
     transform: translateY(-10px);
   }
 
-  100% {
+  /* 100% {
     transform: translateY(0);
-  }
+  } */
 }
 
 @keyframes shake {
