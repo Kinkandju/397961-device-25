@@ -118,9 +118,9 @@ body > * > * > * {
   list-style: none;
 }
 
-.user-navigation-header .login-link-header,
-.user-navigation-header .difference-header,
-.user-navigation-header .purchases-header {
+.login-link-header,
+.difference-header,
+.purchases-header {
   position: relative;
   padding-left: 50px;
 }
@@ -228,7 +228,7 @@ body > * > * > * {
   width: 16px;
   height: 2px;
 
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: #b8a974;
 }
 
 .drop-down-point::after {
@@ -241,7 +241,7 @@ body > * > * > * {
   width: 16px;
   height: 2px;
 
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: #b8a974;
   transform: rotate(90deg);
 }
 
@@ -538,16 +538,18 @@ body > * > * > * {
 
 .slider-service {
   display: flex;
+  align-items: flex-start;
 
   padding-bottom: 43px;
   margin-bottom: 93px;
 }
 
+/* Сеточная стилизация кнопок */
 .slider-buttons {
   position: relative;
   top: -19px;
 
-  width: 285px;
+  width: 284px;
 
   margin-right: 117px;
 }
@@ -567,10 +569,33 @@ body > * > * > * {
 .slider-buttons .button {
   display: block;
 
-  width: 278px;
+  padding: 8px 20px;
   margin-bottom: 24px;
 }
 
+.slider-buttons .button-warranty {
+  padding-left: 25px;
+  padding-right: 21px;
+}
+
+.slider-buttons .button-credit {
+  padding-left: 38px;
+  padding-right: 36px;
+}
+
+.button-delivery:active {
+  padding-right: 133px;
+}
+
+.button-warranty:active {
+  padding-right: 138px;
+}
+
+.button-credit:active {
+  padding-right: 152px;
+}
+
+/* Сеточная стилизация содержимого слайдера */
 .slider-list {
   width: 700px;
 
@@ -1048,6 +1073,11 @@ body > * > * > * {
   background-color: #464646;
 }
 
+/* Сеточная стилизация логотипа подвала сайта */
+.logo-user-navigation {
+  position: relative;
+}
+
 .main-footer-logo {
   position: absolute;
   top: 23px;
@@ -1057,10 +1087,20 @@ body > * > * > * {
   height: 35px;
 }
 
-.logo-user-navigation {
-  position: relative;
+.main-footer-logo::after {
+  position: absolute;
+  top: 172px;
+  left: 1px;
+
+  width: 80px;
+  height: 7px;
+
+  content: "";
+
+  background-color: #f0c52e;
 }
 
+/* Сеточная стилизация пользовательской навигации подвала сайта */
 .user-navigation-footer {
   display: flex;
   justify-content: flex-end;
@@ -1068,37 +1108,65 @@ body > * > * > * {
   margin: 0;
   margin-top: 42px;
   padding: 0;
+
+  list-style: none;
 }
 
 .user-navigation-footer li {
   margin-left: 40px;
 }
 
-.address-site-navigation-call {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+.difference-footer {
+  padding-left: 3px;
+}
 
-  margin-right: 20px;
-  margin-left: 20px;
+.user-navigation-svg {
+  padding-right: 5px;
+}
+
+.login-svg {
+  padding-right: 8px;
+}
+
+/* Сеточная стилизация адреса, навигации по каталогу и телефона подвала сайта */
+.address-site-navigation-call {
+  position: relative;
+  top: -1px;
+
+  display: flex;
+  align-items: baseline;
 }
 
 .site-navigation-footer {
-  display: flex;
-  justify-content: space-between;
+  position: relative;
+  top: 2px;
+  left: -16px;
 
-  width: 440px;
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: 0 auto;
+  padding: 0;
 }
 
+.site-navigation-footer li {
+  margin-right: 35px;
+}
+
+.site-navigation-footer li:nth-child(3) {
+  margin-right: 0;
+}
+
+/* Сеточная стилизация социальных сетей и ссылки на HTML Academy подвала сайта */
 .social-copyright {
+  position: relative;
+  top: -18px;
+
   display: flex;
+  justify-content: center;
 
   padding-top: 60px;
   padding-bottom: 65px;
-}
-
-.social-copyright a {
-  /* margin-left: auto; */
 }
 
 .footer-social {
@@ -1106,6 +1174,10 @@ body > * > * > * {
 }
 
 .footer-social-list {
+  position: relative;
+  top: 2px;
+  left: 15px;
+
   display: flex;
 
   margin: 0;
@@ -1260,7 +1332,6 @@ a {
 }
 
 .main-navigation a,
-.main-footer a,
 .about-us a,
 .catalog a {
   color: #000000;
@@ -1268,7 +1339,6 @@ a {
 
 /* Изменение состояний при наведении на ссылки */
 .main-navigation a:hover,
-.main-footer a:hover,
 .login-link-header:hover::before,
 .difference-header:hover::before,
 .purchases-header:hover::before {
@@ -1276,7 +1346,6 @@ a {
 }
 
 .main-navigation a:active,
-.main-footer a:active,
 .login-link-header:active::before,
 .difference-header:active::before,
 .purchases-header:active::before {
@@ -1543,7 +1612,9 @@ a {
 /* Стили кнопок "вверх" и "вниз" сортировки товаров */
 .arrow::before {
   display: inline-block;
+
   content: "";
+
   border: 10px solid rgba(0, 0, 0, 0.2);
   border-right-width: 5px;
   border-left-width: 5px;
@@ -1742,10 +1813,6 @@ a {
   background-color: #e5e5e5;
 }
 
-.slider-buttons .button {
-  padding: 8px 20px;
-}
-
 .slider-buttons .button:active {
   font-family: 'Gilroy', Arial, sans-serif;
   font-size: 18px;
@@ -1759,28 +1826,23 @@ a {
   border: none;
 }
 
-.slider-buttons .active {
-  padding-left: 16px;
-  padding-right: 130px;
-
-  background-color: #000000;
-  border: none;
+.button:active.button-delivery::before,
+.button:active.button-warranty::before,
+.button:active.button-credit::before {
+  background-color: transparent;
 }
 
+.button-delivery.active::before {
+  background-color: transparent;
+}
 
-/* .slider-buttons .button::before:active {
-  position: absolute;
-  z-index: -1;
-  left: 0;
-  top: 17px;
+.button-delivery.active {
+  padding-right: 133px;
 
-  width: 100%;
-  height: 8px;
-
-  content: "";
+  color: #f7e184;
 
   background-color: #000000;
-} */
+}
 
 /* Логотипы */
 .logotypes-list {
@@ -1836,17 +1898,22 @@ a {
   line-height: 36px;
   font-weight: 300;
   letter-spacing: 0.2px;
-  color: #ffffff;
-  opacity: 0.7;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .user-navigation-footer a:hover {
-  color: #ffffff;
-  opacity: 1;
+  color: rgba(255, 255, 255, 1);
 }
 
 .user-navigation-footer a:active {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.user-navigation-footer a:hover .user-navigation-svg{
+  opacity: 0.6;
+}
+
+.user-navigation-footer a:active .user-navigation-svg {
   opacity: 0.3;
 }
 
