@@ -216,6 +216,10 @@ body > * > * > * {
 
 .drop-down-point {
   position: relative;
+
+  display: inline-block;
+
+  padding-right: 30px;
 }
 
 .drop-down-point::before {
@@ -229,6 +233,8 @@ body > * > * > * {
   height: 2px;
 
   background-color: #b8a974;
+
+  cursor: pointer;
 }
 
 .drop-down-point::after {
@@ -243,6 +249,8 @@ body > * > * > * {
 
   background-color: #b8a974;
   transform: rotate(90deg);
+
+  cursor: pointer;
 }
 
 /* Сеточная стилизация вложенного списка навигации каталога товаров*/
@@ -988,6 +996,18 @@ body > * > * > * {
   margin-right: 25px;
 }
 
+.sort-item a {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.sort-item a:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.sort-item a:active {
+  color: #000000;
+}
+
 .arrow-buttons {
   margin-left: auto;
 }
@@ -1602,7 +1622,8 @@ a {
   text-align: left;
 }
 
-.sort-current a {
+.sort-current a,
+.sort-current a:hover {
   color: #000000;
 }
 
