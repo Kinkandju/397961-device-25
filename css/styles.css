@@ -531,6 +531,18 @@ body > * > * > * {
   background-color: #f0c52e;
 }
 
+.catalog-list-image:active {
+  background-color: #f0c52e;
+}
+
+.catalog-list-image:active img {
+  opacity: 0.3;
+}
+
+.catalog-list li:active h3 {
+  opacity: 0.3;
+}
+
 /* Сеточная стилизация cлайдера предоставляемых услуг */
 .slider-service-container {
   background-color: #e5e5e5;
