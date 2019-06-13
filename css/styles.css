@@ -739,6 +739,18 @@ body > * > * > * {
   padding-right: 35px;
 }
 
+.breadcrumbs li:last-child {
+  padding-right: 0;
+}
+
+.breadcrumbs a:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.breadcrumbs a:active {
+  color: rgba(0, 0, 0, 0.1);
+}
+
 .breadcrumbs a::before {
   position: absolute;
   top: 8px;
