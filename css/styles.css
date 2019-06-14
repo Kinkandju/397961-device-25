@@ -849,33 +849,53 @@ body > * > * > * {
 }
 
 .filter-input-checkbox + label::before {
-  content: "";
   position: absolute;
+  top: 9px;
   left: -42px;
-  top: 8px;
 
-  width: 20px;
-  height: 20px;
+  content: "";
+
+  width: 19px;
+  height: 19px;
 
   border: 2px solid #000000;
   border-radius: 10%;
 }
 
 .filter-input-checkbox:checked + label::after {
+  position: absolute;
+  top: 9px;
+  left: -42px;
+
   content: "";
 
-  position: absolute;
-  top: 12px;
-  left: -38px;
+  width: 30px;
+  height: 30px;
 
-  width: 16px;
-  height: 16px;
-
-  background-color: #000000;
-  /* background-image: url("../img/checkbox-on.svg"); */
+  background-image: url("../img/checkbox-on.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
+
+.filter-input-checkbox + label::before {
+  opacity: 1;
+}
+
+.filter-input-checkbox:hover + label::before {
+  opacity: 0.6;
+}
+
+.filter-input-checkbox:active + label::before,
+.filter-input-checkbox:checked + label::after {
+  opacity: 1;
+}
+
+.filter-input-checkbox:checked:hover + label::after {
+  opacity: 0.6;
+}
+
+
+
 
 .filter-input-radio + label::before {
   content: "";
@@ -904,6 +924,19 @@ body > * > * > * {
   background-color: #000000;
   border-radius: 50%;
 }
+
+.filter-input-radio:hover + label::before {
+  opacity: 0.6;
+}
+
+.filter-input-radio:active + label::before {
+  opacity: 1;
+}
+
+.filter-input-radio:checked:hover + label::after {
+  opacity: 0.6;
+}
+
 
 /* Сеточная стилизация фильтра по критериям товара страницы каталога */
 .filters-name {
@@ -953,6 +986,10 @@ body > * > * > * {
   box-shadow: 0 2px 1px 0 #cfcfcf;
 
   cursor: pointer;
+}
+
+.toggle:active {
+  border: 9px solid #ffffff;
 }
 
 .range-controls .toggle-max {
@@ -1310,7 +1347,8 @@ body > * > * > * {
   width: 760px;
 
   padding: 95px 100px;
-  margin: 0 100px;
+  margin: 0;
+  /* margin: 0 100px; */
 }
 
 .container-name-email {
@@ -1711,7 +1749,7 @@ a {
 
   content: "";
 
-  border: 10px solid rgba(0, 0, 0, 0.2);
+  border: 10px solid #000000;
   border-right-width: 5px;
   border-left-width: 5px;
   border-right-color: transparent;
@@ -1724,6 +1762,22 @@ a {
 
 .button-down::before {
   border-bottom-width: 0;
+}
+
+.arrow {
+  opacity: 0.2;
+}
+
+.arrow:hover {
+  opacity: 0.4;
+}
+
+.arrow:active {
+  opacity: 1;
+}
+
+.arrow.active {
+  opacity: 1;
 }
 
 
