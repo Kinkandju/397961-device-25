@@ -33,10 +33,53 @@ body > * > * > * {
 
 /* Сеточная стилизация шапки сайта */
 .layout-container {
+  position: relative;
+
   margin: 0 auto;
   padding: 0 20px;
 
+  z-index: 5;
+
   width: 1160px;
+}
+
+/* Стилизация градиента */
+.main-catalog {
+  position: relative;
+
+  z-index: 4;
+
+  height: 1288px;
+}
+
+.main-catalog:before {
+  content: '';
+
+  display: block;
+  position: absolute;
+  top: 154px;
+  left: 0;
+
+  height: 100%;
+  /* width: 328px; */
+  width: 36.7%;
+
+  background-image: linear-gradient(to bottom, #d9d9d9 0%, #d9d9d9 65px, #ebebeb 65px, #ebebeb 100%);
+}
+
+.main-catalog:after {
+  content: '';
+
+  display: block;
+  position: absolute;
+  top: 154px;
+  left: 36.7%;
+
+  height: 65px;
+  /* width: 832px; */
+  width: 63.3%;
+
+  background: #ebebeb;
 }
 
 .main-header {
@@ -957,8 +1000,6 @@ body > * > * > * {
   margin: 0;
   margin-bottom: 65px;
   padding: 20px 0;
-
-  background-color: #d9d9d9
 }
 
 /* Сеточная стилизация фильтра выбора стоимости страницы каталога */
@@ -1093,8 +1134,8 @@ body > * > * > * {
   padding-right: 67px;
 
   width: 200px;
-
   background-color: #ebebeb;
+  background-image: linear-gradient(to bottom, #d9d9d9 0%, #d9d9d9 65px, #ebebeb 65px, #ebebeb 100%);
 }
 
 .catalog-list-item {
@@ -1108,6 +1149,8 @@ body > * > * > * {
   padding-top: 49px;
 
   list-style: none;
+
+  background-color: #ffffff;
 }
 
 .catalog-item {
@@ -1244,6 +1287,10 @@ body > * > * > * {
 }
 
 /* Сеточная стилизация пользовательской навигации подвала сайта */
+.main-footer {
+  margin-top: 154px;
+}
+
 .user-navigation-footer {
   display: flex;
   justify-content: flex-end;
@@ -1660,7 +1707,7 @@ a {
   text-transform: uppercase;
   text-align: left;
 
-  /* background-color: #d9d9d9; */
+  background-color: #d9d9d9;
 }
 
 .filters legend {
