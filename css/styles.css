@@ -18,19 +18,6 @@
        url('../fonts/gilroylight.woff') format('woff');
 }
 
-/* Подсветка отдельных блоков сайта */
-/* body > * {
-  outline: red solid 2px;
-}
-
-body > * > * {
-  outline: green solid 2px;
-}
-
-body > * > * > * {
-  outline: blue solid 2px;
-} */
-
 /* Сеточная стилизация шапки сайта */
 .layout-container {
   position: relative;
@@ -56,7 +43,6 @@ body > * > * > * {
   z-index: -1;
 
   height: 100%;
-  /* width: 328px; */
   width: 36.7%;
 
   background-image: linear-gradient(to bottom, #d9d9d9 0%, #d9d9d9 65px, #ebebeb 65px, #ebebeb 100%);
@@ -72,7 +58,6 @@ body > * > * > * {
   z-index: -1;
 
   height: 65px;
-  /* width: 832px; */
   width: 63.3%;
 
   background: #ebebeb;
@@ -1428,10 +1413,41 @@ body > * > * > * {
   font: inherit;
 
   padding: 15px 20px;
+
+  background-color: #f2f2f2;
+  border: none;
 }
 
-.modal-write-us input::-webkit-input-placeholder {
+.modal-write-us input[type="text"]:hover,
+.modal-write-us input[type="email"]:hover,
+.modal-write-us textarea[type="text"]:hover {
+  background-color: #eaeaea;
+}
+
+.modal-write-us input[type="text"]:focus,
+.modal-write-us input[type="email"]:focus,
+.modal-write-us textarea[type="text"]:focus {
+  background-color: #ffffff;
+  outline: 2px solid #f0c52e;
+}
+
+.modal-write-us input[type="text"]:invalid,
+.modal-write-us input[type="email"]:invalid,
+.modal-write-us textarea[type="text"]:invalid {
+  background-color: #f6dada;
+  outline: none;
+}
+
+.modal-write-us input::-webkit-input-placeholder,
+.modal-write-us textarea::-webkit-input-placeholder,
+.modal-write-us input:hover::-webkit-input-placeholder,
+.modal-write-us textarea:hover::-webkit-input-placeholder {
   color: rgba(70, 70, 70, 0.4);
+}
+
+.modal-write-us input:focus::-webkit-input-placeholder,
+.modal-write-us textarea:focus::-webkit-input-placeholder {
+  color: #000000;
 }
 
 /* Сеточная стилизация модального окна карты*/
@@ -1488,6 +1504,13 @@ body > * > * > * {
   transform: rotate(-45deg);
 }
 
+.modal-close:hover {
+  background-color: #f0c52e;
+}
+
+.modal-close:active {
+  background-color: rgba(94%, 77%, 18%, 0.3);
+}
 
 /* ---------------------------------------------------------------------- */
 body {
@@ -2283,9 +2306,6 @@ a {
   font-weight: 300;
   color: rgba(70, 70, 70, 0.4);
   text-align: left;
-
-  background-color: rgba(242, 242, 242, 0.5);
-  border: none;
 }
 
 /* Стилизация скрытых блоков, заголовков, надписей */
