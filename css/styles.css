@@ -1357,7 +1357,7 @@
 
 /* Сеточная стилизация модального окна обратной связи */
 .modal {
-  /* display: none; */
+  display: none;
 
   position: fixed;
   top: 50%;
