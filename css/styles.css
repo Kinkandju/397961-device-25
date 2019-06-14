@@ -1595,7 +1595,8 @@ a {
   font-size: 15px;
   line-height: 30px;
   font-weight: 300;
-  color: rgba(0, 0, 0, 0.3);
+
+  /* color: rgba(0, 0, 0, 0.3); */
 
   border: none;
   border-bottom: 2px solid transparent;
@@ -1603,12 +1604,19 @@ a {
   background-color: transparent;
 }
 
-.search-form input[type="search"]:hover {
-  color: rgba(255, 255, 255, 0.6);
+.search-form input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.search-form input:hover::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.search-form input:focus::-webkit-input-placeholder {
+  color: #000000;
 }
 
 .search-form input[type="search"]:focus {
-  color: #000000;
   border-bottom: 2px solid #000000;
   }
 
