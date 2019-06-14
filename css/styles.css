@@ -877,6 +877,10 @@ body > * > * > * {
   background-position: 0 0;
 }
 
+.filter-input-checkbox:checked.filter-input-checkbox + label::before {
+  visibility: hidden;
+}
+
 .filter-input-checkbox + label::before {
   opacity: 1;
 }
@@ -894,8 +898,11 @@ body > * > * > * {
   opacity: 0.6;
 }
 
-
-
+.filter-input-checkbox:disabled + label::before,
+.filter-input-checkbox:checked:disabled + label::after,
+.filter-input-checkbox:disabled + label {
+  opacity: 0.6;
+}
 
 .filter-input-radio + label::before {
   content: "";
@@ -937,6 +944,11 @@ body > * > * > * {
   opacity: 0.6;
 }
 
+.filter-input-radio:disabled + label::before,
+.filter-input-radio:checked:disabled + label::after,
+.filter-input-radio:disabled + label {
+  opacity: 0.6;
+}
 
 /* Сеточная стилизация фильтра по критериям товара страницы каталога */
 .filters-name {
