@@ -38,19 +38,12 @@ body > * > * > * {
   margin: 0 auto;
   padding: 0 20px;
 
-  z-index: 5;
-
   width: 1160px;
 }
 
 /* Стилизация градиента */
 .main-catalog {
   position: relative;
-
-  z-index: 4;
-
-  /* height: 1288px; */
-  overflow: hidden;
 }
 
 .main-catalog:before {
@@ -60,6 +53,7 @@ body > * > * > * {
   position: absolute;
   top: 0px;
   left: 0;
+  z-index: -1;
 
   height: 100%;
   /* width: 328px; */
@@ -75,6 +69,7 @@ body > * > * > * {
   position: absolute;
   top: 0px;
   left: 36.7%;
+  z-index: -1;
 
   height: 65px;
   /* width: 832px; */
@@ -1248,18 +1243,10 @@ body > * > * > * {
   margin-left: auto;
 }
 
-/* .filter {
-  display: flex;
-
-  background-color: #ebebeb;
-} */
-
 /* Сеточная стилизация подвала сайта */
 .main-footer {
   display: flex;
   flex-direction: column;
-
-  /* margin-top: 80px; */
 
   background-color: #464646;
 }
@@ -1385,13 +1372,13 @@ body > * > * > * {
 
 /* Сеточная стилизация модального окна обратной связи */
 .modal {
-  display: none;
+  /* display: none; */
 
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
-  z-index: 2;
+  z-index: 10;
 
   color: #000000;
 
@@ -1408,7 +1395,6 @@ body > * > * > * {
 
   padding: 95px 100px;
   margin: 0;
-  /* margin: 0 100px; */
 }
 
 .container-name-email {
@@ -1443,6 +1429,11 @@ body > * > * > * {
 
   padding: 15px 20px;
 }
+
+.modal-write-us input::-webkit-input-placeholder {
+  color: rgba(70, 70, 70, 0.4);
+}
+
 /* Сеточная стилизация модального окна карты*/
 .modal-map {
   width: 960px;
