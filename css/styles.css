@@ -49,7 +49,8 @@ body > * > * > * {
 
   z-index: 4;
 
-  height: 1288px;
+  /* height: 1288px; */
+  overflow: hidden;
 }
 
 .main-catalog:before {
@@ -57,7 +58,7 @@ body > * > * > * {
 
   display: block;
   position: absolute;
-  top: 154px;
+  top: 0px;
   left: 0;
 
   height: 100%;
@@ -72,7 +73,7 @@ body > * > * > * {
 
   display: block;
   position: absolute;
-  top: 154px;
+  top: 0px;
   left: 36.7%;
 
   height: 65px;
@@ -313,7 +314,7 @@ body > * > * > * {
 /* Сеточная стилизация вложенного списка навигации каталога товаров*/
 .nested-list {
   position: absolute;
-  z-index: 5;
+  z-index: 6;
 
   display: none;
   flex-direction: column;
@@ -1073,6 +1074,10 @@ body > * > * > * {
 }
 
 /* Сеточная стилизация сортировки товаров страницы каталога */
+.catalog-container {
+  Background-color: #ffffff;
+}
+
 .filter {
   display: flex;
   flex-wrap: wrap;
@@ -1287,10 +1292,6 @@ body > * > * > * {
 }
 
 /* Сеточная стилизация пользовательской навигации подвала сайта */
-.main-footer {
-  margin-top: 154px;
-}
-
 .user-navigation-footer {
   display: flex;
   justify-content: flex-end;
