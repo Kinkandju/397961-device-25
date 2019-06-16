@@ -459,8 +459,7 @@
   cursor: pointer;
 }
 
-/* .label-controls label::after {
-  display: none;
+.label-controls label:first-child::after {
 
   position: absolute;
   top: 2px;
@@ -475,12 +474,6 @@
   border: 1px solid #000000;
   cursor: pointer;
 }
-
-#btn-1:checked ~ .label-controls label[for="btn-1"],
-#btn-2:checked ~ .label-controls label[for="btn-2"],
-#btn-3:checked ~ .label-controls label[for="btn-3"] {
-  display: flex;
-} */
 
 .label-controls label:last-child {
   margin-right: 0;
@@ -740,6 +733,7 @@
   justify-content: space-between;
 
   padding-bottom: 10px;
+  margin-bottom: 90px;
 }
 
 .about-us_contacts h2 {
