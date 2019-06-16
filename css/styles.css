@@ -791,6 +791,10 @@
   margin-bottom: 40px;
 }
 
+.contacts .map {
+  padding-bottom: 27px;
+}
+
 /* Сеточная стилизация заголовка страницы каталога */
 .vpage-title {
   padding-left: 60px;
