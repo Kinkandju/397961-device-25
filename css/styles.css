@@ -1641,8 +1641,6 @@ a {
   line-height: 30px;
   font-weight: 300;
 
-  /* color: rgba(0, 0, 0, 0.3); */
-
   border: none;
   border-bottom: 2px solid transparent;
 
@@ -1732,6 +1730,7 @@ a {
 
   background-color: #f7e296;
 }
+
 /* Стили "хлебных крошек" */
 .breadcrumbs {
   font-family: 'Open Sans', Arial, sans-serif;
