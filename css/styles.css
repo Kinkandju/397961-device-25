@@ -342,20 +342,6 @@
   position: relative;
 }
 
-/* .slider-inner {
-  overflow: hidden;
-}
-
-.slider-slides {
-  width: 300%;
-}
-
-.slider-slides .slide-1-monopod,
-.slider-slides .slide-2-fitness-bracelet,
-.slider-slides .slide-3-quadcopter {
-  float: left;
-} */
-
 .slide-1-monopod,
 .slide-2-fitness-bracelet,
 .slide-3-quadcopter {
