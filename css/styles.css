@@ -72,10 +72,9 @@
 .main-navigation {
   position: relative;
 
-  padding-top: 29px;
+  padding-top: 36px;
   padding-left: 60px;
   padding-right: 55px;
-  /* padding-bottom: 40px; */
 }
 
 /* Сеточная стилизация логотипа */
@@ -136,10 +135,15 @@
 
 .search-form input[type="search"] {
   display: inline-block;
+  vertical-align: baseline;
 
   padding: 6px 0 4px 40px;
 
   width: 355px;
+}
+
+.search-form:focus-within .button-search {
+visibility: visible;
 }
 
 /* Сеточная стилизация пользовательской навигации */
@@ -167,7 +171,7 @@
   content: "";
 
   position: absolute;
-  top: 24px;
+  top: 9px;
   left: 24px;
 
   width: 12px;
@@ -182,7 +186,7 @@
   content: "";
 
   position: absolute;
-  top: 26px;
+  top: 11px;
   left: 29px;
 
   width: 12px;
@@ -197,7 +201,7 @@
   content: "";
 
   position: absolute;
-  top: 24px;
+  top: 9px;
   left: 28px;
 
   width: 12px;
@@ -256,6 +260,7 @@
   position: relative;
 
   display: inline-block;
+  vertical-align: baseline;
 
   padding-right: 30px;
 }
@@ -370,17 +375,21 @@
 
 .slide-3-quadcopter img {
   position: relative;
-  top: 75px;
+  top: 63px;
   order: -1;
 
   width: 526px;
   height: 334px;
   padding-left: 14px;
-  padding-right: 22px;
+  padding-right: 42px;
 }
 
 .monopod-container {
   padding-right: 75px;
+}
+
+.monopod-container .button {
+  margin-left: 1px;
 }
 
 .name-offer {
@@ -391,9 +400,15 @@
   margin-bottom: 50px;
 }
 
+.slide-2-fitness-bracelet .name-offer {
+  top: 20px;
+
+  margin-bottom: 39px;
+}
+
 .name-offer::before {
   position: absolute;
-  top: -42px;
+  top: -41px;
 
   content: "";
 
@@ -405,7 +420,7 @@
 
 .name-offer::after {
   position: absolute;
-  top: -93px;
+  top: -92px;
   left: 330px;
   z-index: -1;
 
@@ -432,25 +447,29 @@
 }
 
 .name-offer + p {
-  margin-bottom: 41px;
+  margin-bottom: 51px;
+}
+
+.slider-slides {
+  position: relative;
 }
 
 .controls-button {
+  position: absolute;
+  top: 210px;
+  right: 75px;
+
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-
-  margin-bottom: 47px;
-}
-
-.slider-controls {
-  display: none;
 }
 
 .label-controls label {
   position: relative;
 
   display: inline-block;
+  vertical-align: baseline;
+
   margin: 0 10px;
   width: 10px;
   height: 10px;
@@ -475,12 +494,19 @@
   cursor: pointer;
 }
 
+.label-controls label:nth-child(2) {
+  left: -4px;
+}
+
+
 .label-controls label:last-child {
+  left: -6px;
   margin-right: 0;
 }
 
 .table-container {
   margin: 0;
+  margin-top: 55px;
   padding: 0;
 
   border-collapse: collapse;
@@ -491,31 +517,37 @@
 }
 
 .table-container td:last-child {
+  padding-top: 5px;
   padding-right: 0;
 }
 
+.fitness-bracelet-container .table-container {
+  margin-top: 53px;
+}
+
 .fitness-bracelet-container {
-  padding-right: 90px;
+  padding-right: 130px;
 }
 
 .quadcopter-container {
   padding-right: 30px;
 }
 
-/* Стилизация первого абзаца слайдера */
-.name-offer::before {
-
+.quadcopter-container .table-container td:first-child {
+  padding-right: 45px;
 }
 
-/* .table-container {
-  table-layout: fixed;
+.quadcopter-container .table-container td:last-child {
+  padding-top: 2px;
 }
 
-.table-container tr {
+.quadcopter-container .identification td {
+  padding-top: 5px;
+}
 
-} */
-
-
+.quadcopter-container .identification td:last-child {
+  padding-top: 7px;
+}
 
 /* Сеточная стилизация блока каталога товаров */
 .catalog {
@@ -556,6 +588,10 @@
   height: 160px;
 
   background-color: rgba(94%, 77%, 18%, 0.5);
+}
+
+.catalog-list-image-monopod {
+  align-items: flex-end;
 }
 
 .catalog-list-image:hover {
@@ -676,7 +712,7 @@
   top: -16px;
 
   margin-left: -1px;
-  padding-right: 300px;
+  padding-right: 250px;
 }
 
 .slide-service-2 p {
@@ -692,7 +728,7 @@
   top: -16px;
 
   margin-left: -1px;
-  padding-right: 260px;
+  padding-right: 270px;
 }
 
 .slide-service-1 img {
@@ -704,15 +740,14 @@
 .slide-service-2 img {
   position: absolute;
   top: -39px;
-  right: 8px;
+  right: -12px;
 }
 
 .slide-service-3 img {
   position: absolute;
   top: -39px;
-  right: 8px;
+  right: 11px;
 }
-
 
 /* Сеточная стилизация блока "Логотипы" */
 .logotypes {
@@ -1059,12 +1094,14 @@
 }
 
 .price-controls label {
+  display: inline-block;
+  vertical-align: baseline;
+
   font-size: 14px;
   line-height: 24px;
   letter-spacing: normal;
   color: rgba(0, 0, 0, 0.2);
 
-  display: inline-block;
   width: 50%;
 }
 
@@ -1127,6 +1164,7 @@
 
 .arrow {
   display: inline-block;
+  vertical-align: baseline;
 }
 
 .button-down {
@@ -1256,6 +1294,9 @@
 .main-footer {
   display: flex;
   flex-direction: column;
+
+  padding: 0 20px;
+  min-width: 1160px;
 
   background-color: #464646;
 }
@@ -1602,7 +1643,7 @@ a {
   text-transform: uppercase;
   text-align: center;
 
-  padding: 10px 40px;
+  padding: 10px 42px;
 
   background-color: transparent;
   border: none;
@@ -1857,6 +1898,7 @@ a {
 /* Стили кнопок "вверх" и "вниз" сортировки товаров */
 .arrow::before {
   display: inline-block;
+  vertical-align: baseline;
 
   content: "";
 
@@ -1890,7 +1932,6 @@ a {
 .arrow.active {
   opacity: 1;
 }
-
 
 /* Стили каталога товаров */
 .liken {
