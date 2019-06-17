@@ -767,13 +767,13 @@ visibility: visible;
   display: flex;
   justify-content: space-between;
 
-  padding-bottom: 10px;
   margin-bottom: 90px;
 }
 
 .about-us_contacts h2 {
   position: relative;
 
+  margin-left: -1px;
   margin-bottom: 43px;
 }
 
@@ -802,11 +802,22 @@ visibility: visible;
 }
 
 .about-us p {
+  padding-right: 20px;
   padding-bottom: 15px;
 }
 
-.second-paragraph {
+.about-us .second-paragraph {
+  padding-right: 0;
   margin-bottom: 51px;
+}
+
+.about-us .button {
+  padding-left: 22px;
+  padding-right: 20px;
+}
+
+.contacts .button {
+  padding-right: 36px;
 }
 
 .carrier-companies {
@@ -1304,15 +1315,18 @@ visibility: visible;
 /* Сеточная стилизация логотипа подвала сайта */
 .logo-user-navigation {
   position: relative;
+
+  display: flex;
+  align-items: baseline;
+
+  margin-bottom: 35px;
 }
 
 .main-footer-logo {
-  position: absolute;
-  top: 23px;
-  left: -1px;
+  position: relative;
+  top: 16px;
 
-  width: 163px;
-  height: 35px;
+  margin-right: auto;
 }
 
 .main-footer-logo svg:hover {
@@ -1323,26 +1337,13 @@ visibility: visible;
   opacity: 0.3;
 }
 
-.main-footer-logo::after {
-  position: absolute;
-  top: 172px;
-  left: 1px;
-
-  width: 80px;
-  height: 7px;
-
-  content: "";
-
-  background-color: #f0c52e;
-}
-
 /* Сеточная стилизация пользовательской навигации подвала сайта */
 .user-navigation-footer {
   display: flex;
   justify-content: flex-end;
 
   margin: 0;
-  margin-top: 42px;
+  margin-top: 60px;
   padding: 0;
 
   list-style: none;
@@ -1367,10 +1368,28 @@ visibility: visible;
 /* Сеточная стилизация адреса, навигации по каталогу и телефона подвала сайта */
 .address-site-navigation-call {
   position: relative;
-  top: -1px;
 
   display: flex;
   align-items: baseline;
+
+  margin-bottom: 20px;
+}
+
+.address-site-navigation-call::before {
+  position: absolute;
+  top: 106px;
+
+  width: 80px;
+  height: 7px;
+
+  content: "";
+
+  background-color: #f0c52e;
+}
+
+.call {
+  margin: 0;
+  padding: 0;
 }
 
 .site-navigation-footer {
@@ -1386,17 +1405,17 @@ visibility: visible;
 }
 
 .site-navigation-footer li {
-  margin-right: 35px;
+  padding-right: 34px;
 }
 
-.site-navigation-footer li:nth-child(3) {
-  margin-right: 0;
+.site-navigation-footer li:first-child {
+  margin-left: 30px;
 }
 
 /* Сеточная стилизация социальных сетей и ссылки на HTML Academy подвала сайта */
 .social-copyright {
   position: relative;
-  top: -18px;
+  top: -19px;
 
   display: flex;
   justify-content: center;
@@ -1420,12 +1439,12 @@ visibility: visible;
   padding: 0;
 }
 
-.footer-social-list li:nth-child(1) {
-  padding-right: 23px;
+.footer-social-list li {
+  padding-right: 22px;
 }
 
-.footer-social-list li:nth-child(2) {
-  padding-right: 23px;
+.footer-social-list li:first-child {
+  margin-left: 17px;
 }
 
 /* Сеточная стилизация модального окна обратной связи */
@@ -2186,6 +2205,8 @@ a {
   font-size: 15px;
   line-height: 30px;
   font-weight: 300;
+  letter-spacing: normal;
+  word-spacing: 1px;
   color: #464646;
   text-align: left;
 
