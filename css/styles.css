@@ -753,7 +753,7 @@ visibility: visible;
 .slide-service-1 img {
   position: absolute;
   top: -14px;
-  right: 8px;
+  right: 7px;
 }
 
 .slide-service-2 img {
@@ -799,6 +799,7 @@ visibility: visible;
 .about-us_contacts h2::before {
   position: absolute;
   top: -52px;
+  left: 1px;
 
   content: "";
 
@@ -844,6 +845,24 @@ visibility: visible;
   margin-bottom: 62px;
   padding: 0;
   padding-left: 35px;
+}
+
+.carrier-companies li {
+  position: relative;
+}
+
+.carrier-companies li::before {
+  position: absolute;
+  top: 16px;
+  left: -34px;
+
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+
+  content: "";
+
+  border: 2px solid rgba(0, 0, 0, 0.2);
 }
 
 .contacts p {
@@ -1272,8 +1291,6 @@ visibility: visible;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-
-  width: 1160px;
 
   margin: 0;
   padding: 0;
@@ -2386,7 +2403,7 @@ a {
   text-align: left;
 
   background-color: #ffffff;
-  list-style-type: circle;
+  list-style: none;
 }
 
 /* Стили пользовательской навигации снизу */
