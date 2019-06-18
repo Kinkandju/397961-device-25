@@ -351,16 +351,19 @@ visibility: visible;
   position: relative;
 }
 
-.slide-1-monopod,
-.slide-2-fitness-bracelet,
-.slide-3-quadcopter {
-  display: flex;
+.slider-item {
+  display: none;
 
   height: 486px;
   width: 1160px;
 
   position: relative;
   top: -110px;
+}
+
+
+.slider-item.slide-1-monopod {
+  display: flex;
 }
 
 .slide-1-monopod img {
@@ -460,6 +463,7 @@ visibility: visible;
 
 .controls-button {
   position: absolute;
+  z-index: 1;
   top: 210px;
   right: 75px;
 
@@ -561,11 +565,20 @@ visibility: visible;
 
 .catalog-list {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
 
   margin: 0;
-  margin-bottom: 200px;
+  margin-bottom: 120px;
   padding: 0;
+}
+
+.catalog-list li {
+  margin-right: 40px;
+  margin-bottom: 80px;
+}
+
+.catalog-list li:nth-child(6n) {
+  margin-right: 0;
 }
 
 .catalog-list a {
@@ -696,11 +709,13 @@ visibility: visible;
   padding: 0;
 }
 
-.slide-service-1,
-.slide-service-2,
-.slide-service-3 {
+.slide-service-item {
   position: relative;
 
+  display: none;
+}
+
+.slide-service-item.slide-service-1 {
   display: flex;
 }
 
@@ -1257,6 +1272,8 @@ visibility: visible;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+
+  width: 1160px;
 
   margin: 0;
   padding: 0;
