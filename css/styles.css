@@ -1277,6 +1277,43 @@ visibility: visible;
   margin-bottom: -8px;
 }
 
+.catalog-item .catalog-item-image:last-child {
+  position: relative;
+}
+
+.catalog-item:last-child .catalog-item-image::before {
+  position: absolute;
+  top: 50px;
+  right: 40px;
+
+  content: "new";
+
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.7px;
+  font-weight: 800;
+  color: rgba(0, 0, 0, 0.1);
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: transparent;
+}
+
+.catalog-item:last-child .catalog-item-image::after {
+  position: absolute;
+  top: 28px;
+  right: 27px;
+
+  content: "";
+
+  width: 59px;
+  height: 59px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: transparent;
+}
+
 .item-container {
   position: relative;
   top: -15px;
