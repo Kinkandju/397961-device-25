@@ -45,7 +45,7 @@
   height: 100%;
   width: 36.7%;
 
-  background-image: linear-gradient(to bottom, #d9d9d9 0%, #d9d9d9 65px, #ebebeb 65px, #ebebeb 100%);
+  background-image: linear-gradient(to bottom, #d9d9d9 0%, #d9d9d9 71px, #ebebeb 71px, #ebebeb 100%);
 }
 
 .main-catalog:after {
@@ -57,7 +57,7 @@
   left: 36.7%;
   z-index: -1;
 
-  height: 65px;
+  height: 71px;
   width: 63.3%;
 
   background: #ebebeb;
@@ -165,6 +165,10 @@ visibility: visible;
 .purchases-header {
   position: relative;
   padding-left: 50px;
+}
+
+.login-link-header .log-out {
+  padding-left: 16px;
 }
 
 .login-link-header::before {
@@ -836,8 +840,11 @@ visibility: visible;
 }
 
 /* Сеточная стилизация заголовка страницы каталога */
-.vpage-title {
+.page-title {
   padding-left: 60px;
+  padding-top: 5px;
+
+  margin-bottom: 24px;
 }
 
 /* Сеточная стилизация "хлебных крошек" страницы каталога */
@@ -847,16 +854,18 @@ visibility: visible;
   margin: 0;
   padding: 0;
   padding-left: 60px;
-  margin-bottom: 50px;
+  margin-bottom: 45px;
 }
 
 .breadcrumbs li {
   position: relative;
+
   padding-right: 35px;
 }
 
 .breadcrumbs li:last-child {
   padding-right: 0;
+  padding-left: 5px;
 }
 
 .breadcrumbs a:hover {
@@ -869,8 +878,8 @@ visibility: visible;
 
 .breadcrumbs a::before {
   position: absolute;
-  top: 8px;
-  right: 18px;
+  top: 7px;
+  right: 16px;
   z-index: 2;
 
   width: 10px;
@@ -881,16 +890,20 @@ visibility: visible;
   background-color: #ffffff;
 }
 
+.breadcrumbs li:first-child a::before {
+  right: 20px;
+}
+
 .breadcrumbs a::after {
   position: absolute;
   top: 0;
-  right: 5px;
+  right: 4px;
   z-index: 1;
 
   content: "";
 
-  width: 26px;
-  height: 26px;
+  width: 24px;
+  height: 24px;
 
   background-color: #ffffff;
   box-shadow: 1px 1px 0 4px #000000;
@@ -898,16 +911,26 @@ visibility: visible;
   transform: rotate(-45deg) scale(0.17);
 }
 
+.breadcrumbs li:first-child a::after {
+  right: 8px;
+}
+
+
 /* Общая сеточная стилизация фильтров страницы каталога */
+.filters {
+  width: 201px;
+}
+
 .filters legend {
   position: relative;
 
-  margin-bottom: 25px;
+  margin-bottom: 35px;
 }
 
 .filters legend::before {
   position: absolute;
-  top: -10px;
+  top: -12px;
+  left: 1px;
 
   content: "";
   width: 200px;
@@ -922,19 +945,38 @@ visibility: visible;
 
 .filters fieldset {
   margin: 0;
+  margin-left: -2px;
   margin-bottom: 40px;
   padding: 0;
 
   border: none;
 }
 
+.filters .color {
+  margin-bottom: 44px;
+}
+
+.filters .bluetooth {
+  margin-bottom: 30px;
+}
+
+.filter-button {
+  position: relative;
+  left: -4px;
+}
+
+.color .color-list {
+  margin: 0;
+  padding: 0;
+}
+
 .filter-option {
-  margin-bottom: 17px;
-  padding-left: 45px;
+  padding-left: 39px;
 }
 
 .filter-option label {
   position: relative;
+  left: 1px;
 
   display: block;
 
@@ -1003,7 +1045,7 @@ visibility: visible;
 
   position: absolute;
   left: -42px;
-  top: 8px;
+  top: 7px;
 
   width: 18px;
   height: 18px;
@@ -1016,7 +1058,7 @@ visibility: visible;
   content: "";
 
   position: absolute;
-  top: 16px;
+  top: 15px;
   left: -34px;
 
   width: 10px;
@@ -1049,8 +1091,8 @@ visibility: visible;
   display: block;
 
   margin: 0;
-  margin-bottom: 65px;
-  padding: 20px 0;
+  margin-bottom: 82px;
+  padding: 23px 0;
 }
 
 /* Сеточная стилизация фильтра выбора стоимости страницы каталога */
@@ -1063,7 +1105,10 @@ visibility: visible;
 }
 
 .range-controls .scale {
+  width: 196px;
   height: 2px;
+
+  padding-left: 5px;
 
   background: #dbdbdb;
 }
@@ -1096,6 +1141,10 @@ visibility: visible;
   border: 9px solid #ffffff;
 }
 
+.range-controls .toggle-min {
+  left: -5px;
+}
+
 .range-controls .toggle-max {
   left: 108px;
 }
@@ -1113,7 +1162,7 @@ visibility: visible;
   letter-spacing: normal;
   color: rgba(0, 0, 0, 0.2);
 
-  width: 50%;
+  width: 45%;
 }
 
 .price-controls input {
@@ -1123,6 +1172,11 @@ visibility: visible;
 
   border: none;
   background: #f1f1f1;
+}
+
+.color legend,
+.bluetooth legend {
+  margin-bottom: 17px;
 }
 
 /* Сеточная стилизация сортировки товаров страницы каталога */
@@ -1135,26 +1189,29 @@ visibility: visible;
   flex-wrap: wrap;
   align-items: baseline;
 
-  padding: 20px 0;
+  padding: 0;
+  padding-top: 23px;
+  padding-bottom: 23px;
 
   background-color: #ebebeb;
 }
 
 .sort-name {
   margin-left: 73px;
-  margin-right: 55px;
+  margin-right: 56px;
 }
 
 .sort-list {
   display: flex;
   flex-wrap: wrap;
+  align-items: baseline;
 
   margin: 0;
   padding: 0;
 }
 
 .sort-list li {
-  margin-right: 25px;
+  margin-right: 32px;
 }
 
 .sort-item a {
@@ -1193,7 +1250,7 @@ visibility: visible;
 
   width: 200px;
   background-color: #ebebeb;
-  background-image: linear-gradient(to bottom, #d9d9d9 0%, #d9d9d9 65px, #ebebeb 65px, #ebebeb 100%);
+  background-image: linear-gradient(to bottom, #d9d9d9 0%, #d9d9d9 71px, #ebebeb 71px, #ebebeb 100%);
 }
 
 .catalog-list-item {
@@ -1203,8 +1260,9 @@ visibility: visible;
 
   margin: 0;
   padding: 0;
-  padding-left: 73px;
-  padding-top: 49px;
+  padding-left: 72px;
+  padding-top: 51px;
+  margin-bottom: 7px;
 
   list-style: none;
 
@@ -1215,10 +1273,13 @@ visibility: visible;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+
+  margin-bottom: -8px;
 }
 
 .item-container {
   position: relative;
+  top: -15px;
 
   display: flex;
   flex-wrap: wrap;
@@ -1234,7 +1295,7 @@ visibility: visible;
   display: none;
 
   position: absolute;
-  top: -403px;
+  top: -390px;
   z-index: 8;
 
   width: 360px;
@@ -1273,10 +1334,12 @@ visibility: visible;
 .pagination-list {
   display: flex;
   justify-content: center;
+  align-items: baseline;
   flex-wrap: wrap;
 
   margin: 0;
   margin-left: 73px;
+  margin-bottom: 77px;
   padding: 0;
 
   background-color: #ebebeb;
@@ -1284,13 +1347,17 @@ visibility: visible;
 
 .pagination-item a {
   display: block;
-  padding: 25px 15px;
+  padding: 23px 14px;
 }
 
 .pagination-item:first-child a,
 .pagination-item:last-child a {
   padding-left: 30px;
   padding-right: 30px;
+}
+
+.pagination-item:nth-child(2) {
+  padding-left: 10px;
 }
 
 .pagination-item:first-child {
@@ -1824,7 +1891,7 @@ a {
 
 .filters legend {
   font-family: 'Gilroy', Arial, sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 24px;
   letter-spacing: 0.2px;
   font-weight: 800;
@@ -1986,8 +2053,6 @@ a {
 /* Стили пагинации */
 .pagination-list {
   list-style: none;
-
-  margin-bottom: 80px;
 }
 
 .pagination-item a {
@@ -2119,7 +2184,7 @@ a {
 }
 
 .slider-list h3,
-.vpage-title {
+.page-title {
   font-family: 'Gilroy', Arial, sans-serif;
   font-size: 47px;
   line-height: 48px;
