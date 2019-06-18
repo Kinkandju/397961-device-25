@@ -1389,6 +1389,10 @@ visibility: visible;
   margin-bottom: 35px;
 }
 
+.footer-catalog-navigation {
+  margin-bottom: 16px;
+}
+
 .main-footer-logo {
   position: relative;
   top: 16px;
@@ -1416,6 +1420,10 @@ visibility: visible;
   list-style: none;
 }
 
+.footer-catalog {
+  margin-top: 42px;
+}
+
 .user-navigation-footer li {
   margin-left: 40px;
 }
@@ -1430,6 +1438,10 @@ visibility: visible;
 
 .login-svg {
   padding-right: 8px;
+}
+
+.footer-catalog .log-out {
+  margin-left: 17px;
 }
 
 /* Сеточная стилизация адреса, навигации по каталогу и телефона подвала сайта */
@@ -1538,7 +1550,7 @@ visibility: visible;
 .modal-write-us {
   width: 760px;
 
-  padding: 95px 100px;
+  padding: 56px 100px;
   margin: 0;
 }
 
@@ -1547,11 +1559,14 @@ visibility: visible;
   justify-content: space-between;
 
   width: 760px;
+
+  margin-bottom: ;
 }
 
 .container-name-email label,
 .message label {
-  margin-bottom: 10px;
+  margin-top: 19px;
+  margin-bottom: 7px;
 }
 
 .user-name,
@@ -1565,14 +1580,27 @@ visibility: visible;
 .message {
   display: flex;
   flex-direction: column;
+
+  margin: 0;
+}
+
+.message label {
+  margin-top: 15px;
+}
+
+.modal-write-us .button {
+  margin-top: 38px;
+  margin-bottom: 18px;
+  padding-left: 35px;
+  padding-right: 33px;
 }
 
 .modal-write-us input[type="text"],
 .modal-write-us input[type="email"],
-.modal-write-us textarea[type="text"] {
+.modal-write-us textarea {
   font: inherit;
 
-  padding: 15px 20px;
+  padding: 16px 20px;
 
   background-color: #f2f2f2;
   border: none;
@@ -1580,28 +1608,40 @@ visibility: visible;
 
 .modal-write-us input[type="text"]:hover,
 .modal-write-us input[type="email"]:hover,
-.modal-write-us textarea[type="text"]:hover {
+.modal-write-us textarea:hover {
   background-color: #eaeaea;
 }
 
 .modal-write-us input[type="text"]:focus,
 .modal-write-us input[type="email"]:focus,
-.modal-write-us textarea[type="text"]:focus {
+.modal-write-us textarea:focus {
   background-color: #ffffff;
   outline: 2px solid #f0c52e;
 }
 
 .modal-write-us input[type="text"]:invalid,
 .modal-write-us input[type="email"]:invalid,
-.modal-write-us textarea[type="text"]:invalid {
+.modal-write-us textarea:invalid {
   background-color: #f6dada;
   outline: none;
 }
 
 .modal-write-us input::-webkit-input-placeholder,
+.modal-write-us input::-moz-placeholder,
+.modal-write-us input:-moz-placeholder,
+.modal-write-us input:-ms-input-placeholder,
 .modal-write-us textarea::-webkit-input-placeholder,
+.modal-write-us textarea::-moz-placeholder,
+.modal-write-us textarea:-moz-placeholder,
+.modal-write-us textarea:-ms-input-placeholder,
 .modal-write-us input:hover::-webkit-input-placeholder,
-.modal-write-us textarea:hover::-webkit-input-placeholder {
+.modal-write-us input:hover::-moz-placeholder,
+.modal-write-us input:hover:-moz-placeholder,
+.modal-write-us input:hover:-ms-input-placeholder,
+.modal-write-us textarea:hover::-webkit-input-placeholder,
+.modal-write-us textarea:hover::-moz-placeholder,
+.modal-write-us textarea:hover:-moz-placeholder,
+.modal-write-us textarea:hover:-ms-input-placeholder {
   color: rgba(70, 70, 70, 0.4);
 }
 
@@ -2243,7 +2283,12 @@ a {
 }
 
 .logotypes-list img {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
   filter: grayscale(100%);
+  filter: gray;
   opacity: 0.2;
 }
 
@@ -2453,7 +2498,7 @@ a {
 
 .modal-write-us input[type="text"],
 .modal-write-us input[type="email"],
-.modal-write-us textarea[type="text"] {
+.modal-write-us textarea {
   font-family: 'Open Sans', Arial, sans-serif;
   font-style: normal;
   font-size: 14px;
