@@ -101,8 +101,6 @@
 
   margin-right: 76px;
   margin-bottom: 31px;
-
-  width: 440px;
 }
 
 .search-form::before {
@@ -148,35 +146,55 @@ visibility: visible;
 
 /* Сеточная стилизация пользовательской навигации */
 .user-navigation-header {
-  display: flex;
-  justify-content: flex-end;
+  display: inline-flex;
+  justify-content: flex-start;
 
-  width: 600px;
+  width: 509px;
 
   margin: 0;
   padding: 0;
-  padding-right: 5px;
 
   list-style: none;
 }
 
-.login-link-header,
-.difference-header,
-.purchases-header {
-  position: relative;
-  padding-left: 50px;
+.difference-header {
+  margin-right:auto;
 }
 
-.login-link-header .log-out {
-  padding-left: 16px;
+.login-link-header {
+  margin-right: 207px;
+}
+
+.catalog-header {
+  margin: 0;
+}
+
+.catalog-header .log-out {
+  padding-left: 15px;
+}
+
+.user-navigation-header .log-out {
+  margin-right: 53px;
+}
+
+.purchases-header {
+  margin-right: 5px;
+}
+
+.user-navigation-header li {
+  position: relative;
+}
+
+.user-navigation-header a {
+  padding-left: 30px;
 }
 
 .login-link-header::before {
-  content: "";
-
   position: absolute;
   top: 9px;
-  left: 24px;
+  left: 4px;
+
+  content: "";
 
   width: 12px;
   height: 12px;
@@ -187,11 +205,11 @@ visibility: visible;
 }
 
 .difference-header::before {
-  content: "";
-
   position: absolute;
   top: 11px;
-  left: 29px;
+  left: 11px;
+
+  content: "";
 
   width: 12px;
   height: 12px;
@@ -202,11 +220,11 @@ visibility: visible;
 }
 
 .purchases-header::before {
-  content: "";
-
   position: absolute;
   top: 9px;
-  left: 28px;
+  left: 8px;
+
+  content: "";
 
   width: 12px;
   height: 12px;
@@ -216,18 +234,11 @@ visibility: visible;
   background-position: 0 0;
 }
 
-.difference-header {
-  padding-right: 12px;
-}
-
-.login-link-header {
-  margin-right: auto;
-}
-
 /* Сеточная стилизация навигации по каталогу */
 .site-navigation-header {
   display: flex;
-  justify-content: flex-end;
+  /* justify-content: flex-end; */
+  justify-content: flex-start;
 
   margin: 0;
   padding: 0;
@@ -249,15 +260,15 @@ visibility: visible;
 }
 
 .site-navigation-header > li:nth-child(1) {
-  margin-right: auto;
+  margin-right: 291px;
 }
 
-.site-navigation-header > li:nth-child(3) {
-  margin-left: 33px;
+.site-navigation-header > li:nth-child(2) {
+  margin-right: 35px;
 }
 
 .site-navigation-header > li:nth-child(4) {
-  margin-left: 110px;
+  margin-left: auto;
 }
 
 .drop-down-point {
@@ -315,10 +326,10 @@ visibility: visible;
   width: 1160px;
 
   margin: 0;
-  padding-top: 20px;
   margin-left: -60px;
   padding: 0;
-  padding-bottom: 53px;
+  padding-top: 20px;
+  padding-bottom: 33px;
 }
 
 .nested-list a {
@@ -1574,14 +1585,15 @@ visibility: visible;
   padding-bottom: 65px;
 }
 
-.footer-social {
-  margin: 0 auto;
+.footer-htmlacademy {
+  position: absolute;
+  right: 0;
 }
 
 .footer-social-list {
   position: relative;
   top: 2px;
-  left: 15px;
+  left: 2px;
 
   display: flex;
 
