@@ -1303,6 +1303,8 @@ visibility: visible;
   justify-content: space-between;
   flex-wrap: wrap;
 
+  width: 762px;
+
   margin: 0;
   padding: 0;
   padding-left: 72px;
@@ -1381,7 +1383,7 @@ visibility: visible;
   z-index: 8;
 
   width: 360px;
-  height: 379px;
+  height: 381px;
 
   background-color: rgba(238, 238, 238, 0.7);
 }
@@ -1415,9 +1417,11 @@ visibility: visible;
 /* Сеточная стилизация пагинации страницы каталога */
 .pagination-list {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: baseline;
   flex-wrap: wrap;
+
+  width: 762px;
 
   margin: 0;
   margin-left: 73px;
@@ -1429,6 +1433,7 @@ visibility: visible;
 
 .pagination-item a {
   display: block;
+
   padding: 23px 14px;
 }
 
