@@ -379,6 +379,7 @@ visibility: visible;
 
 .slide-1-monopod img {
   order: -1;
+  flex-shrink: 0;
 
   padding-left: 90px;
   padding-right: 125px;
@@ -386,6 +387,7 @@ visibility: visible;
 
 .slide-2-fitness-bracelet img {
   order: -1;
+  flex-shrink: 0;
 
   padding-left: 90px;
   padding-right: 139px;
@@ -395,6 +397,7 @@ visibility: visible;
   position: relative;
   top: 63px;
   order: -1;
+  flex-shrink: 0;
 
   width: 526px;
   height: 334px;
@@ -1199,7 +1202,7 @@ visibility: visible;
 }
 
 .price-controls label {
-  display: inline-block;
+  display: inline-flex;
   vertical-align: baseline;
 
   font-size: 14px;
@@ -1214,6 +1217,7 @@ visibility: visible;
   width: 50px;
   margin: 0;
   padding: 0;
+  margin-left: 5px;
 
   border: none;
   background: #f1f1f1;
@@ -1380,6 +1384,7 @@ visibility: visible;
 
   position: absolute;
   top: -390px;
+  left: 0;
   z-index: 8;
 
   width: 360px;
