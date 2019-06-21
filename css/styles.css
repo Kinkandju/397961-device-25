@@ -97,6 +97,7 @@
 
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
 
   margin-right: 76px;
   margin-bottom: 31px;
@@ -119,11 +120,11 @@
 .search-form::after {
   position: absolute;
   top: 28px;
-  left: 12px;
+  left: 13px;
 
   content: "";
 
-  width: 8px;
+  width: 7px;
   height: 2px;
   background-color: #000000;
 
@@ -134,9 +135,10 @@
   display: inline-block;
   vertical-align: baseline;
 
-  padding: 6px 0 4px 40px;
+  padding: 6px 0 6px 40px;
 
   width: 355px;
+  height: 44px;
 }
 
 .search-form:focus-within .button-search {
@@ -748,9 +750,17 @@ visibility: visible;
   padding: 0;
 }
 
-.slider-list .service-1,
-.slider-list .service-2,
-.slider-list .service-3 {
+.slide-service-item {
+  position: relative;
+
+  display: none;
+}
+
+.slide-service-item:nth-child(1) {
+  display: flex;
+}
+
+.slider-list div {
   position: relative;
   top: -73px;
 
@@ -758,24 +768,7 @@ visibility: visible;
   padding: 0;
 }
 
-.slide-service-item {
-  position: relative;
-
-  display: none;
-}
-
-.slide-service-item.slide-service-1 {
-  display: flex;
-}
-
-.service-1,
-.service-2,
-.service-3 {
-  margin: 0;
-  padding: 0;
-}
-
-.slide-service-1 p {
+.slide-service-item:nth-child(1) p {
   position: relative;
   top: -16px;
 
@@ -783,7 +776,7 @@ visibility: visible;
   padding-right: 250px;
 }
 
-.slide-service-2 p {
+.slide-service-item:nth-child(2) p {
   position: relative;
   top: -16px;
 
@@ -791,7 +784,7 @@ visibility: visible;
   padding-right: 250px;
 }
 
-.slide-service-3 p {
+.slide-service-item:nth-child(3) p {
   position: relative;
   top: -16px;
 
@@ -799,19 +792,19 @@ visibility: visible;
   padding-right: 270px;
 }
 
-.slide-service-1 img {
+.slide-service-item:nth-child(1) img {
   position: absolute;
   top: -14px;
   right: 7px;
 }
 
-.slide-service-2 img {
+.slide-service-item:nth-child(2) img {
   position: absolute;
   top: -39px;
   right: -12px;
 }
 
-.slide-service-3 img {
+.slide-service-item:nth-child(3) img {
   position: absolute;
   top: -39px;
   right: 11px;
@@ -1909,15 +1902,32 @@ a {
   background-color: transparent;
 }
 
-.search-form input::-webkit-input-placeholder {
+.search-form label {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 300;
+
+  border: none;
+  background-color: transparent;
+}
+
+.search-form label:active {
+  font-size: 0;
+}
+
+.search-form input::-webkit-input-placeholder,
+.search-form input:-ms-input-placeholder {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.search-form input:hover::-webkit-input-placeholder {
+.search-form input:hover::-webkit-input-placeholder,
+.search-form input:hover:-ms-input-placeholder {
   color: rgba(0, 0, 0, 0.6);
 }
 
-.search-form input:focus::-webkit-input-placeholder {
+.search-form input:focus::-webkit-input-placeholder,
+.search-form input:focus:-ms-input-placeholder {
   color: #000000;
 }
 
