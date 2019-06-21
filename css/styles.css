@@ -10,8 +10,7 @@
 
 @font-face {
   font-family: 'Gilroy';
-  font-weigh
-  t: 300;
+  font-weight: 300;
   font-style: normal;
   src: local('Gilroy'),
        url('../fonts/gilroylight.woff2') format('woff2'),
@@ -360,6 +359,15 @@ visibility: visible;
 /* Сеточная стилизация первого слайдера главной страницы*/
 .slider-special-offer {
   position: relative;
+
+  background-color: #ffffff;
+}
+
+.slider-slides {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
 }
 
 .slider-item {
@@ -372,12 +380,7 @@ visibility: visible;
   top: -110px;
 }
 
-
-.slider-item.slide-1-monopod {
-  display: flex;
-}
-
-.slide-1-monopod img {
+.slider-item:nth-child(1) img {
   order: -1;
   flex-shrink: 0;
 
@@ -385,7 +388,7 @@ visibility: visible;
   padding-right: 125px;
 }
 
-.slide-2-fitness-bracelet img {
+.slider-item:nth-child(2) img {
   order: -1;
   flex-shrink: 0;
 
@@ -393,7 +396,7 @@ visibility: visible;
   padding-right: 139px;
 }
 
-.slide-3-quadcopter img {
+.slider-item:nth-child(3) img {
   position: relative;
   top: 63px;
   order: -1;
@@ -405,12 +408,97 @@ visibility: visible;
   padding-right: 42px;
 }
 
-.monopod-container {
-  padding-right: 75px;
+.label-controls {
+  position: absolute;
+  top: 206px;
+  right: 41px;
+  z-index: 8;
+
+  width: 160px;
+  height: 18px;
+
+  text-align: center;
+  font-size: 0;
 }
 
-.monopod-container .button {
-  margin-left: 1px;
+.label-controls label {
+  position: relative;
+
+  display: inline-block;
+  vertical-align: baseline;
+  width: 16px;
+  height: 16px;
+
+  border-radius: 50%;
+  cursor: pointer;
+
+  padding: 8px;
+  margin-right: 1px;
+
+  background-color: #ffffff;
+}
+
+.label-controls label::after {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+
+  content: "";
+
+  width: 10px;
+  height: 10px;
+
+  background: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 50%;
+}
+
+.label-controls .label::before {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  z-index: 2;
+
+  content: "";
+
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+  border: 1px solid #000000;
+  transform: scale(0.8);
+  cursor: pointer;
+}
+#product-1:checked ~ .slider-slides .slider-item.slider-item:nth-child(1) {
+  display: flex;
+}
+
+#product-2:checked ~ .slider-slides .slider-item.slider-item:nth-child(2) {
+  display: flex;
+}
+
+#product-3:checked ~ .slider-slides .slider-item.slider-item:nth-child(3) {
+  display: flex;
+}
+
+#product-1:checked ~ .label-controls .slider-controls-item--1::before,
+#product-2:checked ~ .label-controls .slider-controls-item--2::before,
+#product-3:checked ~ .label-controls .slider-controls-item--3::before {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  z-index: 2;
+
+  content: "";
+
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+  border: 1px solid #000000;
+  transform: scale(0.8);
+  cursor: pointer;
 }
 
 .name-offer {
@@ -419,12 +507,6 @@ visibility: visible;
   z-index: 1;
 
   margin-bottom: 50px;
-}
-
-.slide-2-fitness-bracelet .name-offer {
-  top: 20px;
-
-  margin-bottom: 39px;
 }
 
 .name-offer::before {
@@ -455,15 +537,15 @@ visibility: visible;
   color: #ffffff;
 }
 
-.slide-1-monopod .name-offer::after {
+.slider-item:nth-child(1) .name-offer::after {
   content: "01";
 }
 
-.slide-2-fitness-bracelet .name-offer::after {
+.slider-item:nth-child(2) .name-offer::after {
   content: "02";
 }
 
-.slide-3-quadcopter .name-offer::after {
+.slider-item:nth-child(3) .name-offer::after {
   content: "03";
 }
 
@@ -471,61 +553,22 @@ visibility: visible;
   margin-bottom: 51px;
 }
 
-.slider-slides {
-  position: relative;
+.monopod-container {
+  padding-left: 1px;
+  padding-right: 74px;
 }
 
-.controls-button {
-  position: absolute;
-  z-index: 1;
-  top: 210px;
-  right: 75px;
-
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
+.fitness-bracelet-container {
+  padding-left: 26px;
+  padding-right: 104px;
 }
 
-.label-controls label {
-  position: relative;
-
-  display: inline-block;
-  vertical-align: baseline;
-
-  margin: 0 10px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  border: 1px solid #000000;
-  cursor: pointer;
+.quadcopter-container {
+  padding-left: 18px;
+  padding-right: 12px;
 }
 
-.label-controls label:first-child::after {
-
-  position: absolute;
-  top: 2px;
-  left: 2px;
-
-  content: "";
-
-  width: 4px;
-  height: 4px;
-
-  border-radius: 50%;
-  border: 1px solid #000000;
-  cursor: pointer;
-}
-
-.label-controls label:nth-child(2) {
-  left: -4px;
-}
-
-
-.label-controls label:last-child {
-  left: -6px;
-  margin-right: 0;
-}
-
+/* Сеточная стилизация таблицы слайдера */
 .table-container {
   margin: 0;
   margin-top: 55px;
@@ -545,14 +588,6 @@ visibility: visible;
 
 .fitness-bracelet-container .table-container {
   margin-top: 53px;
-}
-
-.fitness-bracelet-container {
-  padding-right: 130px;
-}
-
-.quadcopter-container {
-  padding-right: 30px;
 }
 
 .quadcopter-container .table-container td:first-child {
@@ -824,13 +859,13 @@ visibility: visible;
 }
 
 .about-us {
-  display: relative;
+  position: relative;
 
   width: 480px;
 }
 
 .contacts {
-  display: relative;
+  position: relative;
 
   width: 560px;
 }
@@ -1018,23 +1053,19 @@ visibility: visible;
   padding: 0;
 }
 
-.filter-option {
-  padding-left: 39px;
-}
-
 .filter-option label {
   position: relative;
-  left: 1px;
+  top: 1px;
+  left: 43px;
 
   display: block;
 
   cursor: pointer;
-  user-select: none;
 }
 
 .filter-input-checkbox + label::before {
   position: absolute;
-  top: 9px;
+  top: 8px;
   left: -42px;
 
   content: "";
@@ -1048,7 +1079,7 @@ visibility: visible;
 
 .filter-input-checkbox:checked + label::after {
   position: absolute;
-  top: 9px;
+  top: 8px;
   left: -42px;
 
   content: "";
@@ -1065,35 +1096,33 @@ visibility: visible;
   visibility: hidden;
 }
 
-.filter-input-checkbox + label::before {
-  opacity: 1;
-}
-
-.filter-input-checkbox:hover + label::before {
-  opacity: 0.6;
-}
-
-.filter-input-checkbox:active + label::before,
-.filter-input-checkbox:checked + label::after {
-  opacity: 1;
-}
-
-.filter-input-checkbox:checked:hover + label::after {
-  opacity: 0.6;
-}
-
+.filter-option input:focus + label::before,
+.filter-option input:hover + label::before,
+.filter-option input:focus + label::after,
+.filter-option input:hover + label::after,
+.filter-input-checkbox:disabled + label,
 .filter-input-checkbox:disabled + label::before,
 .filter-input-checkbox:checked:disabled + label::after,
-.filter-input-checkbox:disabled + label {
+.filter-input-radio:disabled + label,
+.filter-input-radio:disabled + label::before,
+.filter-input-radio:checked:disabled + label::after {
   opacity: 0.6;
+}
+
+.filter-option input + label::before,
+.filter-option input:focus:active + label::before,
+.filter-option input:active + label::before,
+.filter-option input:focus:active + label::after,
+.filter-option input:active + label::after {
+  opacity: 1;
 }
 
 .filter-input-radio + label::before {
   content: "";
 
   position: absolute;
-  left: -42px;
   top: 7px;
+  left: -42px;
 
   width: 18px;
   height: 18px;
@@ -1114,24 +1143,6 @@ visibility: visible;
 
   background-color: #000000;
   border-radius: 50%;
-}
-
-.filter-input-radio:hover + label::before {
-  opacity: 0.6;
-}
-
-.filter-input-radio:active + label::before {
-  opacity: 1;
-}
-
-.filter-input-radio:checked:hover + label::after {
-  opacity: 0.6;
-}
-
-.filter-input-radio:disabled + label::before,
-.filter-input-radio:checked:disabled + label::after,
-.filter-input-radio:disabled + label {
-  opacity: 0.6;
 }
 
 /* Сеточная стилизация фильтра по критериям товара страницы каталога */
@@ -1321,6 +1332,8 @@ visibility: visible;
 }
 
 .catalog-item {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -1328,38 +1341,32 @@ visibility: visible;
   margin-bottom: -8px;
 }
 
-.catalog-item .catalog-item-image:last-child {
+.catalog-item-image {
   position: relative;
+  order: -1;
+
+  padding: 18px 0;
 }
 
-.catalog-item:last-child .catalog-item-image::before {
+.catalog-item-new::before {
   position: absolute;
-  top: 50px;
-  right: 40px;
+  z-index: 1;
+  top: 66px;
+  right: 39px;
 
   content: "new";
-
-  font-family: 'Gilroy', Arial, sans-serif;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0.7px;
-  font-weight: 800;
-  color: rgba(0, 0, 0, 0.1);
-  text-align: center;
-  text-transform: uppercase;
-
-  background-color: transparent;
 }
 
-.catalog-item:last-child .catalog-item-image::after {
+.catalog-item-new::after {
   position: absolute;
-  top: 28px;
+  z-index: 1;
+  top: 46px;
   right: 27px;
 
   content: "";
 
-  width: 59px;
-  height: 59px;
+  width: 57px;
+  height: 57px;
   border: 2px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background-color: transparent;
@@ -1379,11 +1386,11 @@ visibility: visible;
   width: 260px;
 }
 
-.item-container .actions {
+.actions {
   display: none;
 
   position: absolute;
-  top: -390px;
+  top: 18px;
   left: 0;
   z-index: 8;
 
@@ -1393,14 +1400,15 @@ visibility: visible;
   background-color: rgba(238, 238, 238, 0.7);
 }
 
-.catalog-item:hover .actions {
+.catalog-item-image:hover .actions {
   display: block;
 }
 
 .actions .buy,
 .actions .liken {
   position: relative;
-  top: 168px;
+  top: 171px;
+  left: 2px;
   z-index: 8;
 
   display: block;
@@ -1412,11 +1420,7 @@ visibility: visible;
 
 .actions .button {
   padding: 9px 0;
-  margin-bottom: 10px;
-}
-
-.catalog-item .catalog-item-image {
-  order: -1;
+  margin-bottom: 5px;
 }
 
 /* Сеточная стилизация пагинации страницы каталога */
@@ -1652,8 +1656,6 @@ visibility: visible;
   justify-content: space-between;
 
   width: 760px;
-
-  margin-bottom: ;
 }
 
 .container-name-email label,
@@ -2307,6 +2309,19 @@ a {
   text-align: left;
 
   background-color: #ffffff;
+}
+
+.catalog-item-new::before {
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.7px;
+  font-weight: 800;
+  color: rgba(0, 0, 0, 0.1);
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: transparent;
 }
 
 /* Стили слайдера предоставляемых услуг */
