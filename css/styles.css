@@ -658,8 +658,38 @@ visibility: visible;
   background-color: rgba(94%, 77%, 18%, 0.5);
 }
 
+.catalog-list-image-reality img {
+  margin-right: 1px;
+  margin-bottom: 2px;
+}
+
 .catalog-list-image-monopod {
   align-items: flex-end;
+}
+
+.catalog-list-image-monopod img {
+  margin-left: 2px;
+  margin-bottom: 2px;
+}
+
+.catalog-list-image-camera img {
+  margin-top: 2px;
+  margin-left: 10px;
+}
+
+.catalog-list-image-bracelet img {
+  margin-top: 4px;
+  margin-left: 4px;
+}
+
+.catalog-list-image-clock img {
+  margin-top: 2px;
+  margin-left: 6px;
+}
+
+.catalog-list-image-quadcopter img {
+  margin-top: 6px;
+  margin-right: 1px;
 }
 
 .catalog-list-image:hover {
