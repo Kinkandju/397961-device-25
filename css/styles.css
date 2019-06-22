@@ -238,7 +238,6 @@ visibility: visible;
 /* Сеточная стилизация навигации по каталогу */
 .site-navigation-header {
   display: flex;
-  /* justify-content: flex-end; */
   justify-content: flex-start;
 
   margin: 0;
@@ -472,6 +471,7 @@ visibility: visible;
   transform: scale(0.8);
   cursor: pointer;
 }
+
 #product-1:checked ~ .slider-slides .slider-item.slider-item:nth-child(1) {
   display: flex;
 }
@@ -759,6 +759,30 @@ visibility: visible;
 .slide-service-item:nth-child(1) {
   display: flex;
 }
+
+/* #service-1:checked ~ .slider-service #slide1 {
+  display: flex;
+}
+
+#service-2:checked ~ .slider-service #slide2 {
+  display: flex;
+}
+
+#service-3:checked ~ .slider-service #slide3 {
+  display: flex;
+} */
+
+/* #service-1:checked ~ .slider-service label[for="service-1"] .button-delivery:active {
+  padding-right: 133px;
+}
+
+#service-1:checked ~ .slider-service label[for="service-2"] .button-warranty:active {
+  padding-right: 138px;
+}
+
+#service-1:checked ~ .slider-service label[for="service-3"] .button-credit:active {
+  padding-right: 152px;
+} */
 
 .slider-list div {
   position: relative;

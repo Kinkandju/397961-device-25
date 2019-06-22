@@ -224,27 +224,35 @@
     <section class="slider-service-container">
       <!-- div-центровщик для удобства стилизации -->
       <div class="layout-container">
+
         <h2 class="visually-hidden">Предоставляемые услуги</h2>
+        <input class="visually-hidden" type="radio" id="service-1" name="toggle" checked>
+        <input class="visually-hidden" type="radio" id="service-2" name="toggle">
+        <input class="visually-hidden" type="radio" id="service-3" name="toggle">
 
         <div class="slider-service">
 
-          <!-- <input class="visually-hidden" type="radio" id="service-1" name="toggle" checked>
-          <input class="visually-hidden" type="radio" id="service-2" name="toggle">
-          <input class="visually-hidden" type="radio" id="service-3" name="toggle"> -->
+          <!-- Переключатели слайдов -->
           <div class="slider-buttons">
             <label for="service-1">
-              <button class="button button-delivery active">Доставка</button>
+              <button class="button button-delivery active">
+                Доставка
+              </button>
             </label>
             <label for="service-2">
-              <button class="button button-warranty">Гарантия</button>
+              <button class="button button-warranty">
+                Гарантия
+              </button>
             </label>
             <label for="service-3">
-              <button class="button button-credit">Кредит</button>
+              <button class="button button-credit">
+                Кредит
+              </button>
             </label>
           </div>
 
           <ul class="slider-list">
-            <li class="slide-service-item">
+            <li class="slide-service-item" id="slide1">
               <div>
                 <h3>Доставка</h3>
                 <p>
@@ -254,7 +262,7 @@
               <img src="img/delivery.svg" width="136" height="164" alt="Доставка">
             </li>
 
-            <li class="slide-service-item">
+            <li class="slide-service-item" id="slide2">
               <div>
               <h3>Гарантия</h3>
               <p>
@@ -265,7 +273,7 @@
               <img src="img/warranty.svg" width="171" height="194" alt="Гарантия">
             </li>
 
-            <li class="slide-service-item">
+            <li class="slide-service-item" id="slide3">
               <div>
               <h3>Кредит</h3>
               <p>
