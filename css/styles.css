@@ -530,13 +530,6 @@ visibility: visible;
   z-index: -1;
 
   content: "01";
-
-  font-family: 'Gilroy', Arial, sans-serif;
-  font-size: 179px;
-  line-height: 179px;
-  letter-spacing: 1.8px;
-  font-weight: 800;
-  color: #ffffff;
 }
 
 .slider-item:nth-child(1) .name-offer::after {
@@ -790,6 +783,7 @@ visibility: visible;
   display: flex;
 }
 
+/* Для дальнейшего оживления слайдера */
 /* #service-1:checked ~ .slider-service #slide1 {
   display: flex;
 }
@@ -2319,6 +2313,15 @@ a {
   text-align: left;
 
   background-color: transparent;
+}
+
+.name-offer::after {
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 179px;
+  line-height: 179px;
+  letter-spacing: 1.8px;
+  font-weight: 800;
+  color: #ffffff;
 }
 
 .name-offer + p {
