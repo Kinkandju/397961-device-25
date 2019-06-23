@@ -783,31 +783,6 @@ visibility: visible;
   display: flex;
 }
 
-/* Для дальнейшего оживления слайдера */
-/* #service-1:checked ~ .slider-service #slide1 {
-  display: flex;
-}
-
-#service-2:checked ~ .slider-service #slide2 {
-  display: flex;
-}
-
-#service-3:checked ~ .slider-service #slide3 {
-  display: flex;
-} */
-
-/* #service-1:checked ~ .slider-service label[for="service-1"] .button-delivery:active {
-  padding-right: 133px;
-}
-
-#service-1:checked ~ .slider-service label[for="service-2"] .button-warranty:active {
-  padding-right: 138px;
-}
-
-#service-1:checked ~ .slider-service label[for="service-3"] .button-credit:active {
-  padding-right: 152px;
-} */
-
 .slider-list div {
   position: relative;
   top: -73px;
