@@ -32,6 +32,11 @@
 /* Стилизация градиента */
 .main-catalog {
   position: relative;
+
+  overflow: hidden;
+
+  width: 100%;
+  min-width: 1200px;
 }
 
 .main-catalog:before {
@@ -44,7 +49,8 @@
   z-index: -1;
 
   height: 100%;
-  width: 36.7%;
+  /* width: 36.7%; */
+  width: 50%;
 
   background-image: linear-gradient(to bottom, #d9d9d9 0%, #d9d9d9 71px, #ebebeb 71px, #ebebeb 100%);
 }
@@ -55,11 +61,13 @@
   display: block;
   position: absolute;
   top: 0px;
-  left: 36.7%;
+  /* left: 36.7%; */
+  left: 50%;
   z-index: -1;
 
   height: 71px;
-  width: 63.3%;
+  /* width: 63.3%; */
+  width: 100%;
 
   background: #ebebeb;
 }
@@ -151,6 +159,7 @@ visibility: visible;
 .user-navigation-header {
   display: inline-flex;
   justify-content: flex-start;
+  flex-wrap: wrap;
 
   width: 509px;
 
@@ -718,6 +727,9 @@ visibility: visible;
 /* Сеточная стилизация cлайдера предоставляемых услуг */
 .slider-service-container {
   background-color: #e5e5e5;
+
+  width: 100%;
+  min-width: 1200px;
 }
 
 .slider-service {
@@ -1549,8 +1561,8 @@ display: block;
   display: flex;
   flex-direction: column;
 
-  padding: 0 20px;
-  min-width: 1160px;
+  /* padding: 0 20px; */
+  min-width: 1200px;
 
   background-color: #464646;
 }
@@ -1588,6 +1600,7 @@ display: block;
 .user-navigation-footer {
   display: flex;
   justify-content: flex-end;
+  flex-wrap: wrap;
 
   margin: 0;
   margin-top: 60px;
