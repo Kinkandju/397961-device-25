@@ -1,18 +1,20 @@
 /* Подключение нестандартных шрифтов */
 @font-face {
-  font-family: 'Gilroy';
+  font-family: "Gilroy";
   font-weight: 800;
   font-style: normal;
-  src: local('Gilroy'),
+  src: local("Gilroy Light"),
+       local("Gilroy-Light"),
        url('../fonts/gilroyextrabold.woff2') format('woff2'),
        url('../fonts/gilroyextrabold.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'Gilroy';
+  font-family: "Gilroy";
   font-weight: 300;
   font-style: normal;
-  src: local('Gilroy'),
+  src: local("Gilroy ExtraBold"),
+       local("Gilroy-ExtraBold"),
        url('../fonts/gilroylight.woff2') format('woff2'),
        url('../fonts/gilroylight.woff') format('woff');
 }
@@ -271,6 +273,10 @@ visibility: visible;
   margin-left: auto;
 }
 
+.site-navigation-header > li:nth-child(6) {
+  margin-right: 0;
+}
+
 .drop-down-point {
   position: relative;
 
@@ -314,22 +320,19 @@ visibility: visible;
 /* Сеточная стилизация вложенного списка навигации каталога товаров*/
 .nested-list {
   position: absolute;
+  left: -60px;
   z-index: 6;
 
+  width: 800px;
+
   display: none;
-  flex-direction: column;
-  align-items: flex-start;
-  align-content: flex-start;
   flex-wrap: wrap;
 
-  height: 110px;
-  width: 1160px;
-
   margin: 0;
-  margin-left: -60px;
   padding: 0;
-  padding-top: 20px;
-  padding-bottom: 33px;
+  padding-left: 60px;
+  padding-right: 300px;
+  padding-bottom: 55px;
 }
 
 .nested-list a {
@@ -337,24 +340,23 @@ visibility: visible;
 }
 
 .nested-list li {
-  margin-left: 60px;
+  position: relative;
+  top: 20px;
 
   width: 200px;
 }
 
-.nested-list li:nth-child(1),
-.nested-list li:nth-child(2),
-.nested-list li:nth-child(3) {
-  margin-right: -21px;
+.nested-list li:nth-child(6n) {
+  width: 800px;
 }
 
-.nested-list li:nth-child(4),
-.nested-list li:nth-child(5) {
-  margin-right: -60px;
+.nested-list li:nth-child(1n),
+.nested-list li:nth-child(4n) {
+  margin-right: 40px;
 }
 
-.nested-list li:nth-child(6)  {
-  height: 100px;
+.nested-list li:nth-child(3n+2) {
+  margin-right: 0;
 }
 
 /* Сеточная стилизация первого слайдера главной страницы*/
@@ -399,14 +401,14 @@ visibility: visible;
 
 .slider-item:nth-child(3) img {
   position: relative;
-  top: 63px;
+  top: 64px;
   order: -1;
   flex-shrink: 0;
 
   width: 526px;
   height: 334px;
-  padding-left: 14px;
-  padding-right: 42px;
+  padding-left: 31px;
+  padding-right: 23px;
 }
 
 .label-controls {
@@ -559,46 +561,58 @@ visibility: visible;
 }
 
 .quadcopter-container {
-  padding-left: 18px;
-  padding-right: 12px;
+  padding-left: 20px;
+  padding-right: 10px;
 }
 
 /* Сеточная стилизация таблицы слайдера */
 .table-container {
+  position: relative;
+  left: -1px;
+
+  display: flex;
+
+  width: 486px;
+
   margin: 0;
-  margin-top: 55px;
+  margin-top: 57px;
   padding: 0;
 
   border-collapse: collapse;
 }
 
-.table-container td {
-  padding-right: 76px;
+.value,
+.identification {
+  display: flex;
 }
 
-.table-container td:last-child {
-  padding-top: 5px;
-  padding-right: 0;
+.identification {
+  position: relative;
+  top: 5px;
 }
 
-.fitness-bracelet-container .table-container {
-  margin-top: 53px;
+.value td:nth-child(1) {
+  padding-right: 77px;
 }
 
-.quadcopter-container .table-container td:first-child {
-  padding-right: 45px;
+.value td:nth-child(2) {
+  padding-right: 75px;
 }
 
-.quadcopter-container .table-container td:last-child {
-  padding-top: 2px;
+.identification td:nth-child(1) {
+  padding-right: 80px;
 }
 
-.quadcopter-container .identification td {
-  padding-top: 5px;
+.identification td:nth-child(2) {
+  padding-right: 79px;
 }
 
-.quadcopter-container .identification td:last-child {
-  padding-top: 7px;
+.quadcopter-value td:nth-child(1) {
+  padding-right: 58px;
+}
+
+.quadcopter-identification td:nth-child(1) {
+  padding-right: 47px;
 }
 
 /* Сеточная стилизация блока каталога товаров */
@@ -612,7 +626,7 @@ visibility: visible;
   flex-wrap: wrap;
 
   margin: 0;
-  margin-bottom: 120px;
+  margin-bottom: 121px;
   padding: 0;
 }
 
@@ -710,14 +724,14 @@ visibility: visible;
   display: flex;
   align-items: flex-start;
 
-  padding-bottom: 43px;
-  margin-bottom: 93px;
+  padding-bottom: 41px;
+  margin-bottom: 94px;
 }
 
 /* Сеточная стилизация кнопок */
 .slider-buttons {
   position: relative;
-  top: -19px;
+  top: -20px;
 
   width: 284px;
 
@@ -732,7 +746,8 @@ visibility: visible;
   content: "";
 
   width: 7px;
-  height: 319px;
+  min-height: 319px;
+  height: 110%;
   background-color: #000000;
 }
 
@@ -740,16 +755,17 @@ visibility: visible;
   display: block;
 
   padding: 8px 20px;
-  margin-bottom: 24px;
+  margin-bottom: 23px;
 }
 
 .slider-buttons .button-warranty {
   padding-left: 25px;
   padding-right: 21px;
+  margin-bottom: 25px;
 }
 
 .slider-buttons .button-credit {
-  padding-left: 38px;
+  padding-left: 37px;
   padding-right: 36px;
 }
 
@@ -775,6 +791,7 @@ visibility: visible;
 
 .slide-service-item {
   position: relative;
+  top: -1px;
 
   display: none;
 }
@@ -815,22 +832,49 @@ visibility: visible;
   padding-right: 270px;
 }
 
-.slide-service-item:nth-child(1) img {
+.slide-service-item:nth-child(1) div::after {
   position: absolute;
-  top: -14px;
+  top: 59px;
   right: 7px;
+
+  content: "";
+
+  width: 136px;
+  height: 164px;
+
+  background-image: url("../img/delivery.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
-.slide-service-item:nth-child(2) img {
+.slide-service-item:nth-child(2) div::after {
   position: absolute;
-  top: -39px;
+  top: 35px;
   right: -12px;
+
+  content: "";
+
+  width: 171px;
+  height: 194px;
+
+  background-image: url("../img/warranty.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
-.slide-service-item:nth-child(3) img {
+.slide-service-item:nth-child(3) div::after {
   position: absolute;
-  top: -39px;
-  right: 11px;
+  top: 34px;
+  right: 12px;
+
+  content: "";
+
+  width: 156px;
+  height: 186px;
+
+  background-image: url("../img/credit.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 /* Сеточная стилизация блока "Логотипы" */
@@ -840,10 +884,22 @@ visibility: visible;
 
 .logotypes-list {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
 
   margin: 0;
   padding: 0;
+}
+
+.logotypes-list li {
+  margin-right: 40px;
+}
+
+.logotypes-list li:nth-child(3) {
+  margin-right: 37px;
+}
+
+.logotypes-list li:nth-child(4n) {
+  margin-right: 0;
 }
 
 /* Сеточная стилизация блоков "О нас" и "Контакты" */
@@ -857,14 +913,14 @@ visibility: visible;
 .about-us_contacts h2 {
   position: relative;
 
-  margin-left: -1px;
+  margin-left: -2px;
   margin-bottom: 43px;
 }
 
 .about-us_contacts h2::before {
   position: absolute;
   top: -52px;
-  left: 1px;
+  left: 2px;
 
   content: "";
 
@@ -949,6 +1005,9 @@ visibility: visible;
 /* Сеточная стилизация "хлебных крошек" страницы каталога */
 .breadcrumbs {
   display: flex;
+  flex-wrap: wrap;
+
+  width: 450px;
 
   margin: 0;
   padding: 0;
@@ -962,8 +1021,8 @@ visibility: visible;
   padding-right: 35px;
 }
 
-.breadcrumbs li:last-child {
-  padding-right: 0;
+.breadcrumbs li:nth-child(3n) {
+  /* padding-right: 0; */
   padding-left: 5px;
 }
 
@@ -989,7 +1048,7 @@ visibility: visible;
   background-color: #ffffff;
 }
 
-.breadcrumbs li:first-child a::before {
+.breadcrumbs li:nth-child(1) a::before {
   right: 20px;
 }
 
@@ -1010,10 +1069,9 @@ visibility: visible;
   transform: rotate(-45deg) scale(0.17);
 }
 
-.breadcrumbs li:first-child a::after {
+.breadcrumbs li:nth-child(1) a::after {
   right: 8px;
 }
-
 
 /* Общая сеточная стилизация фильтров страницы каталога */
 .filters {
@@ -1266,8 +1324,8 @@ visibility: visible;
   align-items: baseline;
 
   padding: 0;
-  padding-top: 23px;
-  padding-bottom: 23px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   background-color: #ebebeb;
 }
@@ -1281,6 +1339,8 @@ visibility: visible;
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
+
+  width: 400px;
 
   margin: 0;
   padding: 0;
@@ -1418,6 +1478,10 @@ visibility: visible;
 
 .catalog-item-image:hover .actions {
   display: block;
+}
+
+.catalog-item-image:focus-within .actions {
+display: block;
 }
 
 .actions .buy,
@@ -1586,10 +1650,12 @@ visibility: visible;
 .site-navigation-footer {
   position: relative;
   top: 2px;
-  left: -16px;
 
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
+
+  width: 600px;
 
   margin: 0 auto;
   padding: 0;
@@ -1597,10 +1663,6 @@ visibility: visible;
 
 .site-navigation-footer li {
   padding-right: 34px;
-}
-
-.site-navigation-footer li:first-child {
-  margin-left: 30px;
 }
 
 /* Сеточная стилизация социальных сетей и ссылки на HTML Academy подвала сайта */
@@ -1626,6 +1688,10 @@ visibility: visible;
   left: 2px;
 
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  width: 600px;
 
   margin: 0;
   padding: 0;
@@ -1737,26 +1803,44 @@ visibility: visible;
   outline: none;
 }
 
-.modal-write-us input::-webkit-input-placeholder,
-.modal-write-us input::-moz-placeholder,
-.modal-write-us input:-moz-placeholder,
-.modal-write-us input:-ms-input-placeholder,
-.modal-write-us textarea::-webkit-input-placeholder,
-.modal-write-us textarea::-moz-placeholder,
-.modal-write-us textarea:-moz-placeholder,
-.modal-write-us textarea:-ms-input-placeholder,
-.modal-write-us input:hover::-webkit-input-placeholder,
-.modal-write-us input:hover::-moz-placeholder,
-.modal-write-us input:hover:-moz-placeholder,
-.modal-write-us input:hover:-ms-input-placeholder,
-.modal-write-us textarea:hover::-webkit-input-placeholder,
-.modal-write-us textarea:hover::-moz-placeholder,
-.modal-write-us textarea:hover:-moz-placeholder,
-.modal-write-us textarea:hover:-ms-input-placeholder {
+.modal-write-us input[type="text"]:focus,
+.modal-write-us input[type="email"]:focus,
+.modal-write-us textarea:focus {
+  color: #000000;
+}
+
+.modal-write-us input[type="text"]::-webkit-input-placeholder {
   color: rgba(70, 70, 70, 0.4);
 }
 
-.modal-write-us input:focus::-webkit-input-placeholder,
+.modal-write-us input[type="email"]::-webkit-input-placeholder {
+  color: rgba(70, 70, 70, 0.4);
+}
+
+.modal-write-us input[type="text"]:-ms-input-placeholder {
+  color: rgba(70, 70, 70, 0.4);
+}
+
+.modal-write-us input[type="email"]:-ms-input-placeholder {
+  color: rgba(70, 70, 70, 0.4);
+}
+
+.modal-write-us textarea::-webkit-input-placeholder {
+  color: rgba(70, 70, 70, 0.4);
+}
+
+.modal-write-us textarea:-ms-input-placeholder {
+  color: rgba(70, 70, 70, 0.4);
+}
+
+.modal-write-us input[type="text"]:focus::-webkit-input-placeholder {
+  color: #000000;
+}
+
+.modal-write-us input[type="email"]:focus::-webkit-input-placeholder {
+  color: #000000;
+}
+
 .modal-write-us textarea:focus::-webkit-input-placeholder {
   color: #000000;
 }
@@ -1825,7 +1909,7 @@ body {
   margin: 0;
   padding: 0;
 
-  font-family: 'Gilroy', 'Open Sans', Arial, sans-serif;
+  font-family: "Gilroy", "Open Sans", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: normal;
@@ -1871,7 +1955,7 @@ a {
   position: relative;
   z-index: 1;
 
-  font-family: 'Gilroy', Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 3.6px;
@@ -1914,7 +1998,7 @@ a {
 
 /* Стили формы поиска */
 .search-form input[type="search"] {
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   font-size: 15px;
   line-height: 30px;
   font-weight: 300;
@@ -1926,7 +2010,7 @@ a {
 }
 
 .search-form label {
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   font-size: 15px;
   line-height: 30px;
   font-weight: 300;
@@ -1939,18 +2023,27 @@ a {
   font-size: 0;
 }
 
-.search-form input::-webkit-input-placeholder,
-.search-form input:-ms-input-placeholder {
+.search-form input[type="search"]::-webkit-input-placeholder {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.search-form input:hover::-webkit-input-placeholder,
-.search-form input:hover:-ms-input-placeholder {
+.search-form input[type="search"]:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.search-form input[type="search"]:hover::-webkit-input-placeholder {
   color: rgba(0, 0, 0, 0.6);
 }
 
-.search-form input:focus::-webkit-input-placeholder,
-.search-form input:focus:-ms-input-placeholder {
+.search-form input[type="search"]:hover:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.search-form input[type="search"]:focus::-webkit-input-placeholder {
+  color: #000000;
+}
+
+.search-form input[type="search"]:focus:-ms-input-placeholder {
   color: #000000;
 }
 
@@ -1961,7 +2054,7 @@ a {
 .button-search {
   visibility: hidden;
 
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   font-size: 15px;
   line-height: 30px;
   font-weight: 300;
@@ -1989,7 +2082,7 @@ a {
 
 /* Стили пользовательской навигации */
 .user-navigation-header {
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   font-size: 15px;
   line-height: 30px;
   font-weight: 300;
@@ -2003,7 +2096,7 @@ a {
 
 /* Стили блока навигации по каталогу */
 .site-navigation-header {
-  font-family: 'Gilroy', Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 3.6px;
@@ -2013,7 +2106,7 @@ a {
 }
 
 .nested-list {
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   font-size: 15px;
   line-height: 36px;
   letter-spacing: 0.2px;
@@ -2028,7 +2121,7 @@ a {
 
 /* Стили "хлебных крошек" */
 .breadcrumbs {
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.1px;
@@ -2045,7 +2138,7 @@ a {
 
 /* Стили фильтра по критериям товара */
 .filters-name {
-  font-family: 'Gilroy', Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 3.2px;
@@ -2058,7 +2151,7 @@ a {
 }
 
 .filters legend {
-  font-family: 'Gilroy', Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 0.2px;
@@ -2076,7 +2169,7 @@ a {
 }
 
 .cost input {
-  font-family: 'Gilroy', Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.2px;
@@ -2090,7 +2183,7 @@ a {
 
 /* Стили сортировки товаров */
 .sort-name {
-  font-family: 'Gilroy', Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 3.2px;
@@ -2137,7 +2230,7 @@ a {
 
 .color-list,
 .bluetooth-list {
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   font-size: 14px;
   line-height: 40px;
   letter-spacing: 0.1px;
@@ -2189,7 +2282,7 @@ a {
 
 /* Стили каталога товаров */
 .liken {
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 36px;
   letter-spacing: 0.1px;
@@ -2207,7 +2300,7 @@ a {
 }
 
 .button-price {
-  font-family: 'Gilroy', Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.2px;
@@ -2224,7 +2317,7 @@ a {
 }
 
 .pagination-item a {
-  font-family: 'Gilroy', Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 3.2px;
@@ -2276,7 +2369,7 @@ a {
 
 /* Стили слайдера специальных предложений */
 .slider-special-offer .name-offer{
-  font-family: 'Gilroy', Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 47px;
   line-height: 56px;
   letter-spacing: 0.5px;
@@ -2291,7 +2384,7 @@ a {
 }
 
 .name-offer::after {
-  font-family: 'Gilroy', Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 179px;
   line-height: 179px;
   letter-spacing: 1.8px;
@@ -2300,7 +2393,7 @@ a {
 }
 
 .name-offer + p {
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   font-size: 15px;
   line-height: 30px;
   font-weight: 300;
@@ -2312,7 +2405,7 @@ a {
 }
 
 .identification {
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 20px;
   font-weight: 300;
@@ -2324,7 +2417,7 @@ a {
 }
 
 .value {
-  font-family: 'Gilroy', Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 36px;
   line-height: 48px;
   font-weight: 300;
@@ -2342,7 +2435,7 @@ a {
 /* Стили каталога товаров */
 .catalog h3,
 .catalog-item-title {
-  font-family: 'Gilroy', Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 800;
@@ -2354,7 +2447,7 @@ a {
 }
 
 .catalog-item-new::before {
-  font-family: 'Gilroy', Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.7px;
@@ -2375,7 +2468,7 @@ a {
 
 .slider-list h3,
 .page-title {
-  font-family: 'Gilroy', Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 47px;
   line-height: 48px;
   font-weight: 800;
@@ -2385,7 +2478,7 @@ a {
 }
 
 .slider-list p {
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   font-size: 15px;
   line-height: 30px;
   font-weight: 300;
@@ -2397,7 +2490,7 @@ a {
 }
 
 .slider-buttons .button:active {
-  font-family: 'Gilroy', Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 800;
@@ -2449,7 +2542,7 @@ a {
 
 /* Стили блоков "О нас" и "Контакты" */
 .about-us_contacts h2 {
-  font-family: 'Gilroy', Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 47px;
   line-height: 48px;
   font-weight: 800;
@@ -2461,7 +2554,7 @@ a {
 }
 
 .about-us_contacts p {
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   font-size: 15px;
   line-height: 30px;
   font-weight: 300;
@@ -2474,7 +2567,7 @@ a {
 }
 
 .carrier-companies {
-  font-family: 'Gilroy', Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 16px;
   line-height: 40px;
   font-weight: 800;
@@ -2493,7 +2586,7 @@ a {
 }
 
 .user-navigation-footer a {
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   font-size: 15px;
   line-height: 36px;
   font-weight: 300;
@@ -2509,11 +2602,11 @@ a {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.user-navigation-footer a:hover .user-navigation-svg{
+.icon-footer:hover .user-navigation-svg {
   opacity: 0.6;
 }
 
-.user-navigation-footer a:active .user-navigation-svg {
+.icon-footer:active .user-navigation-svg {
   opacity: 0.3;
 }
 
@@ -2528,7 +2621,7 @@ a {
 }
 
 .site-navigation-footer a {
-  font-family: 'Gilroy', Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 3.6px;
@@ -2549,7 +2642,7 @@ a {
 
 /* Стили адреса */
 .address {
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   font-style: normal;
   font-size: 15px;
   line-height: 30px;
@@ -2585,7 +2678,7 @@ a {
 }
 
 .call a {
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   font-style: normal;
   font-size: 15px;
   line-height: 30px;
@@ -2636,7 +2729,7 @@ a {
 
 /* Стили формы модального окна (Обратная связь) */
 .modal-write-us {
-  font-family: 'Gilroy', Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 800;
@@ -2649,7 +2742,7 @@ a {
 .modal-write-us input[type="text"],
 .modal-write-us input[type="email"],
 .modal-write-us textarea {
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   font-style: normal;
   font-size: 14px;
   line-height: 18px;
